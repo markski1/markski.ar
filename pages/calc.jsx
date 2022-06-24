@@ -134,31 +134,37 @@ export default function Page() {
 			<center>
 				<p className={utilStyles.heading2Xl}>AR$<span id="total">0,00</span></p>
 			</center>
-			<p className={utilStyles.headingLg}>En impuestos: <span className={utilStyles.money}>AR$<span id="totalImpuestos"></span></span></p>
-			<small>
-				<ul>
-					<li>IVA Servicios Digitales <span className={utilStyles.money}>AR$<span id="servdig">0,00</span></span> <b>(21%)</b></li>
-					<li>Percepción impuesto RG AFIP 4815 <span className={utilStyles.money}>AR$<span id="afip">0,00</span></span> <b>(35%)</b></li>
-					<li>Ley impuesto PAIS <span className={utilStyles.money}>AR$<span id="pais">0,00</span></span> <b>(8%)</b></li>
-					<li>Impuestos provinciales <span className={utilStyles.money}>AR$<span id="pvc">0,00</span></span> <b>(<span id="impuestlol">?</span>%)</b></li>
-				</ul>
-			</small>
-			<p className={utilStyles.headingLg}>Conversiónes actuales:</p>
-			<small>
-				<ul>
-					<li>USD: <span className={utilStyles.money} id="domUSD"></span></li>
-					<li>EUR: <span className={utilStyles.money} id="domEUR"></span></li>
-					<li>BRS: <span className={utilStyles.money} id="domBRS"></span></li>
-				</ul>
-			</small>
-			<p>Si te sirve la pagina y tenes ganas, podes colaborar:</p>
-			<small>
-				<ul>
-					<li><a href="https://www.cafecito.app/Markski" className={utilStyles.money}>Cafecito (Pesos Argentinos)</a></li>
-					<li><a href="https://steamcommunity.com/tradeoffer/new/?partner=100235343&token=OQmyhlHg" className={utilStyles.money}>Steam (Skins de CSGO o TF2)</a></li>
-					<li>Por CBU/CVU: Alias <span className={utilStyles.money}>markski</span></li>
-				</ul>
-			</small>
+			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
+				<p className={utilStyles.headingLg}>En impuestos: <span className={utilStyles.money}>AR$<span id="totalImpuestos"></span></span></p>
+				<small>
+					<ul>
+						<li>IVA Servicios Digitales <span className={utilStyles.money}>AR$<span id="servdig">0,00</span></span> <b>(21%)</b></li>
+						<li>Percepción impuesto RG AFIP 4815 <span className={utilStyles.money}>AR$<span id="afip">0,00</span></span> <b>(35%)</b></li>
+						<li>Ley impuesto PAIS <span className={utilStyles.money}>AR$<span id="pais">0,00</span></span> <b>(8%)</b></li>
+						<li>Impuestos provinciales <span className={utilStyles.money}>AR$<span id="pvc">0,00</span></span> <b>(<span id="impuestlol">?</span>%)</b></li>
+					</ul>
+				</small>
+			</div>
+			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
+				<p className={utilStyles.headingLg}>Conversiónes actuales:</p>
+				<small>
+					<ul>
+						<li>USD: <span className={utilStyles.money} id="domUSD"></span></li>
+						<li>EUR: <span className={utilStyles.money} id="domEUR"></span></li>
+						<li>BRS: <span className={utilStyles.money} id="domBRS"></span></li>
+					</ul>
+				</small>
+			</div>
+			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
+				<p>Si te sirve la pagina y tenes ganas, podes colaborar:</p>
+				<small>
+					<ul>
+						<li><a href="https://www.cafecito.app/Markski" className={utilStyles.money}>Cafecito (Pesos Argentinos)</a></li>
+						<li><a href="https://steamcommunity.com/tradeoffer/new/?partner=100235343&token=OQmyhlHg" className={utilStyles.money}>Steam (Skins de CSGO o TF2)</a></li>
+						<li>Por CBU/CVU: Alias <span className={utilStyles.money}>markski</span></li>
+					</ul>
+				</small>
+			</div>
 		</Layout>
 		</>
 	);
