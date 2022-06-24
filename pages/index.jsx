@@ -57,7 +57,7 @@ let site = (
 		<hr />
 		<PrintEntry
 			title = '[Spanish] Prueba de Punteria'
-			url = 'punteria'
+			url = 'https://old.mrks.cf/punteria'
 			text = 'Una simple prueba de punteria y velocidad con el puntero.'
 		/>
 		<hr />
@@ -75,13 +75,13 @@ let site = (
 		<hr />
 		<PrintEntry
 			title = 'CSGO Sensitivity Converter'
-			url = 'csgosens'
+			url = 'https://old.mrks.cf/csgosens'
 			text = "A tool which allows to keep your perceived sensitivity if you\'re changing certain parameters in CSGO."
 		/>
 		<hr />
 		<PrintEntry
 			title = 'Nintendo Graveyard'
-			url = 'nintendont'
+			url = 'https://old.mrks.cf/nintendont'
 			text = 'A list of services and events terminated by Nintendo.'
 		/>
 		<div className={utilStyles.headingContainer}>
@@ -89,13 +89,13 @@ let site = (
 		</div>
 		<PrintEntry
 			title = 'SA-MP Weapon statistics'
-			url = 'SA-MP_Weapons'
+			url = 'https://old.mrks.cf/SA-MP_Weapons'
 			text = 'Comprehensive table of statistics for most weapons available in SA-MP.'
 		/>
 		<hr />
 		<PrintEntry
 			title = 'SA-MP Explosion data'
-			url = 'SA-MP_Explosions'
+			url = 'https://old.mrks.cf/SA-MP_Explosions'
 			text = 'Comprehensive-ish table of evidence-based qualifications for all the explosions you can use in SA-MP.'
 		/>
 		<div className={utilStyles.headingContainer}>

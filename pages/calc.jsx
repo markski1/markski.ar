@@ -3,25 +3,25 @@ import Head from 'next/head';
 import Layout, { siteTitle } from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Grid from '@mui/material/Grid';
-import Script from 'next/script'
 
-export default function FirstPost() {
+export default function Page() {
 	let pvcPorcentaje;
 	//               N/A  CABA  CHACO  CRDB  LPMP  RNGR  SALTA
 	pvcPorcentaje = [0.0, 0.02, 0.055, 0.03, 0.01, 0.05, 0.036];
-	let AverGarray = ["Gaston", "Gabriel", "Gaetan", "Galileo", "Gandalf", "Galvin", "Garfield", "Garrison", "Gaspar", "Galicia", "Gabino", "Gaudencio"];
 	
 	let eur = 0;
 	let usd = 0;
 	let brs = 0;
 
-	function setearMonedas() {
-		alert("Ejecutado");
-		let infoMonedas = fetch('https://snep.mrks.cf/monedas.php');
-		let respuesta = JSON.parse(infoMonedas.text());
-		let eur = respuesta.eur;
-		let usd = respuesta.usd;
-		let brs = respuesta.brs;
+	async function setearMonedas() {
+		let response = await fetch("https://snep.mrks.cf/monedas.php")
+		let values = await response.json();
+
+		console.log(values);
+
+		eur = values.eur;
+		usd = values.usd;
+		brs = values.brs;
 		
 		document.getElementById("domEUR").innerHTML = eur.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
 		document.getElementById("domUSD").innerHTML = usd.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
@@ -46,15 +46,14 @@ export default function FirstPost() {
 			return false;
 		}
 
-		// Un script PHP actualiza estos valores cada 5 horas
 		if (moneda == 2) {
-			cantidad *= 1.4;
+			cantidad *= usd;
 		}
 		if (moneda == 3) {
-			cantidad *= 1.5;
+			cantidad *= eur;
 		}
 		if (moneda == 4) {
-			cantidad *= 2;
+			cantidad *= brs;
 		}
 
 		// Chequeamos de vuelta si menor que 0. ¿Por que?
@@ -71,9 +70,9 @@ export default function FirstPost() {
 		var pvc = 0.0;
 		pvc = cantidad * pvcPorcentaje[pvcia];
 		document.getElementById("impuestlol").innerHTML = (pvcPorcentaje[pvcia] * 100).toFixed(1);
-		var porcentajeTotalImpuestos = 64 + (pvcPorcentaje[pvcia] * 100);
 		var totalImpuestos = servdig + afip + pais + pvc;
 		var total = cantidad + totalImpuestos;
+		
 
 		document.getElementById("total").innerHTML = total.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
 		document.getElementById("servdig").innerHTML = servdig.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
@@ -81,15 +80,10 @@ export default function FirstPost() {
 		document.getElementById("pais").innerHTML = pais.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
 		document.getElementById("pvc").innerHTML = pvc.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
 		document.getElementById("totalImpuestos").innerHTML = totalImpuestos.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-		// A ver...
-		document.getElementById("botonAver").setAttribute("value", "A ver " + AverGarray[getRandomInt(AverGarray.length)]);
 		return false;
 	}
 	function isNumeric(n) {
 		return !isNaN(parseFloat(n)) && isFinite(n);
-	}
-	function getRandomInt(max) {
-		return Math.floor(Math.random() * Math.floor(max));
 	}
 
 	return (
@@ -106,16 +100,9 @@ export default function FirstPost() {
 
 			<div className={utilStyles.headingContainer}>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Calculadora de pagos al exterior</p>
-				<p>
-					<small>
-						USD: <span className={utilStyles.money} id="domUSD"></span><br/>
-						EUR: <span className={utilStyles.money} id="domEUR"></span><br/>
-						BRS: <span className={utilStyles.money} id="domBRS"></span><br/>
-					</small>
-				</p>
 			</div>
 			<center>
-				<h3>Ingresa cuanto vas a cargar</h3>
+				<p className={utilStyles.headingLg}>Ingresa cuanto vas a cargar</p>
 			</center>
 			
 			<form method="POST">
@@ -140,7 +127,7 @@ export default function FirstPost() {
 							<option value={6}>Salta</option>
 							<option value={0}>Ninguna de las anteriores</option>
 						</select>
-						<input style={{marginTop: '20px'}} type="button" className={utilStyles.button} id="botonAver" onClick={calcular} value="A ver Gaston"></input>
+						<input style={{marginTop: '20px'}} type="button" className={utilStyles.button} onClick={calcular} value="Calcular"></input>
 					</Grid>
 				</Grid>
 			</form>
@@ -154,6 +141,22 @@ export default function FirstPost() {
 					<li>Percepción impuesto RG AFIP 4815 <span className={utilStyles.money}>AR$<span id="afip">0,00</span></span> <b>(35%)</b></li>
 					<li>Ley impuesto PAIS <span className={utilStyles.money}>AR$<span id="pais">0,00</span></span> <b>(8%)</b></li>
 					<li>Impuestos provinciales <span className={utilStyles.money}>AR$<span id="pvc">0,00</span></span> <b>(<span id="impuestlol">?</span>%)</b></li>
+				</ul>
+			</small>
+			<p className={utilStyles.headingLg}>Conversiónes actuales:</p>
+			<small>
+				<ul>
+					<li>USD: <span className={utilStyles.money} id="domUSD"></span></li>
+					<li>EUR: <span className={utilStyles.money} id="domEUR"></span></li>
+					<li>BRS: <span className={utilStyles.money} id="domBRS"></span></li>
+				</ul>
+			</small>
+			<p>Si te sirve la pagina y tenes ganas, podes colaborar:</p>
+			<small>
+				<ul>
+					<li><a href="https://www.cafecito.app/Markski" className={utilStyles.money}>Cafecito (Pesos Argentinos)</a></li>
+					<li><a href="https://steamcommunity.com/tradeoffer/new/?partner=100235343&token=OQmyhlHg" className={utilStyles.money}>Steam (Skins de CSGO o TF2)</a></li>
+					<li>Por CBU/CVU: Alias <span className={utilStyles.money}>markski</span></li>
 				</ul>
 			</small>
 		</Layout>

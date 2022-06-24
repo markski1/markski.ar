@@ -83,11 +83,21 @@
 	height: 60px;
 	border-radius: 5px;
 	border-style: solid;
-	border-width: 2px;
+	border-width: 4px;
 	border-color: darkgray;
+	background-color: lightgray;
 	font-size: 1.2rem;
 	padding-left: 1rem;
 	min-width: 15rem;
+}
+
+.input:hover {
+	background-color: white;
+}
+
+.input:focus {
+	background-color: white;
+	border-color: #00AA88;
 }
 
 .button {
