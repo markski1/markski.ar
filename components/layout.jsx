@@ -4,9 +4,10 @@ import Link from 'next/link';
 
 export const siteTitle = 'mrks.cf';
 
-export default function Layout({ children, home }) {
+export default function Layout({ children, home, func }) {
 	return (
-		<div className={styles.container}>
+		<body onLoad={func}>
+			<div className={styles.container}>
 			<Head>
 				<link rel="icon" href="/favicon.png" />
 				<meta
@@ -18,7 +19,6 @@ export default function Layout({ children, home }) {
 			<header style={{textAlign: 'center'}}>
 				<img
 					style={{marginLeft: 'auto', marginRight: 'auto'}}
-					priority
 					src="/images/profile.png"
 					width={144}
 					height={144}
@@ -41,5 +41,6 @@ export default function Layout({ children, home }) {
 				<p>Markski 2012-{(new Date()).getFullYear()}</p>
 			</div>
 		</div>
+		</body>
 	);
 }
