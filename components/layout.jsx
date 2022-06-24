@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
 import styles from './layout.module.css';
 import Link from 'next/link';
 
@@ -17,12 +16,12 @@ export default function Layout({ children, home }) {
 				<meta name="og:title" content={siteTitle} />
 			</Head>
 			<header style={{textAlign: 'center'}}>
-				<Image
+				<img
+					style={{marginLeft: 'auto', marginRight: 'auto'}}
 					priority
 					src="/images/profile.png"
-					className={styles.logo}
-					height={144}
 					width={144}
+					height={144}
 					/>
 			</header>
 			<main style={{width: "95%", margin: "-2rem auto 0rem"}}>
@@ -37,7 +36,7 @@ export default function Layout({ children, home }) {
 			)}
 			<div className={styles.footer}>
 				<a href="https://mynickname.com/markski">
-					<Image src="/images/nickname.gif" width= {350} height={19	} />
+					<img src="/images/nickname.gif" style={{marginLeft: 'auto', marginRight: 'auto'}} width={350} height={19} />
 				</a>
 				<p>Markski 2012-{(new Date()).getFullYear()}</p>
 			</div>
