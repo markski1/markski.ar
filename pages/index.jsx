@@ -24,9 +24,9 @@ let site = (
 	<>
 		<Head>
 			<title>Home - mrks.cf</title>
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/v4-font-face.min.css" />
-			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 		</Head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/v4-font-face.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 		<section className={utilStyles.headingMd}>
 			<p>I'm Markski. A computer science student and programmer from Argentina.</p>
 		</section><div className={utilStyles.contactCard}>
