@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout';
+import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Grid from '@mui/material/Grid';
 import Link from 'next/link';
@@ -23,7 +23,7 @@ function PrintEntry(props) {
 let site = (
 	<>
 		<Head>
-			<title>Home - {siteTitle}</title>
+			<title>Home - mrks.cf</title>
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/v4-font-face.min.css" />
 			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 		</Head>
@@ -69,7 +69,7 @@ let site = (
 		<hr />
 		<PrintEntry
 			title = 'Rosettes'
-			url = 'https://snep.mrks.cf/'
+			url = 'rosettes'
 			text = 'A simple, free to use, open source Discord bot.'
 		/>
 		<hr />

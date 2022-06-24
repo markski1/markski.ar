@@ -2,8 +2,6 @@ import Head from 'next/head';
 import styles from './layout.module.css';
 import Link from 'next/link';
 
-export const siteTitle = 'mrks.cf';
-
 export default function Layout({ children, home, func }) {
 	return (
 		<>
@@ -13,18 +11,22 @@ export default function Layout({ children, home, func }) {
 					name="description"
 					content="Desarrollador, estudiante de informatica. / Developer, Comp Sci student."
 				/>
-				<meta name="og:title" content={siteTitle} />
+				<meta name="og:title" content="mrks.cf" />
 			</Head>
 			<body onLoad={func}>
 				<div className={styles.container}>
 				
 				<header style={{textAlign: 'center'}}>
-					<img
-						style={{marginLeft: 'auto', marginRight: 'auto'}}
-						src="/images/profile.png"
-						width={144}
-						height={144}
-						/>
+					<Link href="/">
+						<a>
+							<img
+								style={{marginLeft: 'auto', marginRight: 'auto'}}
+								src="/images/profile.png"
+								width={144}
+								height={144}
+								/>
+						</a>
+					</Link>
 				</header>
 				<main style={{width: "95%", margin: "-2rem auto 0rem"}}>
 					{children}

@@ -1,16 +1,14 @@
 import * as React from 'react';
 import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout';
+import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
-import Grid from '@mui/material/Grid';
-import Script from 'next/script'
 
 export default function Page() {
 	return (
 		<>
 		<Layout>
 			<Head>
-				<title>Donate - {siteTitle}</title>
+				<title>Donate - mrks.cf</title>
 				<meta name="og:title" content="Donate - mrks.cf" />
 			</Head>
 
