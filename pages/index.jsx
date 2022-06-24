@@ -30,7 +30,7 @@ let site = (
 		<section className={utilStyles.headingMd}>
 			<p>I'm Markski. A computer science student and programmer from Argentina.</p>
 		</section><div className={utilStyles.contactCard}>
-			<Grid container spacing={0}>
+			<Grid container columnSpacing={7}>
 				<Grid item xs>
 					<section xs className={utilStyles.headingMd}>
 						Get in touch:
@@ -50,7 +50,7 @@ let site = (
 			<p className={utilStyles.headingLg}>Tools and Services</p>
 		</div>
 		<PrintEntry
-			title = '[Spanish] Calculadora de pagos a servicios del exterior'
+			title = '[Spanish] Calculadora de pagos al exterior'
 			url = 'calc'
 			text = 'Calcula el costo total con impuestos de pagos a Steam, Netflix, etc.'
 		/>
