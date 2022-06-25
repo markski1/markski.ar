@@ -24,12 +24,12 @@ export default function Page() {
 			</center>
 			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
 				<p>Los rangos tienen un numero indicando progreso:</p>
-				<img style={{padding: '10px'}} src="./images/csgo/rango.png"/>
+				<img width={387} height={107} src="./images/csgo/rango.png"/>
 				<p>Los textos de kill y granada son mas simples:</p>
-				<img style={{padding: '10px'}} src="./images/csgo/kill.png"/>
-				<img style={{padding: '10px'}} src="./images/csgo/granadas.png"/>
+				<img width={198} height={64} src="./images/csgo/kill.png"/>
+				<img width={284} height={107} src="./images/csgo/granadas.png"/>
 				<p>Los textos de daños dado y recibido son mas sencillos:</p>
-				<img style={{padding: '10px'}} src="./images/csgo/daño.png"/>
+				<img width={188} height={62} src="./images/csgo/daño.png"/>
 				<p>Ademas:</p>
 				<ul>
 					<li>Texto como "negativo/positivo" se cambia a "si/no"</li>

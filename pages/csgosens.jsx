@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout';
+import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Grid from '@mui/material/Grid';
 
@@ -41,7 +41,7 @@ export default function Page() {
 		return false;
 	}
 
-	function calcular() {
+	function calcular(e) {
 		var format = +(document.getElementById('format').value);
 		var dpi = +(document.getElementById('dpi').value);
 		var sens = +(document.getElementById('sens').value);
@@ -88,7 +88,7 @@ export default function Page() {
 				break;
 		}
 		document.getElementById("results").innerHTML = printResults;
-		return false;
+		return e.preventDefault();
 	}
 
 	function GetFormatMultiplier(format) {
@@ -112,7 +112,7 @@ export default function Page() {
 		<>
 		<Layout func={timerStuff}>
 			<Head>
-				<title>CSGO Sens and m-yaw converter - {siteTitle}</title>
+				<title>CSGO Sens and m-yaw converter - mrks.cf</title>
 				<meta
 					name="description"
 					content="Converts your CSGO settings across DPI, aspect ratios and yaw."
@@ -124,7 +124,7 @@ export default function Page() {
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>CSGO Sens and m-yaw converter</p>
 			</div>
 
-			<form method="POST">
+			<form onSubmit={calcular}>
 				<span>eDPI: <span id="edpi">Loading...</span></span>
 				<Grid container columnSpacing={2.5}>
 					<Grid item xs>
@@ -172,7 +172,7 @@ export default function Page() {
 						</div>
 
 						<span>&nbsp;</span>
-						<input type="button" className={utilStyles.button} onClick={calcular} value="Calculate" />
+						<input type="submit" className={utilStyles.button} value="Calculate" />
 					</Grid>
 				</Grid>
 			</form>

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Head from 'next/head';
-import Layout, { siteTitle } from '../components/layout';
+import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Grid from '@mui/material/Grid';
 
@@ -9,33 +9,25 @@ export default function Page() {
 	//               N/A  CABA  CHACO  CRDB  LPMP  RNGR  SALTA
 	pvcPorcentaje = [0.0, 0.02, 0.055, 0.03, 0.01, 0.05, 0.036];
 	
-	let eur = 0;
-	let usd = 0;
-	let brs = 0;
+	let values;
 
 	async function setearMonedas() {
 		let response = await fetch("https://snep.mrks.cf/monedas.php")
-		let values = await response.json();
-
-		console.log(values);
-
-		eur = values.eur;
-		usd = values.usd;
-		brs = values.brs;
+		values = await response.json();
 		
-		document.getElementById("domEUR").innerHTML = eur.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-		document.getElementById("domUSD").innerHTML = usd.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-		document.getElementById("domBRS").innerHTML = brs.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+		document.getElementById("domEUR").innerHTML = values.eur.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+		document.getElementById("domUSD").innerHTML = values.usd.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+		document.getElementById("domBRS").innerHTML = values.brs.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
 	}
 
-	function calcular() {
+	function calcular(e) {
 		var cantidad = document.getElementById('cantidad').value;
 		var moneda = document.getElementById('moneda').value;
 		var pvcia = document.getElementById('pvcia').value;
 
 		if (!isNumeric(cantidad)) {
 			alert("Valor no valido. Cualquier numero con el decimal marcado con punto o coma.");
-			return false;
+			return e.preventDefault();
 		}
 
 		cantidad = +(cantidad);
@@ -43,24 +35,24 @@ export default function Page() {
 
 		if (cantidad < 0) {
 			alert("Por favor ingresa una cantidad mayor a 0");
-			return false;
+			return e.preventDefault();
 		}
 
 		if (moneda == 2) {
-			cantidad *= usd;
+			cantidad *= values.usd;
 		}
 		if (moneda == 3) {
-			cantidad *= eur;
+			cantidad *= values.eur;
 		}
 		if (moneda == 4) {
-			cantidad *= brs;
+			cantidad *= values.brs;
 		}
 
 		// Chequeamos de vuelta si menor que 0. ¿Por que?
 		// Porque cuando una conversión no esta funcionando, aparece como -1, por lo tanto arriba se torna a negativo.
 		if (cantidad < 0) {
 			alert("Perdón, pero esa conversión actualmente no esta funcionando.");
-			return false;
+			return e.preventDefault();
 		}
 
 		var servdig = cantidad * 0.21;
@@ -80,7 +72,7 @@ export default function Page() {
 		document.getElementById("pais").innerHTML = pais.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
 		document.getElementById("pvc").innerHTML = pvc.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
 		document.getElementById("totalImpuestos").innerHTML = totalImpuestos.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-		return false;
+		return e.preventDefault();
 	}
 	function isNumeric(n) {
 		return !isNaN(parseFloat(n)) && isFinite(n);
@@ -90,7 +82,7 @@ export default function Page() {
 		<>
 		<Layout func={setearMonedas}>
 			<Head>
-				<title>Calculadora de pagos al exterior - {siteTitle}</title>
+				<title>Calculadora de pagos al exterior - mrks.cf</title>
 				<meta
 					name="description"
 					content="Calculadora impuestos de pagos a Steam, Netflix, Spotify, Epic Games, etc."
@@ -105,7 +97,7 @@ export default function Page() {
 				<p className={utilStyles.headingLg}>Ingresa cuanto vas a cargar</p>
 			</center>
 			
-			<form method="POST">
+			<form onSubmit={(calcular)}>
 				<Grid container spacing={2.5}>
 					<Grid item xs>
 						<select defaultValue={1} className={utilStyles.input} id="moneda">
@@ -127,7 +119,7 @@ export default function Page() {
 							<option value={6}>Salta</option>
 							<option value={0}>Ninguna de las anteriores</option>
 						</select>
-						<input style={{marginTop: '20px'}} type="button" className={utilStyles.button} onClick={calcular} value="Calcular" />
+						<input style={{marginTop: '20px'}} type="submit" className={utilStyles.button} value="Calcular" />
 					</Grid>
 				</Grid>
 			</form>
