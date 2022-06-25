@@ -42,10 +42,7 @@ export default function Layout({ children, home, func }) {
 					</div>
 				)}
 				<div className={styles.footer}>
-					<a href="https://mynickname.com/markski">
-						<img src="/images/nickname.gif" style={{marginLeft: 'auto', marginRight: 'auto'}} width={350} height={19} />
-					</a>
-					<p>Markski 2012-{(new Date()).getFullYear()}</p>
+					<span>Markski 2012-{(new Date()).getFullYear()}</span>
 				</div>
 				</div>
 			</body>

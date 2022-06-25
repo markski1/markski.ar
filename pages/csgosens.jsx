@@ -126,7 +126,7 @@ export default function Page() {
 
 			<form method="POST">
 				<span>eDPI: <span id="edpi">Loading...</span></span>
-				<Grid container spacing={2.5}>
+				<Grid container columnSpacing={2.5}>
 					<Grid item xs>
 						<span>Aspect Ratio</span>
 						<select defaultValue={1} onChange={timerStuff} className={utilStyles.input} id="format" title="Your current aspect ratio.">
@@ -137,18 +137,19 @@ export default function Page() {
 						</select>
 						<span>Sensitivity</span>
 						<input className={utilStyles.input} id="sens" onChange={timerStuff} defaultValue={1.5} type="number" pattern="[0-9]+([\.,][0-9]+)?" step="0.01" title="Your current sensitivity." />
+						<span>Mouse DPI</span>
+						<input className={utilStyles.input} id="dpi" onChange={timerStuff} defaultValue={800} type="number" pattern="[0-9]+([\.,][0-9]+)?" step="1" title="Your current DPI." />
+					</Grid>
+					<Grid item xs>
+						<span>m_yaw</span>
+						<input className={utilStyles.input} id="myaw" onChange={timerStuff} defaultValue={0.022} type="number" pattern="[0-9]+([\.,][0-9]+)?" step="0.001" title="Your current m_yaw." />
+
 						<span>Action</span>
 						<select defaultValue={1} className={utilStyles.input} id="selection">
 							<option value={1}>Translate sens to new format</option>
 							<option value={2}>Translate sens to new m_yaw</option>
 							<option value={3}>Translate sens to new DPI</option>
 						</select>
-					</Grid>
-					<Grid item xs>
-						<span>Mouse DPI</span>
-						<input className={utilStyles.input} id="dpi" onChange={timerStuff} defaultValue={800} type="number" pattern="[0-9]+([\.,][0-9]+)?" step="1" title="Your current DPI." />
-						<span>m_yaw</span>
-						<input className={utilStyles.input} id="myaw" onChange={timerStuff} defaultValue={0.022} type="number" pattern="[0-9]+([\.,][0-9]+)?" step="0.001" title="Your current m_yaw." />
 
 						<div id="selFormat">
 							<span>New format:</span>

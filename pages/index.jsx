@@ -104,7 +104,7 @@ let site = (
 		<hr />
 		<PrintEntry
 			title = 'Nintendo Graveyard'
-			url = 'https://old.mrks.cf/nintendont'
+			url = 'nintendont'
 			text = 'A list of services and events terminated by Nintendo.'
 		/>
 		<div className={utilStyles.headingContainer}>
