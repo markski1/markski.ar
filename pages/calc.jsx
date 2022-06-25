@@ -114,7 +114,7 @@ export default function Page() {
 							<option value={3}>EUR</option>
 							<option value={4}>BR$</option>
 						</select>
-						<input style={{marginTop: '20px'}} className={utilStyles.input} id="cantidad" placeholder="Cantidad $" type="number" pattern="[0-9]+([\.,][0-9]+)?" step="0.01" title="Numero con no mas de 2 decimales."></input>
+						<input style={{marginTop: '20px'}} className={utilStyles.input} id="cantidad" placeholder="Cantidad $" type="number" pattern="[0-9]+([\.,][0-9]+)?" step="0.01" title="Numero con no mas de 2 decimales." />
 					</Grid>
 					<Grid item xs>
 						<select defaultValue={0} className={utilStyles.input} id="pvcia">
@@ -127,7 +127,7 @@ export default function Page() {
 							<option value={6}>Salta</option>
 							<option value={0}>Ninguna de las anteriores</option>
 						</select>
-						<input style={{marginTop: '20px'}} type="button" className={utilStyles.button} onClick={calcular} value="Calcular"></input>
+						<input style={{marginTop: '20px'}} type="button" className={utilStyles.button} onClick={calcular} value="Calcular" />
 					</Grid>
 				</Grid>
 			</form>
