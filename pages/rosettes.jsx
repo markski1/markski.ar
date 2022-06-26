@@ -44,7 +44,7 @@ export default function Page() {
 			</center>
 			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
 				<p>Simply invite Rosettes into your server. <a style={{color: 'cyan'}} href="https://discord.com/api/oauth2/authorize?client_id=970176524110147605&permissions=3198016&scope=bot">Click here</a>.</p>
-				<p>To see a full list of commands, <a style={{color: 'cyan'}} href="https://snep.mrks.cf/rosettes/commands.html">click here</a>.</p>
+				<p>To see a full list of commands, <a style={{color: 'cyan'}} href="https://snep.markski.ar/rosettes/commands.html">click here</a>.</p>
 				<p>If you want to help cover server costs, and increase how much time I can put into improving it, you can <Link href="/donate"><a style={{color: 'cyan'}}>donate</a></Link>.</p>
 			</div>
 

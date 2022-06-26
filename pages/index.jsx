@@ -3,7 +3,6 @@ import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Grid from '@mui/material/Grid';
 import Link from 'next/link';
-import { minWidth } from '@mui/system';
 
 function PrintEntry(props) {
 	return (
@@ -24,7 +23,7 @@ function PrintEntry(props) {
 let site = (
 	<>
 		<Head>
-			<title>Home - mrks.cf</title>
+			<title>Home - markski.ar</title>
 		</Head>
 		<section className={utilStyles.headingMd}>
 			<p>I'm Markski. A computer science student and programmer from Argentina.</p>
@@ -80,7 +79,7 @@ let site = (
 		<hr />
 		<PrintEntry
 			title = '[Spanish] Prueba de Punteria'
-			url = 'https://old.mrks.cf/punteria'
+			url = 'https://old.markski.ar/punteria'
 			text = 'Una simple prueba de punteria y velocidad con el puntero.'
 		/>
 		<hr />
@@ -112,13 +111,13 @@ let site = (
 		</div>
 		<PrintEntry
 			title = 'SA-MP Weapon statistics'
-			url = 'https://old.mrks.cf/SA-MP_Weapons'
+			url = 'https://old.markski.ar/SA-MP_Weapons'
 			text = 'Comprehensive table of statistics for most weapons available in SA-MP.'
 		/>
 		<hr />
 		<PrintEntry
 			title = 'SA-MP Explosion data'
-			url = 'https://old.mrks.cf/SA-MP_Explosions'
+			url = 'https://old.markski.ar/SA-MP_Explosions'
 			text = 'Comprehensive-ish table of evidence-based qualifications for all the explosions you can use in SA-MP.'
 		/>
 		<div className={utilStyles.headingContainer}>

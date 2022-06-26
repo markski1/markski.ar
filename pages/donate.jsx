@@ -8,8 +8,8 @@ export default function Page() {
 		<>
 		<Layout>
 			<Head>
-				<title>Donate - mrks.cf</title>
-				<meta name="og:title" content="Donate - mrks.cf" />
+				<title>Donate - markski.ar</title>
+				<meta name="og:title" content="Donate - markski.ar" />
 			</Head>
 
 			<div className={utilStyles.headingContainer}>

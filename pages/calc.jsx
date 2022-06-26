@@ -12,7 +12,7 @@ export default function Page() {
 	let values;
 
 	async function setearMonedas() {
-		let response = await fetch("https://snep.mrks.cf/monedas.php")
+		let response = await fetch("https://snep.markski.ar/monedas.php");
 		values = await response.json();
 		
 		document.getElementById("domEUR").innerHTML = values.eur.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
@@ -82,12 +82,12 @@ export default function Page() {
 		<>
 		<Layout func={setearMonedas}>
 			<Head>
-				<title>Calculadora de pagos al exterior - mrks.cf</title>
+				<title>Calculadora de pagos al exterior - markski.ar</title>
 				<meta
 					name="description"
 					content="Calculadora impuestos de pagos a Steam, Netflix, Spotify, Epic Games, etc."
 				/>
-				<meta name="og:title" content="Calculadora de pago a servicios del exterior - mrks.cf" />
+				<meta name="og:title" content="Calculadora de pago a servicios del exterior - markski.ar" />
 			</Head>
 
 			<div className={utilStyles.headingContainer}>

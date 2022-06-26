@@ -112,12 +112,12 @@ export default function Page() {
 		<>
 		<Layout func={timerStuff}>
 			<Head>
-				<title>CSGO Sens and m-yaw converter - mrks.cf</title>
+				<title>CSGO Sens and m-yaw converter - markski.ar</title>
 				<meta
 					name="description"
 					content="Converts your CSGO settings across DPI, aspect ratios and yaw."
 				/>
-				<meta name="og:title" content="CSGO Sens and m-yaw converter - mrks.cf" />
+				<meta name="og:title" content="CSGO Sens and m-yaw converter - markski.ar" />
 			</Head>
 
 			<div className={utilStyles.headingContainer}>

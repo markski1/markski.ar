@@ -8,12 +8,12 @@ export default function Page() {
 		<>
 		<Layout>
 			<Head>
-				<title>Chat simple para CSGO - mrks.cf</title>
+				<title>Chat simple para CSGO - markski.ar</title>
 				<meta
 					name="description"
 					content="Modificación para CSGO que simplifica los elementos del chat."
 				/>
-				<meta name="og:title" content="Chat simple para CSGO - mrks.cf" />
+				<meta name="og:title" content="Chat simple para CSGO - markski.ar" />
 			</Head>
 
 			<div className={utilStyles.headingContainer}>
@@ -42,7 +42,7 @@ export default function Page() {
 			</center>
 			<div className={utilStyles.headingContainer} style={{padding: '10px'}}>
 				<ul style={{listStyleType: 'square'}}>
-					<li><p>Descargar el mod haciendo <a href="https://snep.mrks.cf/WwjK.7z">click acá</a>.</p></li>
+					<li><p>Descargar el mod haciendo <a href="https://snep.markski.ar/WwjK.7z">click acá</a>.</p></li>
 					<li><p>Copiar csgo_simplespanish.txt dentro del comprimido, y pegarlo en la carpeta:<br/>Steam <b>&gt;</b> steamapps <b>&gt;</b> Counter-Strike Global Offensive <b>&gt;</b> csgo <b>&gt;</b> resource</p></li>
 					<li><p>En Steam, click derecho en CSGO, propiedades, y en opciones de lanzamiento:<br/><b>'-novid -nojoy -language spanishsimple'</b> sin comillas.</p></li>
 				</ul>

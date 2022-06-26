@@ -31,8 +31,8 @@ export default function Page() {
 		<>
 		<Layout>
 			<Head>
-				<title>Nintendo Graveyard - mrks.cf</title>
-				<meta name="og:title" content="Nintendo Graveyard - mrks.cf" />
+				<title>Nintendo Graveyard - markski.ar</title>
+				<meta name="og:title" content="Nintendo Graveyard - markski.ar" />
 			</Head>
 
 			<div className={utilStyles.headingContainer}>
