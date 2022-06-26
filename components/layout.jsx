@@ -12,7 +12,7 @@ export default function Layout({ children, home, func }) {
 					name="description"
 					content="Desarrollador, estudiante de informatica. / Developer, Comp Sci student."
 				/>
-				<meta name="og:title" content="mrks.cf" />
+				<meta name="og:title" content="markski.ar" />
 			</Head>
 			<body onLoad={func}>
 				<div className={styles.container}>
