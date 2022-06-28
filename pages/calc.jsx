@@ -82,12 +82,13 @@ export default function Page() {
 		<>
 		<Layout func={setearMonedas}>
 			<Head>
-				<title>Calculadora de pagos al exterior - markski.ar</title>
+				<title>Calculadora de pagos al exterior Argentina - markski.ar</title>
 				<meta
 					name="description"
-					content="Calculadora impuestos de pagos a Steam, Netflix, Spotify, Epic Games, etc."
+					content="Calcula los impuestos de pagos a Steam, Netflix, Spotify, Epic Games, etc."
 				/>
-				<meta name="og:title" content="Calculadora de pago a servicios del exterior - markski.ar" />
+				<meta property="og:title" content="Calculadora de pagos al exterior Argentina" />
+				<meta property="og:description" content="Calcula los impuestos de pagos al exterior, tales como Steam, Netflix, Spotify, Epic Games, etc." />
 			</Head>
 
 			<div className={utilStyles.headingContainer}>

@@ -72,21 +72,15 @@ let site = (
 			<p className={utilStyles.headingLg}>Tools and Services</p>
 		</div>
 		<PrintEntry
-			title = '[Spanish] Calculadora de pagos al exterior'
+			title = '[Spanish] Argentine exterior tax calculator'
 			url = 'calc'
-			text = 'Calcula el costo total con impuestos de pagos a Steam, Netflix, etc.'
+			text = 'Calculates costs of payments to Steam, Netflix, etc.'
 		/>
 		<hr />
 		<PrintEntry
-			title = '[Spanish] Prueba de Punteria'
-			url = 'https://old.markski.ar/punteria'
-			text = 'Una simple prueba de punteria y velocidad con el puntero.'
-		/>
-		<hr />
-		<PrintEntry
-			title = '[Spanish] Simplificador de texto para CSGO'
+			title = '[Spanish] CS:GO Text simplifier'
 			url = 'simplecsgo'
-			text = 'Simplifica los textos del chat en CSGO.'
+			text = 'Simplifies the in-game chat texts in CS:GO.'
 		/>
 		<hr />
 		<PrintEntry
@@ -96,9 +90,9 @@ let site = (
 		/>
 		<hr />
 		<PrintEntry
-			title = 'CSGO Sensitivity Converter'
+			title = 'CS:GO Sensitivity Converter'
 			url = 'csgosens'
-			text = "A tool which allows to keep your perceived sensitivity if you\'re changing certain parameters in CSGO."
+			text = "A tool which allows to keep your perceived sensitivity if you\'re changing certain parameters in CS:GO."
 		/>
 		<hr />
 		<PrintEntry
