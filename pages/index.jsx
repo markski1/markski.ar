@@ -141,12 +141,6 @@ export default function Home() {
 				url = 'https://github.com/markski1/SAMP-3dspeed'
 				text = 'An easy to implement 3D Speedometer for your SA-MP server which exists in the game world itself.'
 			/>
-			<hr />
-			<PrintEntry
-				title = 'surf-callbacks'
-				url = 'https://github.com/markski1/samp-surf-callbacks'
-				text = 'Provides callbacks for certain scenarios where a player surfs or stops surfing a vehicle.'
-			/>
 			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
 				<p>Everything in this website is free to use.<br/>
 				If you find something useful, please consider supporting my work with a <Link href="/donate"><a style={{color: 'cyan'}}>donation</a></Link>.</p>
