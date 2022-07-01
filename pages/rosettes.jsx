@@ -25,7 +25,7 @@ export default function Page() {
 			</center>
 			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
 				<p>
-					Rosettes is a simple, free-to-use Discord bot.
+					Rosettes is a simple, free and open source Discord bot.
 				</p>
 				<p>
 					It's functions include, but are not limited to:
@@ -36,16 +36,19 @@ export default function Page() {
 					<li>Checking the status of certain game servers.</li>
 					<li>Can display information about a given user or guild.</li>
 					<li>Can extract video files off twitter links.</li>
+					<li>Reminder alarms.</li>
 				</ul>
+				<p>Most important of all, Rosettes is in active development, and always accepting feedback for new features.</p>
 			</div>
 
 			<center>
 				<p className={utilStyles.headingLg}>Using Rosettes</p>
 			</center>
 			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
-				<p>Simply invite Rosettes into your server. <a style={{color: 'cyan'}} href="https://discord.com/api/oauth2/authorize?client_id=970176524110147605&permissions=3198016&scope=bot">Click here</a>.</p>
+				<p>Simply <a style={{color: 'cyan'}} href="https://discord.com/api/oauth2/authorize?client_id=970176524110147605&permissions=3198016&scope=bot">invite Rosettes</a> into your server, and you're done.<br/>
+				Optionally, you can toggle a few settings from the <a style={{color: 'cyan'}} href="https://snep.markski.ar/rosettes">web panel</a>.</p>
 				<p>To see a full list of commands, <a style={{color: 'cyan'}} href="https://snep.markski.ar/rosettes/commands.html">click here</a>.</p>
-				<p>If you want to help cover server costs, and increase how much time I can put into improving it, you can <Link href="/donate"><a style={{color: 'cyan'}}>donate</a></Link>.</p>
+				<p>If you wish to support hosting and development of Rosettes, you can <Link href="/donate"><a style={{color: 'cyan'}}>donate</a></Link>.</p>
 			</div>
 
 			<center>

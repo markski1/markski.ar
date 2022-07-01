@@ -73,21 +73,21 @@ export default function Home() {
 				<p className={utilStyles.headingLg}>Tools and Services</p>
 			</div>
 			<PrintEntry
-				title = '[Spanish] Argentine exterior tax calculator'
+				title = 'Argentine exterior tax calculator [spanish only]'
 				url = 'calc'
 				text = 'Calculates costs of payments to Steam, Netflix, etc.'
 			/>
 			<hr />
 			<PrintEntry
-				title = '[Spanish] CS:GO Text simplifier'
-				url = 'simplecsgo'
-				text = 'Simplifies the in-game chat texts in CS:GO.'
+				title = 'Rosettes'
+				url = 'rosettes'
+				text = 'A simple, free, open source Discord bot.'
 			/>
 			<hr />
 			<PrintEntry
-				title = 'Rosettes'
-				url = 'rosettes'
-				text = 'A simple, free to use, open source Discord bot.'
+				title = 'CS:GO Text simplifier [spanish only]'
+				url = 'simplecsgo'
+				text = 'Simplifies the in-game chat texts in CS:GO.'
 			/>
 			<hr />
 			<PrintEntry

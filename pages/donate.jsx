@@ -26,7 +26,6 @@ export default function Page() {
 				<li>If you live in Argentina, you can use <a href="https://www.cafecito.app/Markski" className={utilStyles.money}>Cafecito</a>, or transfer to CBU alias <span className={utilStyles.money}>markski</span></li>
 				<li>If you live elsewhere in the world, you can use <a href="https://www.ko-fi.com/Markski" className={utilStyles.money}>Ko-Fi</a>.</li>
 			</ul>
-			<p><small>Alternatively, you can also donate with <a href="https://steamcommunity.com/tradeoffer/new/?partner=100235343&token=OQmyhlHg" className={utilStyles.money}>CSGO Skins</a>. No transfer fees, no sanctions or limitations, and I can turn them into money easily.</small></p>
 			<p>If you decide to donate, whichever way you choose, I will be extremely thankful!</p>
 		</Layout>
 		</>
