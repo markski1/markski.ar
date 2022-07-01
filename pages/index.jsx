@@ -93,7 +93,7 @@ export default function Home() {
 			<PrintEntry
 				title = 'CS:GO Sensitivity Converter'
 				url = 'csgosens'
-				text = "A tool which allows to keep your perceived sensitivity if you\'re changing certain parameters in CS:GO."
+				text = "A tool to keep your perceived sensitivity if you're changing parameters in CS:GO."
 			/>
 			<hr />
 			<PrintEntry
