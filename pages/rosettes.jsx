@@ -31,12 +31,12 @@ export default function Page() {
 					It's functions include, but are not limited to:
 				</p>
 				<ul>
+					<li>Role management (Assign role on join, AutoRoles)</li>
 					<li>Dice-rolling and coin-flipping commands.</li>
 					<li>Plays music off Youtube, Yandex, Soundcloud and Bandcamp.</li>
-					<li>Checking the status of certain game servers.</li>
-					<li>Can display information about a given user or guild.</li>
-					<li>Can extract video files off twitter links.</li>
-					<li>Reminder alarms.</li>
+					<li>Displays information about a given user or guild.</li>
+					<li>Extracts video files off twitter links.</li>
+					<li>Many miscelaneous functions (urban dictionary, reminder alarms, emoji exporter, etc)</li>
 				</ul>
 				<p>Most important of all, Rosettes is in active development, and always accepting feedback for new features.</p>
 			</div>
@@ -54,7 +54,8 @@ export default function Page() {
 				<p><b>3. Done!</b></p>
 				<p>
 					<small>To see a full list of commands, <a style={{color: 'cyan'}} href="https://snep.markski.ar/rosettes/commands.html">click here</a>.<br/>
-				If you wish to support hosting and development of Rosettes, you can <Link href="/donate"><a style={{color: 'cyan'}}>donate</a></Link>.</small></p>
+					If you wish to support hosting and development of Rosettes, you can <Link href="/donate"><a style={{color: 'cyan'}}>donate</a></Link>.</small>
+				</p>
 			</div>
 
 			<center>
