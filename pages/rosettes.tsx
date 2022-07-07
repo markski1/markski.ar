@@ -20,9 +20,9 @@ export default function Page() {
 			<div className={utilStyles.headingContainer}>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Rosettes, The Simple Discord Bot</p>
 			</div>
-			<center>
+			<div className={utilStyles.centerContainer}>
 				<p className={utilStyles.headingLg}>About Rosettes</p>
-			</center>
+			</div>
 			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
 				<p>
 					Rosettes is a simple, free and open source Discord bot.
@@ -41,9 +41,9 @@ export default function Page() {
 				<p>Most important of all, Rosettes is in active development, and always accepting feedback for new features.</p>
 			</div>
 
-			<center>
+			<div className={utilStyles.centerContainer}>
 				<p className={utilStyles.headingLg}>Using Rosettes</p>
-			</center>
+			</div>
 			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
 				<p>To get Rosettes in your server is very straightforwards.</p>
 				<p><b>1. <a style={{color: 'cyan'}} href="https://discord.com/api/oauth2/authorize?client_id=970176524110147605&permissions=275149548624&scope=bot">Invite Rosettes</a> into your server.</b><br/>
@@ -58,9 +58,9 @@ export default function Page() {
 				</p>
 			</div>
 
-			<center>
+			<div className={utilStyles.centerContainer}>
 				<p className={utilStyles.headingLg}>Questions and Answers</p>
-			</center>
+			</div>
 			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
 				<p>
 					<b>
@@ -92,7 +92,7 @@ export default function Page() {
 					</b>
 				</p>
 				<p>
-					It is available in it's <a style={{color: 'cyan'}} class="link" href="https://github.com/markski1/RosettesDiscord">GitHub repository</a>.
+					It is available in it's <a style={{color: 'cyan'}} data-class="link" href="https://github.com/markski1/RosettesDiscord">GitHub repository</a>.
 				</p>
 				<p>
 					<b>

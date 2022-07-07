@@ -21,49 +21,50 @@ export default function Page() {
 	}
 
 	function calcular(e) {
-		var cantidad = document.getElementById('cantidad').value;
-		var moneda = document.getElementById('moneda').value;
-		var pvcia = document.getElementById('pvcia').value;
+		var cantidad = (document.getElementById('cantidad') as HTMLInputElement).value;
+		var moneda = (document.getElementById('moneda') as HTMLInputElement).value;
+		var pvcia = (document.getElementById('pvcia') as HTMLInputElement).value;
 
 		if (!isNumeric(cantidad)) {
 			alert("Valor no valido. Cualquier numero con el decimal marcado con punto o coma.");
 			return e.preventDefault();
 		}
 
-		cantidad = +(cantidad);
-		pvcia = +(pvcia);
+		var cantidadNum = +(cantidad);
+		var pvciaNum = +(pvcia);
+		var monedaNum = +(moneda);
 
-		if (cantidad < 0) {
+		if (cantidadNum < 0) {
 			alert("Por favor ingresa una cantidad mayor a 0");
 			return e.preventDefault();
 		}
 
-		if (moneda == 2) {
-			cantidad *= values.usd;
+		if (monedaNum == 2) {
+			cantidadNum *= values.usd;
 		}
-		if (moneda == 3) {
-			cantidad *= values.eur;
+		if (monedaNum == 3) {
+			cantidadNum *= values.eur;
 		}
-		if (moneda == 4) {
-			cantidad *= values.brs;
+		if (monedaNum == 4) {
+			cantidadNum *= values.brs;
 		}
 
 		// Chequeamos de vuelta si menor que 0. ¿Por que?
 		// Porque cuando una conversión no esta funcionando, aparece como -1, por lo tanto arriba se torna a negativo.
-		if (cantidad < 0) {
+		if (cantidadNum < 0) {
 			alert("Perdón, pero esa conversión actualmente no esta funcionando.");
 			return e.preventDefault();
 		}
 
-		var servdig = cantidad * 0.21;
-		servdig = cantidad * 0.21;
-		var afip = cantidad * 0.35;
-		var pais = cantidad * 0.08;
+		var servdig = cantidadNum * 0.21;
+		servdig = cantidadNum * 0.21;
+		var afip = cantidadNum * 0.35;
+		var pais = cantidadNum * 0.08;
 		var pvc = 0.0;
-		pvc = cantidad * pvcPorcentaje[pvcia];
+		pvc = cantidadNum * pvcPorcentaje[pvcia];
 		document.getElementById("impuestlol").innerHTML = (pvcPorcentaje[pvcia] * 100).toFixed(1);
 		var totalImpuestos = servdig + afip + pais + pvc;
-		var total = cantidad + totalImpuestos;
+		var total = cantidadNum + totalImpuestos;
 		
 
 		document.getElementById("total").innerHTML = total.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
@@ -94,9 +95,9 @@ export default function Page() {
 			<div className={utilStyles.headingContainer}>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Calculadora de pagos al exterior</p>
 			</div>
-			<center>
+			<div className={utilStyles.centerContainer}>
 				<p className={utilStyles.headingLg}>Ingresa cuanto vas a cargar</p>
-			</center>
+			</div>
 			
 			<form onSubmit={(calcular)}>
 				<Grid container spacing={2.5}>
@@ -124,9 +125,9 @@ export default function Page() {
 					</Grid>
 				</Grid>
 			</form>
-			<center>
+			<div className={utilStyles.centerContainer}>
 				<p className={utilStyles.heading2Xl}>AR$<span id="total">0,00</span></p>
-			</center>
+			</div>
 			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
 				<p className={utilStyles.headingLg}>En impuestos: <span className={utilStyles.money}>AR$<span id="totalImpuestos"></span></span></p>
 				<small>

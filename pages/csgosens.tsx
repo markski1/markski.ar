@@ -9,15 +9,15 @@ export default function Page() {
 	var showingSetting = 1;
 
 	function timerStuff() {
-		var dpi = +(document.getElementById('dpi').value);
-		var sens = +(document.getElementById('sens').value);
-		var myaw = +(document.getElementById('myaw').value);
+		var dpi = +((document.getElementById('dpi') as HTMLInputElement).value);
+		var sens = +((document.getElementById('sens') as HTMLInputElement).value);
+		var myaw = +((document.getElementById('myaw') as HTMLInputElement).value);
 		if (!(dpi) || !(sens) || !(myaw)) return false;
 		var edpi = dpi * sens;
 		var edpi = edpi * (myaw / 0.022);
 		document.getElementById("edpi").innerHTML = edpi.toFixed(2);
 
-		var selection = +(document.getElementById('selection').value);
+		var selection = +((document.getElementById('selection') as HTMLInputElement).value);
 		if (selection != showingSetting) {
 			switch (selection) {
 				case 1: // format
@@ -42,11 +42,11 @@ export default function Page() {
 	}
 
 	function calcular(e) {
-		var format = +(document.getElementById('format').value);
-		var dpi = +(document.getElementById('dpi').value);
-		var sens = +(document.getElementById('sens').value);
-		var myaw = +(document.getElementById('myaw').value);
-		var selection = +(document.getElementById('selection').value);
+		var format = +((document.getElementById('format') as HTMLInputElement).value);
+		var dpi = +((document.getElementById('dpi') as HTMLInputElement).value);
+		var sens = +((document.getElementById('sens') as HTMLInputElement).value);
+		var myaw = +((document.getElementById('myaw') as HTMLInputElement).value);
+		var selection = +((document.getElementById('selection') as HTMLInputElement).value);
 
 		var printResults = "";
 
@@ -54,7 +54,7 @@ export default function Page() {
 
 		switch (selection) {
 			case 1: // format
-				newFormat = +(document.getElementById('newFormat').value);
+				newFormat = +((document.getElementById('newFormat') as HTMLInputElement).value);
 				if (format == newFormat) {
 					printResults = "<p>You've chosen the same format in both cases.</p>";
 					break;
@@ -73,7 +73,7 @@ export default function Page() {
 				printResults += ".</p>";
 				break;
 			case 2: // m_yaw
-				newMyaw = +(document.getElementById('newMyaw').value);
+				newMyaw = +((document.getElementById('newMyaw') as HTMLInputElement).value);
 				console.log(sens);
 				console.log(myaw);
 				console.log(newMyaw);
@@ -81,7 +81,7 @@ export default function Page() {
 				printResults = "<p>Change your sensitivity to " + sens.toFixed(2) + "</p>";
 				break;
 			case 3: // dpi
-				newDpi = +(document.getElementById('newDpi').value);
+				newDpi = +((document.getElementById('newDpi') as HTMLInputElement).value);
 				var edpi = sens * dpi;
 				var newSens = edpi / newDpi;
 				printResults = "<p>Change your sensitivity to " + newSens.toFixed(2) + "</p>";

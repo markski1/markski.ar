@@ -124,3 +124,9 @@
 .money {
 	color: #00AA88;
 }
+
+.centerContainer {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}

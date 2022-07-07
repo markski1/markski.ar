@@ -31,7 +31,7 @@ export default function Home() {
 			</section><div className={utilStyles.contactCard}>
 				<Grid container columnSpacing={7}>
 					<Grid item xs>
-						<section xs={6} className={utilStyles.headingMd} style={{paddingBottom: '7px'}}>
+						<section data-xs={6} className={utilStyles.headingMd} style={{paddingBottom: '7px'}}>
 							Get in touch:
 						</section>
 						<span>

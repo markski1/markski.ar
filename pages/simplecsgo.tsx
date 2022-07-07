@@ -19,9 +19,9 @@ export default function Page() {
 			<div className={utilStyles.headingContainer}>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Chat simple para CSGO</p>
 			</div>
-			<center>
+			<div className={utilStyles.centerContainer}>
 				<p className={utilStyles.headingLg}>Como se ve</p>
-			</center>
+			</div>
 			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
 				<p>Los rangos tienen un numero indicando progreso:</p>
 				<img width={387} height={107} src="./images/csgo/rango.png"/>
@@ -37,9 +37,9 @@ export default function Page() {
 					<li>Otras cosas xd</li>
 				</ul>
 			</div>
-			<center>
+			<div className={utilStyles.centerContainer}>
 				<p className={utilStyles.headingLg}>Como instalarlo</p>
-			</center>
+			</div>
 			<div className={utilStyles.headingContainer} style={{padding: '10px'}}>
 				<ul style={{listStyleType: 'square'}}>
 					<li><p>Descargar el mod haciendo <a href="https://snep.markski.ar/WwjK.7z">click acá</a>.</p></li>
@@ -47,12 +47,12 @@ export default function Page() {
 					<li><p>En Steam, click derecho en CSGO, propiedades, y en opciones de lanzamiento:<br/><b>'-novid -nojoy -language spanishsimple'</b> sin comillas.</p></li>
 				</ul>
 			</div>
-			<center>
+			<div className={utilStyles.centerContainer}>
 				<p className={utilStyles.headingLg}>Aviso y creditos</p>
-			</center>
+			</div>
 			<div className={utilStyles.headingContainer} style={{padding: '10px 40px'}}>
 				<p>Este mod se instala como si fuera un lenguaje alternativo. No hace nada que CSGO no permita. No va a causar bans de VAC, Faceit ni GC.</p>
-				<p>Este mod es una versión en español del mod disponible haciendo <a class="link" href="https://gamebanana.com/mods/38438">click acá</a></p>
+				<p>Este mod es una versión en español del mod disponible haciendo <a data-class="link" href="https://gamebanana.com/mods/38438">click acá</a></p>
 			</div>
 		</Layout>
 		</>
