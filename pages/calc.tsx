@@ -152,12 +152,11 @@ export default function Page() {
 				</small>
 			</div>
 			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
-				<p>Si te sirve la pagina y tenes ganas, podes colaborar:</p>
+				<p>Si te sirve la herramienta y tenes ganas, podes colaborar:</p>
 				<small>
 					<ul>
-						<li><a href="https://www.cafecito.app/Markski" className={utilStyles.money}>Cafecito (Pesos Argentinos)</a></li>
-						<li><a href="https://steamcommunity.com/tradeoffer/new/?partner=100235343&token=OQmyhlHg" className={utilStyles.money}>Steam (Skins de CSGO o TF2)</a></li>
-						<li>Por CBU/CVU: Alias <span className={utilStyles.money}>markski</span></li>
+						<li>Por Mercado Pago: A traves de <a href="https://www.cafecito.app/Markski" className={utilStyles.money}>Cafecito</a></li>
+						<li>Por CBU/CVU: <span className={utilStyles.money}>0000003100011560441592</span> | Alias: <span className={utilStyles.money}>markski</span></li>
 					</ul>
 				</small>
 			</div>
