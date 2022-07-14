@@ -6,8 +6,8 @@ import Grid from '@mui/material/Grid';
 
 export default function Page() {
 	let pvcPorcentaje;
-	//               N/A  CABA  CHACO  CRDB  LPMP  RNGR  SALTA
-	pvcPorcentaje = [0.0, 0.02, 0.055, 0.03, 0.01, 0.05, 0.036];
+	//               N/A  CABA  CHACO  CRDB  LPMP  NEUQ  RNGR  SALTA
+	pvcPorcentaje = [0.0, 0.02, 0.055, 0.03, 0.01, 0.03, 0.05, 0.036];
 	
 	let values;
 
@@ -58,7 +58,7 @@ export default function Page() {
 
 		var servdig = cantidadNum * 0.21;
 		servdig = cantidadNum * 0.21;
-		var afip = cantidadNum * 0.35;
+		var afip = cantidadNum * 0.45;
 		var pais = cantidadNum * 0.08;
 		var pvc = 0.0;
 		pvc = cantidadNum * pvcPorcentaje[pvcia];
@@ -112,13 +112,14 @@ export default function Page() {
 					</Grid>
 					<Grid item xs>
 						<select defaultValue={0} className={utilStyles.input} id="pvcia">
-							<option  value={0}>Provincia</option>
+							<option value={0}>Provincia</option>
 							<option value={1}>Buenos Aires o CABA</option>
 							<option value={2}>Chaco</option>
 							<option value={3}>Cordoba</option>
 							<option value={4}>La Pampa</option>
-							<option value={5}>Rio Negro</option>
-							<option value={6}>Salta</option>
+							<option value={5}>Neuquén</option>
+							<option value={6}>Rio Negro</option>
+							<option value={7}>Salta</option>
 							<option value={0}>Ninguna de las anteriores</option>
 						</select>
 						<input style={{marginTop: '20px'}} type="submit" className={utilStyles.button} value="Calcular" />
@@ -133,10 +134,11 @@ export default function Page() {
 				<small>
 					<ul>
 						<li>IVA Servicios Digitales <span className={utilStyles.money}>AR$<span id="servdig">0,00</span></span> <b>(21%)</b></li>
-						<li>Percepción impuesto RG AFIP 4815 <span className={utilStyles.money}>AR$<span id="afip">0,00</span></span> <b>(35%)</b></li>
+						<li>Percepción impuesto RG AFIP 4815 <span className={utilStyles.money}>AR$<span id="afip">0,00</span></span> <b>(45%)</b></li>
 						<li>Ley impuesto PAIS <span className={utilStyles.money}>AR$<span id="pais">0,00</span></span> <b>(8%)</b></li>
 						<li>Impuestos provinciales <span className={utilStyles.money}>AR$<span id="pvc">0,00</span></span> <b>(<span id="impuestlol">?</span>%)</b></li>
 					</ul>
+					<p>Para mas información, leér <a className={utilStyles.money} href="https://www.mercadopago.com.ar/ayuda/pagos-en-moneda-extranjera_4063">este documento</a>. (No aplica solo a mercadopago)</p>
 				</small>
 			</div>
 			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
