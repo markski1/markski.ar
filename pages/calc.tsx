@@ -5,66 +5,62 @@ import utilStyles from '../styles/utils.module.css';
 import Grid from '@mui/material/Grid';
 
 export default function Page() {
-	let pvcPorcentaje;
+	let pvcPorcentaje: number[];
 	//               N/A  CABA  CHACO  CRDB  LPMP  NEUQ  RNGR  SALTA
 	pvcPorcentaje = [0.0, 0.02, 0.055, 0.03, 0.01, 0.03, 0.05, 0.036];
 	
-	let values;
+	let values: { eur: number; usd: number; brs: number; };
 
 	async function setearMonedas() {
 		let response = await fetch("https://snep.markski.ar/monedas.php");
 		values = await response.json();
-		
+
 		document.getElementById("domEUR").innerHTML = values.eur.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
 		document.getElementById("domUSD").innerHTML = values.usd.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
 		document.getElementById("domBRS").innerHTML = values.brs.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
 	}
 
-	function calcular(e) {
-		var cantidad = (document.getElementById('cantidad') as HTMLInputElement).value;
-		var moneda = (document.getElementById('moneda') as HTMLInputElement).value;
-		var pvcia = (document.getElementById('pvcia') as HTMLInputElement).value;
+	function calcular(e: { preventDefault: () => any; }) {
+		var cantidad = +((document.getElementById('cantidad') as HTMLInputElement).value);
+		var moneda = +((document.getElementById('moneda') as HTMLInputElement).value);
+		var pvcia = +((document.getElementById('pvcia') as HTMLInputElement).value);
 
 		if (!isNumeric(cantidad)) {
 			alert("Valor no valido. Cualquier numero con el decimal marcado con punto o coma.");
 			return e.preventDefault();
 		}
 
-		var cantidadNum = +(cantidad);
-		var pvciaNum = +(pvcia);
-		var monedaNum = +(moneda);
-
-		if (cantidadNum < 0) {
+		if (cantidad < 0) {
 			alert("Por favor ingresa una cantidad mayor a 0");
 			return e.preventDefault();
 		}
 
-		if (monedaNum == 2) {
-			cantidadNum *= values.usd;
+		if (moneda == 2) {
+			cantidad *= values.usd;
 		}
-		if (monedaNum == 3) {
-			cantidadNum *= values.eur;
+		if (moneda == 3) {
+			cantidad *= values.eur;
 		}
-		if (monedaNum == 4) {
-			cantidadNum *= values.brs;
+		if (moneda == 4) {
+			cantidad *= values.brs;
 		}
 
 		// Chequeamos de vuelta si menor que 0. ¿Por que?
 		// Porque cuando una conversión no esta funcionando, aparece como -1, por lo tanto arriba se torna a negativo.
-		if (cantidadNum < 0) {
+		if (cantidad < 0) {
 			alert("Perdón, pero esa conversión actualmente no esta funcionando.");
 			return e.preventDefault();
 		}
 
-		var servdig = cantidadNum * 0.21;
-		servdig = cantidadNum * 0.21;
-		var afip = cantidadNum * 0.45;
-		var pais = cantidadNum * 0.08;
+		var servdig = cantidad * 0.21;
+		servdig = cantidad * 0.21;
+		var afip = cantidad * 0.45;
+		var pais = cantidad * 0.08;
 		var pvc = 0.0;
-		pvc = cantidadNum * pvcPorcentaje[pvcia];
+		pvc = cantidad * pvcPorcentaje[pvcia];
 		document.getElementById("impuestlol").innerHTML = (pvcPorcentaje[pvcia] * 100).toFixed(1);
 		var totalImpuestos = servdig + afip + pais + pvc;
-		var total = cantidadNum + totalImpuestos;
+		var total = cantidad + totalImpuestos;
 		
 
 		document.getElementById("total").innerHTML = total.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
@@ -75,7 +71,7 @@ export default function Page() {
 		document.getElementById("totalImpuestos").innerHTML = totalImpuestos.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
 		return e.preventDefault();
 	}
-	function isNumeric(n) {
+	function isNumeric(n: any) {
 		return !isNaN(parseFloat(n)) && isFinite(n);
 	}
 
@@ -86,10 +82,10 @@ export default function Page() {
 				<title>Calculadora de pagos al exterior Argentina - markski.ar</title>
 				<meta
 					name="description"
-					content="Calcula los impuestos de pagos a Steam, Netflix, Spotify, Epic Games, etc."
+					content="Calcula impuestos de pagos a Steam, Netflix, Spotify, Epic Games, etc."
 				/>
 				<meta property="og:title" content="Calculadora de pagos al exterior Argentina" />
-				<meta property="og:description" content="Calcula los impuestos de pagos al exterior, tales como Steam, Netflix, Spotify, Epic Games, etc." />
+				<meta property="og:description" content="Calcula impuestos de pagos al exterior, Steam, Netflix, Spotify, Epic Games, etc." />
 			</Head>
 
 			<div className={utilStyles.headingContainer}>

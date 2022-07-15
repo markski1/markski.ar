@@ -41,7 +41,7 @@ export default function Page() {
 		return false;
 	}
 
-	function calcular(e) {
+	function calcular(e: { preventDefault: () => any; }) {
 		var format = +((document.getElementById('format') as HTMLInputElement).value);
 		var dpi = +((document.getElementById('dpi') as HTMLInputElement).value);
 		var sens = +((document.getElementById('sens') as HTMLInputElement).value);
@@ -50,7 +50,7 @@ export default function Page() {
 
 		var printResults = "";
 
-		var newMyaw, newDpi, newFormat;
+		var newMyaw: number, newDpi: number, newFormat: number;
 
 		switch (selection) {
 			case 1: // format
@@ -91,7 +91,7 @@ export default function Page() {
 		return e.preventDefault();
 	}
 
-	function GetFormatMultiplier(format) {
+	function GetFormatMultiplier(format: number) {
 		switch (format) {
 			case 0:
 				return (21 / 9);

@@ -27,7 +27,7 @@ export default function Home() {
 				<title>Home - markski.ar</title>
 			</Head>
 			<section className={utilStyles.headingMd}>
-				<p>I'm Markski. A computer science student and programmer from Argentina.</p>
+				<p>Computer science student and software developer from Argentina.</p>
 			</section><div className={utilStyles.contactCard}>
 				<Grid container columnSpacing={7}>
 					<Grid item xs>
