@@ -9,15 +9,15 @@ export default function Page() {
 	var showingSetting = 1;
 
 	function timerStuff() {
-		var dpi = +((document.getElementById('dpi') as HTMLInputElement).value);
-		var sens = +((document.getElementById('sens') as HTMLInputElement).value);
-		var myaw = +((document.getElementById('myaw') as HTMLInputElement).value);
+		var dpi = parseInt((document.getElementById('dpi') as HTMLInputElement).value);
+		var sens = parseFloat((document.getElementById('sens') as HTMLInputElement).value);
+		var myaw = parseFloat((document.getElementById('myaw') as HTMLInputElement).value);
 		if (!(dpi) || !(sens) || !(myaw)) return false;
 		var edpi = dpi * sens;
 		var edpi = edpi * (myaw / 0.022);
 		document.getElementById("edpi").innerHTML = edpi.toFixed(2);
 
-		var selection = +((document.getElementById('selection') as HTMLInputElement).value);
+		var selection = parseInt((document.getElementById('selection') as HTMLInputElement).value);
 		if (selection != showingSetting) {
 			switch (selection) {
 				case 1: // format
@@ -42,11 +42,11 @@ export default function Page() {
 	}
 
 	function calcular(e: { preventDefault: () => any; }) {
-		var format = +((document.getElementById('format') as HTMLInputElement).value);
-		var dpi = +((document.getElementById('dpi') as HTMLInputElement).value);
-		var sens = +((document.getElementById('sens') as HTMLInputElement).value);
-		var myaw = +((document.getElementById('myaw') as HTMLInputElement).value);
-		var selection = +((document.getElementById('selection') as HTMLInputElement).value);
+		var format = parseFloat((document.getElementById('format') as HTMLInputElement).value);
+		var dpi = parseInt((document.getElementById('dpi') as HTMLInputElement).value);
+		var sens = parseFloat((document.getElementById('sens') as HTMLInputElement).value);
+		var myaw = parseFloat((document.getElementById('myaw') as HTMLInputElement).value);
+		var selection = parseInt((document.getElementById('selection') as HTMLInputElement).value);
 
 		var printResults = "";
 
@@ -54,7 +54,7 @@ export default function Page() {
 
 		switch (selection) {
 			case 1: // format
-				newFormat = +((document.getElementById('newFormat') as HTMLInputElement).value);
+				newFormat = parseInt((document.getElementById('newFormat') as HTMLInputElement).value);
 				if (format == newFormat) {
 					printResults = "<p>You've chosen the same format in both cases.</p>";
 					break;
@@ -73,7 +73,7 @@ export default function Page() {
 				printResults += ".</p>";
 				break;
 			case 2: // m_yaw
-				newMyaw = +((document.getElementById('newMyaw') as HTMLInputElement).value);
+				newMyaw = parseFloat((document.getElementById('newMyaw') as HTMLInputElement).value);
 				console.log(sens);
 				console.log(myaw);
 				console.log(newMyaw);
@@ -81,7 +81,7 @@ export default function Page() {
 				printResults = "<p>Change your sensitivity to " + sens.toFixed(2) + "</p>";
 				break;
 			case 3: // dpi
-				newDpi = +((document.getElementById('newDpi') as HTMLInputElement).value);
+				newDpi = parseInt((document.getElementById('newDpi') as HTMLInputElement).value);
 				var edpi = sens * dpi;
 				var newSens = edpi / newDpi;
 				printResults = "<p>Change your sensitivity to " + newSens.toFixed(2) + "</p>";
@@ -145,7 +145,7 @@ export default function Page() {
 						<input className={utilStyles.input} id="myaw" onChange={timerStuff} defaultValue={0.022} type="number" pattern="[0-9]+([\.,][0-9]+)?" step="0.001" title="Your current m_yaw." />
 
 						<span>Action</span>
-						<select defaultValue={1} className={utilStyles.input} id="selection">
+						<select defaultValue={1} onChange={timerStuff} className={utilStyles.input} id="selection">
 							<option value={1}>Translate sens to new format</option>
 							<option value={2}>Translate sens to new m_yaw</option>
 							<option value={3}>Translate sens to new DPI</option>

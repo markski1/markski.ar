@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 
-function PrintEntry(props) {
+function PrintEntry(props: { title: string; text: string; date: string; url: string; }) {
 	return (
 		<>
 			<div className={utilStyles.headingContainer} style={{paddingBottom: '30px'}}>

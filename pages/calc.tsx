@@ -21,9 +21,9 @@ export default function Page() {
 	}
 
 	function calcular(e: { preventDefault: () => any; }) {
-		var cantidad = +((document.getElementById('cantidad') as HTMLInputElement).value);
-		var moneda = +((document.getElementById('moneda') as HTMLInputElement).value);
-		var pvcia = +((document.getElementById('pvcia') as HTMLInputElement).value);
+		var cantidad = parseFloat((document.getElementById('cantidad') as HTMLInputElement).value);
+		var moneda = parseInt((document.getElementById('moneda') as HTMLInputElement).value);
+		var pvcia = parseInt((document.getElementById('pvcia') as HTMLInputElement).value);
 
 		if (!isNumeric(cantidad)) {
 			alert("Valor no valido. Cualquier numero con el decimal marcado con punto o coma.");

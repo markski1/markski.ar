@@ -4,7 +4,7 @@ import utilStyles from '../styles/utils.module.css';
 import Grid from '@mui/material/Grid';
 import Link from 'next/link';
 
-function PrintEntry(props) {
+function PrintEntry(props: { url: string; text: string; title: string; }) {
 	return (
 		<div className={utilStyles.entry}>
 			<p>
