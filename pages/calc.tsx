@@ -152,7 +152,7 @@ export default function Page() {
 				<small>
 					<ul>
 						<li>Por Mercado Pago: A traves de <a href="https://www.cafecito.app/Markski" className={utilStyles.money}>Cafecito</a></li>
-						<li>Por CBU/CVU: <span className={utilStyles.money}>0000003100011560441592</span> | Alias: <span className={utilStyles.money}>markski</span></li>
+						<li>Por CBU: <span className={utilStyles.money}>0110337130033713474751</span> o al alias <span className={utilStyles.money}>markski</span></li>
 					</ul>
 				</small>
 			</div>
