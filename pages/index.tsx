@@ -79,6 +79,12 @@ export default function Home() {
 			/>
 			<hr />
 			<PrintEntry
+				title = 'WTTk - WinTweakToolkit'
+				url = 'wttk'
+				text = 'The lightweight, feature-complete tool kit for common Windows tweaking that would otherwise require having to dive into the registry or other unfriendly places.'
+			/>
+			<hr />
+			<PrintEntry
 				title = 'Rosettes'
 				url = 'rosettes'
 				text = 'A simple, free, open source Discord bot.'
