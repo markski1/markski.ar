@@ -14,11 +14,11 @@ export default function Page() {
 					name="description"
 					content="The lightweight, feature-complete tool kit for common Windows tweaking that would otherwise require having to dive into the registry or other unfriendly places."
 				/>
-				<meta name="og:title" content="WTTk, a Windows Tweaking Tool" />
+				<meta name="og:title" content="WTTk, the Windows Tweaking Toolkit" />
 			</Head>
 
 			<div className={utilStyles.headingContainer}>
-				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>WTTk, a Windows Tweaking Tool</p>
+				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>WTTk, the Windows Tweaking Toolkit</p>
 			</div>
 			<div className={utilStyles.centerContainer}>
 				<p className={utilStyles.headingLg}>About</p>
