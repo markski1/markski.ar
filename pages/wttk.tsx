@@ -36,7 +36,7 @@ export default function Page() {
 					<li>Ability to disable many annoying Windows features.</li>
 					<li>A shutdown scheduler.</li>
 				</ul>
-				<img src="https://user-images.githubusercontent.com/22557859/190013569-e68adf27-513a-40f9-9a6c-636668294e41.png"></img>
+					<img width={674} height={558} src="./images/wttk.png" />
 				<p>Most important of all, WTTk is in active development, and always accepting feedback for new features.</p>
 			</div>
 
