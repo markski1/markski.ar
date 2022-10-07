@@ -141,9 +141,9 @@ export default function Page() {
 				<p className={utilStyles.headingLg}>Conversiónes actuales:</p>
 				<small>
 					<ul>
-						<li>USD: <span className={utilStyles.money} id="domUSD"></span></li>
-						<li>EUR: <span className={utilStyles.money} id="domEUR"></span></li>
-						<li>BRS: <span className={utilStyles.money} id="domBRS"></span></li>
+						<li>1 USD = <span className={utilStyles.money} id="domUSD"></span></li>
+						<li>1 EUR = <span className={utilStyles.money} id="domEUR"></span></li>
+						<li>1 BRS = <span className={utilStyles.money} id="domBRS"></span></li>
 					</ul>
 				</small>
 			</div>
