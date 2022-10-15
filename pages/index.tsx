@@ -8,11 +8,11 @@ function PrintEntry(props: { url: string; text: string; title: string; }) {
 	return (
 		<div className={utilStyles.entry}>
 			<p>
-				<h2>
+				<h3>
 					<Link href={props.url} >
 						<a>{props.title}</a>
 					</Link>
-				</h2>
+				</h3>
 				<br/>
 				{props.text}
 			</p>
@@ -27,7 +27,7 @@ export default function Home() {
 				<title>Home - markski.ar</title>
 			</Head>
 			<section className={utilStyles.headingMd}>
-				<p>Computer science student and software developer from Argentina.</p>
+				<h1>Computer science student and software developer from Argentina.</h1>
 			</section><div className={utilStyles.contactCard}>
 				<Grid container columnSpacing={7}>
 					<Grid item xs>
@@ -70,7 +70,7 @@ export default function Home() {
 				</Grid>
 			</div>
 			<div className={utilStyles.headingContainer}>
-				<h1 className={utilStyles.headingLg}>Tools and Services</h1>
+				<h2 className={utilStyles.headingLg}>Tools and Services</h2>
 			</div>
 			<PrintEntry
 				title = 'Argentine exterior tax calculator [spanish only]'
@@ -108,7 +108,7 @@ export default function Home() {
 				text = 'A list of services and events terminated by Nintendo.'
 			/>
 			<div className={utilStyles.headingContainer}>
-				<h1 className={utilStyles.headingLg}>Documentation</h1>
+				<h2 className={utilStyles.headingLg}>Documentation</h2>
 			</div>
 			<PrintEntry
 				title = 'SA-MP Weapon statistics'
@@ -122,7 +122,7 @@ export default function Home() {
 				text = 'Comprehensive-ish table of evidence-based qualifications for all the explosions you can use in SA-MP.'
 			/>
 			<div className={utilStyles.headingContainer}>
-				<h1 className={utilStyles.headingLg}>Software and Libraries</h1>
+				<h2 className={utilStyles.headingLg}>Software and Libraries</h2>
 			</div>
 			<PrintEntry
 				title = 'PSXU'
