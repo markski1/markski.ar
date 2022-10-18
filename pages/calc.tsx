@@ -45,6 +45,8 @@ export default function Page() {
 			cantidad *= values.brs;
 		}
 
+		document.getElementById("totalCompra").innerHTML = cantidad.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+
 		// Chequeamos de vuelta si menor que 0. ¿Por que?
 		// Porque cuando una conversión no esta funcionando, aparece como -1, por lo tanto arriba se torna a negativo.
 		if (cantidad < 0) {
@@ -123,10 +125,11 @@ export default function Page() {
 				</Grid>
 			</form>
 			<div className={utilStyles.centerContainer}>
-				<p className={utilStyles.heading2Xl}>AR$<span id="total">0,00</span></p>
+				<p className={utilStyles.heading2Xl}>Total: AR$<span id="total" style={{fontWeight: '600'}}>0,00</span></p>
 			</div>
 			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
-				<p className={utilStyles.headingLg}>En impuestos: <span className={utilStyles.money}>AR$<span id="totalImpuestos"></span></span></p>
+				<p className={utilStyles.headingLg}>En la compra: <span className={utilStyles.money}>AR$<span id="totalCompra">0,00</span></span><br />
+				En impuestos: <span className={utilStyles.money}>AR$<span id="totalImpuestos">0,00</span></span></p>
 				<small>
 					<ul>
 						<li>IVA Servicios Digitales <span className={utilStyles.money}>AR$<span id="servdig">0,00</span></span> <b>(21%)</b></li>

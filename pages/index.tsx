@@ -70,14 +70,8 @@ export default function Home() {
 				</Grid>
 			</div>
 			<div className={utilStyles.headingContainer}>
-				<h2 className={utilStyles.headingLg}>Tools and Services</h2>
+				<h2 className={utilStyles.headingLg}>Software and Services</h2>
 			</div>
-			<PrintEntry
-				title = 'Argentine exterior tax calculator [spanish only]'
-				url = 'calc'
-				text = 'Calculates costs of payments to Steam, Netflix, etc.'
-			/>
-			<hr />
 			<PrintEntry
 				title = 'WTTk - WinTweakToolkit'
 				url = 'wttk'
@@ -91,6 +85,12 @@ export default function Home() {
 			/>
 			<hr />
 			<PrintEntry
+				title = 'Argentine exterior tax calculator [spanish only]'
+				url = 'calc'
+				text = 'Calculates costs of payments to Steam, Netflix, etc.'
+			/>
+			<hr />
+			<PrintEntry
 				title = 'CS:GO Text simplifier [spanish only]'
 				url = 'simplecsgo'
 				text = 'Simplifies the in-game chat texts in CS:GO.'
@@ -101,28 +101,8 @@ export default function Home() {
 				url = 'csgosens'
 				text = "A tool to keep your perceived sensitivity if you're changing parameters in CS:GO."
 			/>
-			<hr />
-			<PrintEntry
-				title = 'Nintendo Graveyard'
-				url = 'nintendont'
-				text = 'A list of services and events terminated by Nintendo.'
-			/>
 			<div className={utilStyles.headingContainer}>
-				<h2 className={utilStyles.headingLg}>Documentation</h2>
-			</div>
-			<PrintEntry
-				title = 'SA-MP Weapon statistics'
-				url = 'https://old.markski.ar/SA-MP_Weapons'
-				text = 'Comprehensive table of statistics for most weapons available in SA-MP.'
-			/>
-			<hr />
-			<PrintEntry
-				title = 'SA-MP Explosion data'
-				url = 'https://old.markski.ar/SA-MP_Explosions'
-				text = 'Comprehensive-ish table of evidence-based qualifications for all the explosions you can use in SA-MP.'
-			/>
-			<div className={utilStyles.headingContainer}>
-				<h2 className={utilStyles.headingLg}>Software and Libraries</h2>
+				<h2 className={utilStyles.headingLg}>Repositories and Libraries</h2>
 			</div>
 			<PrintEntry
 				title = 'PSXU'
