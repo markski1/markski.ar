@@ -25,6 +25,7 @@ export default function Layout({ children, home=false, func=function() {} }) {
 								src="/images/profile.png"
 								width={144}
 								height={144}
+								alt="logo"
 								/>
 						</a>
 					</Link>

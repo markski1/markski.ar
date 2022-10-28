@@ -88,6 +88,14 @@ export default function Page() {
 				<p>
 					With the methods listed at the top of the <Link href="/"><a style={{color: 'cyan'}}>homepage</a></Link>.
 				</p>
+				<p>
+					<b>
+						WTTk doesn't work, throws an error on launch!
+					</b>
+				</p>
+				<p>
+					WTTk requires the  <Link href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime"><a style={{color: 'cyan'}}>.NET 6.0 Runtime</a></Link> in order to run. Your should already have this if your Windows is up to date, though.
+				</p>
 			</div>
 		</Layout>
 		</>

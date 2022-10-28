@@ -118,7 +118,7 @@ export default function Home() {
 			<hr />
 			<PrintEntry
 				title = 'vModData'
-				url = 'https://github.com/markski1/SAMP-tireFuncs'
+				url = 'https://github.com/markski1/SAMP-vModData'
 				text = 'Library to obtain information about vehicle components in SA-MP.'
 			/>
 			<hr />
