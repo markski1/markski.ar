@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
+import Header from '../components/molecules/header';
+import SectorContainer from '../components/molecules/SectorContainer';
 
 export default function Page() {
 	return (
@@ -17,13 +19,13 @@ export default function Page() {
 				<meta name="og:title" content="Rosettes, The Simple Discord Bot" />
 			</Head>
 
-			<div className={utilStyles.headingContainer}>
+			<Header>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Rosettes, The Simple Discord Bot</p>
-			</div>
+			</Header>
 			<div className={utilStyles.centerContainer}>
 				<p className={utilStyles.headingLg}>About Rosettes</p>
 			</div>
-			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
+			<SectorContainer>
 				<p>
 					Rosettes is a simple, free and open source Discord bot.
 				</p>
@@ -39,12 +41,12 @@ export default function Page() {
 					<li>Many miscelaneous functions (urban dictionary, reminder alarms, emoji exporter, etc)</li>
 				</ul>
 				<p>Most important of all, Rosettes is in active development, and always accepting feedback for new features.</p>
-			</div>
+			</SectorContainer>
 
 			<div className={utilStyles.centerContainer}>
 				<p className={utilStyles.headingLg}>Using Rosettes</p>
 			</div>
-			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
+			<SectorContainer>
 				<p>To get Rosettes in your server is very straightforwards.</p>
 				<p><b>1. <a style={{color: 'cyan'}} href="https://discord.com/api/oauth2/authorize?client_id=970176524110147605&permissions=275149548624&scope=bot">Invite Rosettes</a> into your server.</b><br/>
 				<small>You can remove managing-type permissions if you don't want Rosettes for that.<br/>
@@ -56,12 +58,12 @@ export default function Page() {
 					<small>To see a full list of commands, <a style={{color: 'cyan'}} href="https://snep.markski.ar/rosettes/commands.html">click here</a>.<br/>
 					If you wish to support hosting and development of Rosettes, you can <Link href="/donate"><a style={{color: 'cyan'}}>donate</a></Link>.</small>
 				</p>
-			</div>
+			</SectorContainer>
 
 			<div className={utilStyles.centerContainer}>
 				<p className={utilStyles.headingLg}>Questions and Answers</p>
 			</div>
-			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
+			<SectorContainer>
 				<p>
 					<b>
 						Why "Rosettes"?
@@ -110,7 +112,7 @@ export default function Page() {
 				<p>
 					With the methods listed at the top of the <Link href="/"><a style={{color: 'cyan'}}>homepage</a></Link>.
 				</p>
-			</div>
+			</SectorContainer>
 		</Layout>
 		</>
 	);
