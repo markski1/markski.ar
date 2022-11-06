@@ -2,6 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
+import Header from '../components/molecules/header';
 
 export default function Page() {
 	return (
@@ -12,9 +13,9 @@ export default function Page() {
 				<meta name="og:title" content="Donate - markski.ar" />
 			</Head>
 
-			<div className={utilStyles.headingContainer}>
+			<Header>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Make a donation</p>
-			</div>
+			</Header>
 			<p>
 				I invest a significant amount of my time creating and maintaining the tools, services and documentation available both in this website and on my GitHub page.
 			</p>

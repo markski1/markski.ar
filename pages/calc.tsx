@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Grid from '@mui/material/Grid';
+import Header from '../components/molecules/header';
+import SectorContainer from '../components/molecules/SectorContainer';
 
 export default function Page() {
 	let pvcPorcentaje: number[];
@@ -90,9 +92,9 @@ export default function Page() {
 				<meta property="og:description" content="Calcula impuestos de pagos al exterior, Steam, Netflix, Spotify, Epic Games, etc." />
 			</Head>
 
-			<div className={utilStyles.headingContainer}>
+			<Header>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Calculadora de pagos al exterior</p>
-			</div>
+			</Header>
 			<div className={utilStyles.centerContainer}>
 				<p className={utilStyles.headingLg}>Ingresa cuanto vas a cargar</p>
 			</div>
@@ -127,30 +129,38 @@ export default function Page() {
 			<div className={utilStyles.centerContainer}>
 				<p className={utilStyles.heading2Xl}>Total: AR$<span id="total" style={{fontWeight: '600'}}>0,00</span></p>
 			</div>
-			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
-				<p className={utilStyles.headingLg}>En la compra: <span className={utilStyles.money}>AR$<span id="totalCompra">0,00</span></span><br />
-				En impuestos: <span className={utilStyles.money}>AR$<span id="totalImpuestos">0,00</span></span></p>
-				<small>
-					<ul>
-						<li>IVA Servicios Digitales <span className={utilStyles.money}>AR$<span id="servdig">0,00</span></span> <b>(21%)</b></li>
-						<li>Percepción impuesto RG AFIP 4815 <span className={utilStyles.money}>AR$<span id="afip">0,00</span></span> <b>(45%)</b></li>
-						<li>Ley impuesto PAIS <span className={utilStyles.money}>AR$<span id="pais">0,00</span></span> <b>(8%)</b></li>
-						<li>Impuestos provinciales <span className={utilStyles.money}>AR$<span id="pvc">0,00</span></span> <b>(<span id="impuestlol">?</span>%)</b></li>
-					</ul>
-					<p>Para mas información, leér <a className={utilStyles.money} href="https://www.mercadopago.com.ar/ayuda/pagos-en-moneda-extranjera_4063">este documento</a>. (No aplica solo a mercadopago)</p>
-				</small>
-			</div>
-			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
-				<p className={utilStyles.headingLg}>Conversiónes actuales:</p>
-				<small>
-					<ul>
-						<li>1 USD = <span className={utilStyles.money} id="domUSD"></span></li>
-						<li>1 EUR = <span className={utilStyles.money} id="domEUR"></span></li>
-						<li>1 BRS = <span className={utilStyles.money} id="domBRS"></span></li>
-					</ul>
-				</small>
-			</div>
-			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
+			<SectorContainer>
+				<Grid container columnSpacing={4}>
+					<Grid item>
+						<div style={{whiteSpace: 'pre-line', minWidth: '20rem'}}>
+							<p className={utilStyles.headingLg}>En la compra: <span className={utilStyles.money}>AR$<span id="totalCompra">0,00</span></span><br />
+							En impuestos: <span className={utilStyles.money}>AR$<span id="totalImpuestos">0,00</span></span></p>
+							<small>
+								<ul>
+									<li>IVA Servicios Digitales <span className={utilStyles.money}>AR$<span id="servdig">0,00</span></span> <b>(21%)</b></li>
+									<li>Percepción imp. RG AFIP 4815 <span className={utilStyles.money}>AR$<span id="afip">0,00</span></span> <b>(45%)</b></li>
+									<li>Ley impuesto PAIS <span className={utilStyles.money}>AR$<span id="pais">0,00</span></span> <b>(8%)</b></li>
+									<li>Impuestos provinciales <span className={utilStyles.money}>AR$<span id="pvc">0,00</span></span> <b>(<span id="impuestlol">?</span>%)</b></li>
+								</ul>
+							</small>
+						</div>
+					</Grid>
+					<Grid item xs={4}>
+						<div style={{whiteSpace: 'pre-line', minWidth: '10rem'}}>
+							<p className={utilStyles.headingLg}>Conversiónes:</p>
+							<small>
+								<ul>
+									<li>1 USD = <span className={utilStyles.money} id="domUSD"></span></li>
+									<li>1 EUR = <span className={utilStyles.money} id="domEUR"></span></li>
+									<li>1 BRS = <span className={utilStyles.money} id="domBRS"></span></li>
+								</ul>
+							</small>
+						</div>
+					</Grid>
+				</Grid>
+			</SectorContainer>
+
+			<SectorContainer>
 				<p>Si te sirve la herramienta y tenes ganas, podes colaborar:</p>
 				<small>
 					<ul>
@@ -158,7 +168,7 @@ export default function Page() {
 						<li>Por CBU: <span className={utilStyles.money}>0110337130033713474751</span> o al alias <span className={utilStyles.money}>markski</span></li>
 					</ul>
 				</small>
-			</div>
+			</SectorContainer>
 		</Layout>
 		</>
 	);

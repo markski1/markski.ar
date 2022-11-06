@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Grid from '@mui/material/Grid';
+import Header from '../components/molecules/header';
+import SectorContainer from '../components/molecules/SectorContainer';
 
 export default function Page() {
 
@@ -120,9 +122,9 @@ export default function Page() {
 				<meta name="og:title" content="CSGO Sens and m-yaw converter - markski.ar" />
 			</Head>
 
-			<div className={utilStyles.headingContainer}>
+			<Header>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>CSGO Sens and m-yaw converter</p>
-			</div>
+			</Header>
 
 			<form onSubmit={calcular}>
 				<span>eDPI: <span id="edpi">Loading...</span></span>
