@@ -3,8 +3,7 @@ import Head from 'next/head';
 import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Grid from '@mui/material/Grid';
-import Header from '../components/molecules/header';
-import SectorContainer from '../components/molecules/SectorContainer';
+import Header from '../components/molecules/Header';
 
 export default function Page() {
 
