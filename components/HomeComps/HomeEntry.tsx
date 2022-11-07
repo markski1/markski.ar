@@ -7,7 +7,7 @@ export default function PrintEntry(props: { url: string; text: string; title: st
 			<p>
 				<h3>
 					<Link href={props.url} >
-						<a>{props.title}</a>
+						{props.title}
 					</Link>
 				</h3>
 				<br/>

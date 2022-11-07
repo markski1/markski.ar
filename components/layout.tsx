@@ -16,35 +16,19 @@ export default function Layout({ children, home=false, func=function() {} }) {
 			</Head>
 			<body onLoad={func}>
 				<div className={styles.container}>
-				
-				<header style={{textAlign: 'center'}}>
-					<Link href="/">
-						<a>
-							<img
-								style={{marginLeft: 'auto', marginRight: 'auto'}}
-								src="/images/profile.png"
-								width={144}
-								height={144}
-								alt="logo"
-								/>
-						</a>
-					</Link>
-				</header>
-				<main style={{width: "95%", margin: "-2rem auto 0rem"}}>
-					{children}
-				</main>
-				{!home && (
-					<div className={styles.backToHome}>
-						<Link href="/">
-							<a>
+					<main style={{width: "98%", margin: "-2rem auto 0rem"}}>
+						{children}
+					</main>
+					{!home && (
+						<div className={styles.backToHome}>
+							<Link href="/">
 								<button className={utilStyles.button}>← Home</button>
-							</a>
-						</Link>
+							</Link>
+						</div>
+					)}
+					<div className={styles.footer}>
+						<span>Markski 2012-{(new Date()).getFullYear()}</span>
 					</div>
-				)}
-				<div className={styles.footer}>
-					<span>Markski 2012-{(new Date()).getFullYear()}</span>
-				</div>
 				</div>
 			</body>
 		</>

@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-import Header from '../components/molecules/Header';
+import Header from '../components/molecules/PageHeader';
 import SectorContainer from '../components/molecules/SectorContainer';
 
 export default function Page() {
@@ -56,7 +56,7 @@ export default function Page() {
 				<p><b>3. Done!</b></p>
 				<p>
 					<small>To see a full list of commands, <a style={{color: 'cyan'}} href="https://snep.markski.ar/rosettes/commands.html">click here</a>.<br/>
-					If you wish to support hosting and development of Rosettes, you can <Link href="/donate"><a style={{color: 'cyan'}}>donate</a></Link>.</small>
+					If you wish to support hosting and development of Rosettes, you can <Link href="/donate"><span style={{color: 'cyan'}}>donate</span></Link>.</small>
 				</p>
 			</SectorContainer>
 
@@ -110,7 +110,7 @@ export default function Page() {
 					</b>
 				</p>
 				<p>
-					With the methods listed at the top of the <Link href="/"><a style={{color: 'cyan'}}>homepage</a></Link>.
+					With the methods listed at the top of the <Link href="/"><span style={{color: 'cyan'}}>homepage</span></Link>.
 				</p>
 			</SectorContainer>
 		</Layout>

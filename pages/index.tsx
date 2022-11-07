@@ -94,7 +94,7 @@ export default function Home() {
 			/>
 			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
 				<p>Everything in this website is free to use.<br/>
-				If you find something useful, please consider supporting my work with a <Link href="/donate"><a style={{color: 'cyan'}}>donation</a></Link>.</p>
+				If you find something useful, please consider supporting my work with a <Link href="/donate"><span style={{color: 'cyan'}}>donation</span></Link>.</p>
 			</div>
 		</Layout>
 	);

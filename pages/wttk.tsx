@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-import Header from '../components/molecules/Header';
+import Header from '../components/molecules/PageHeader';
 import SectorContainer from '../components/molecules/SectorContainer';
 
 export default function Page() {
@@ -51,7 +51,7 @@ export default function Page() {
 					WTTk has only been tested on Windows 10.<br/>
 					It -should- work on Windows 11, and it'll -likely- work on 8/8.1, but I cannot guarantee these.
 				</p>
-				<p><small>If you find WTTk useful and wish to help, please consider making a <Link href="/donate"><a style={{color: 'cyan'}}>donation</a></Link>.</small></p>
+				<p><small>If you find WTTk useful and wish to help, please consider making a <Link href="/donate"><span style={{color: 'cyan'}}>donation</span></Link>.</small></p>
 			</SectorContainer>
 
 			<div className={utilStyles.centerContainer}>
@@ -88,7 +88,7 @@ export default function Page() {
 					</b>
 				</p>
 				<p>
-					With the methods listed at the top of the <Link href="/"><a style={{color: 'cyan'}}>homepage</a></Link>.
+					With the methods listed at the top of the <Link href="/"><span style={{color: 'cyan'}}>homepage</span></Link>.
 				</p>
 				<p>
 					<b>
@@ -96,7 +96,7 @@ export default function Page() {
 					</b>
 				</p>
 				<p>
-					WTTk requires the  <Link href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime"><a style={{color: 'cyan'}}>.NET 6.0 Runtime</a></Link> in order to run. Your should already have this if your Windows is up to date, though.
+					WTTk requires the  <Link href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime"><span style={{color: 'cyan'}}>.NET 6.0 Runtime</span></Link> in order to run. Your should already have this if your Windows is up to date, though.
 				</p>
 			</SectorContainer>
 		</Layout>
