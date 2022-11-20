@@ -4,13 +4,12 @@ import Link from 'next/link';
 export default function PrintEntry(props: { url: string; text: string; title: string; }) {
 	return (
 		<div className={utilStyles.entry}>
-			<p>
-				<h3>
+			<h3>
 					<Link href={props.url} >
 						{props.title}
 					</Link>
 				</h3>
-				<br/>
+			<p>
 				{props.text}
 			</p>
 		</div>

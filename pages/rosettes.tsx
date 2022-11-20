@@ -9,16 +9,15 @@ import SectorContainer from '../components/molecules/SectorContainer';
 export default function Page() {
 	return (
 		<>
+		<Head>
+			<title>Rosettes, The Simple Discord Bot</title>
+			<meta
+				name="description"
+				content="Rosettes is a simple, open source Discord bot with many easy to use features."
+			/>
+			<meta name="og:title" content="Rosettes, The Simple Discord Bot" />
+		</Head>
 		<Layout>
-			<Head>
-				<title>Rosettes, The Simple Discord Bot</title>
-				<meta
-					name="description"
-					content="Rosettes is a simple, open source Discord bot with many easy to use features."
-				/>
-				<meta name="og:title" content="Rosettes, The Simple Discord Bot" />
-			</Head>
-
 			<Header>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Rosettes, The Simple Discord Bot</p>
 			</Header>

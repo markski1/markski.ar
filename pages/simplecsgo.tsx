@@ -8,16 +8,15 @@ import SectorContainer from '../components/molecules/SectorContainer';
 export default function Page() {
 	return (
 		<>
+		<Head>
+			<title>Chat simple para CSGO - markski.ar</title>
+			<meta
+				name="description"
+				content="Modificación para CSGO que simplifica los elementos del chat."
+			/>
+			<meta name="og:title" content="Chat simple para CSGO - markski.ar" />
+		</Head>
 		<Layout>
-			<Head>
-				<title>Chat simple para CSGO - markski.ar</title>
-				<meta
-					name="description"
-					content="Modificación para CSGO que simplifica los elementos del chat."
-				/>
-				<meta name="og:title" content="Chat simple para CSGO - markski.ar" />
-			</Head>
-
 			<Header>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Chat simple para CSGO</p>
 			</Header>

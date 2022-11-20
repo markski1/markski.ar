@@ -9,16 +9,15 @@ import SectorContainer from '../components/molecules/SectorContainer';
 export default function Page() {
 	return (
 		<>
+		<Head>
+			<title>WTTk, a Windows Tweaking Tool.</title>
+			<meta
+				name="description"
+				content="The lightweight, feature-complete tool kit for common Windows tweaking that would otherwise require having to dive into the registry or other unfriendly places."
+			/>
+			<meta name="og:title" content="WTTk, the Windows Tweaking Toolkit" />
+		</Head>
 		<Layout>
-			<Head>
-				<title>WTTk, a Windows Tweaking Tool.</title>
-				<meta
-					name="description"
-					content="The lightweight, feature-complete tool kit for common Windows tweaking that would otherwise require having to dive into the registry or other unfriendly places."
-				/>
-				<meta name="og:title" content="WTTk, the Windows Tweaking Toolkit" />
-			</Head>
-
 			<Header>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>WTTk, the Windows Tweaking Toolkit</p>
 			</Header>

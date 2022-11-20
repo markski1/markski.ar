@@ -8,10 +8,12 @@ import GetIcon from '../components/HomeComps/Icons';
 
 export default function Home() {
 	return (
+		<>
+		<Head>
+			<title>Home - markski.ar</title>
+		</Head>
 		<Layout home>
-			<Head>
-				<title>Home - markski.ar</title>
-			</Head>
+			
 			<section className={utilStyles.headingMd}>
 				<h1>markski; computer science student and developer in Argentina.</h1>
 			</section><div className={utilStyles.contactCard}>
@@ -97,5 +99,6 @@ export default function Home() {
 				If you find something useful, please consider supporting my work with a <Link href="/donate"><span style={{color: 'cyan'}}>donation</span></Link>.</p>
 			</div>
 		</Layout>
+		</>
 	);
 }

@@ -10,19 +10,28 @@ export default function Page() {
 	let pvcPorcentaje: number[];
 	//               N/A  CABA  CHACO  CRDB  LPMP  NEUQ  RNGR  SALTA
 	pvcPorcentaje = [0.0, 0.02, 0.055, 0.03, 0.01, 0.03, 0.05, 0.036];
-	
+
 	let values: { eur: number; usd: number; brs: number; };
+
+	var obtenidos = false;
 
 	async function setearMonedas() {
 		let response = await fetch("https://snep.markski.ar/monedas.php");
 		values = await response.json();
 
-		document.getElementById("domEUR").innerHTML = values.eur.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-		document.getElementById("domUSD").innerHTML = values.usd.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-		document.getElementById("domBRS").innerHTML = values.brs.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
+		obtenidos = true;
+		return;
 	}
 
-	function calcular(e: { preventDefault: () => any; }) {
+	async function calcular(e: { preventDefault: () => any; }) {
+		if (!obtenidos) {
+			try {
+				await setearMonedas();
+			}
+			catch {
+				// nada xd
+			}
+		}
 		var cantidad = parseFloat((document.getElementById('cantidad') as HTMLInputElement).value);
 		var moneda = parseInt((document.getElementById('moneda') as HTMLInputElement).value);
 		var pvcia = parseInt((document.getElementById('pvcia') as HTMLInputElement).value);
@@ -81,17 +90,16 @@ export default function Page() {
 
 	return (
 		<>
+		<Head>
+			<title>Calculadora de pagos al exterior Argentina - markski.ar</title>
+			<meta
+				name="description"
+				content="Calcula impuestos de pagos a Steam, Netflix, Spotify, Epic Games, etc."
+			/>
+			<meta property="og:title" content="Calculadora de pagos al exterior Argentina" />
+			<meta property="og:description" content="Calcula impuestos de pagos al exterior, Steam, Netflix, Spotify, Epic Games, etc." />
+		</Head>
 		<Layout func={setearMonedas}>
-			<Head>
-				<title>Calculadora de pagos al exterior Argentina - markski.ar</title>
-				<meta
-					name="description"
-					content="Calcula impuestos de pagos a Steam, Netflix, Spotify, Epic Games, etc."
-				/>
-				<meta property="og:title" content="Calculadora de pagos al exterior Argentina" />
-				<meta property="og:description" content="Calcula impuestos de pagos al exterior, Steam, Netflix, Spotify, Epic Games, etc." />
-			</Head>
-
 			<Header>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Calculadora de pagos al exterior</p>
 			</Header>
@@ -99,7 +107,7 @@ export default function Page() {
 				<p className={utilStyles.headingLg}>Ingresa cuanto vas a cargar</p>
 			</div>
 			
-			<form onSubmit={(calcular)}>
+			<form onSubmit={calcular} action="#">
 				<Grid container spacing={2.5}>
 					<Grid item xs>
 						<select defaultValue={1} className={utilStyles.input} id="moneda">
@@ -126,38 +134,24 @@ export default function Page() {
 					</Grid>
 				</Grid>
 			</form>
+
+
 			<div className={utilStyles.centerContainer}>
 				<p className={utilStyles.heading2Xl}>Total: AR$<span id="total" style={{fontWeight: '600'}}>0,00</span></p>
 			</div>
 			<SectorContainer>
-				<Grid container columnSpacing={4}>
-					<Grid item>
-						<div style={{whiteSpace: 'pre-line', minWidth: '20rem'}}>
-							<p className={utilStyles.headingLg}>En la compra: <span className={utilStyles.money}>AR$<span id="totalCompra">0,00</span></span><br />
-							En impuestos: <span className={utilStyles.money}>AR$<span id="totalImpuestos">0,00</span></span></p>
-							<small>
-								<ul>
-									<li>IVA Servicios Digitales <span className={utilStyles.money}>AR$<span id="servdig">0,00</span></span> <b>(21%)</b></li>
-									<li>Percepción RG AFIP 4815 <span className={utilStyles.money}>AR$<span id="afip">0,00</span></span> <b>(45%)</b></li>
-									<li>Ley impuesto PAIS <span className={utilStyles.money}>AR$<span id="pais">0,00</span></span> <b>(8%)</b></li>
-									<li>Impuestos provinciales <span className={utilStyles.money}>AR$<span id="pvc">0,00</span></span> <b>(<span id="impuestlol">?</span>%)</b></li>
-								</ul>
-							</small>
-						</div>
-					</Grid>
-					<Grid item xs={4}>
-						<div style={{whiteSpace: 'pre-line', minWidth: '10rem'}}>
-							<p className={utilStyles.headingLg}>Conversiónes:</p>
-							<small>
-								<ul>
-									<li>1 USD = <span className={utilStyles.money} id="domUSD"></span></li>
-									<li>1 EUR = <span className={utilStyles.money} id="domEUR"></span></li>
-									<li>1 BRS = <span className={utilStyles.money} id="domBRS"></span></li>
-								</ul>
-							</small>
-						</div>
-					</Grid>
-				</Grid>
+				<div style={{whiteSpace: 'pre-line', minWidth: '20rem'}}>
+					<p className={utilStyles.headingLg}>En la compra: <span className={utilStyles.money}>AR$<span id="totalCompra">0,00</span></span><br />
+					En impuestos: <span className={utilStyles.money}>AR$<span id="totalImpuestos">0,00</span></span></p>
+					<small>
+						<ul>
+							<li>IVA Servicios Digitales <span className={utilStyles.money}>AR$<span id="servdig">0,00</span></span> <b>(21%)</b></li>
+							<li>Percepción RG AFIP 4815 <span className={utilStyles.money}>AR$<span id="afip">0,00</span></span> <b>(45%)</b></li>
+							<li>Ley impuesto PAIS <span className={utilStyles.money}>AR$<span id="pais">0,00</span></span> <b>(8%)</b></li>
+							<li>Impuestos provinciales <span className={utilStyles.money}>AR$<span id="pvc">0,00</span></span> <b>(<span id="impuestlol">?</span>%)</b></li>
+						</ul>
+					</small>
+				</div>
 			</SectorContainer>
 
 			<SectorContainer>

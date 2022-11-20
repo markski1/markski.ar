@@ -29,12 +29,11 @@ function PrintEntry(props: { title: string; text: string; date: string; url: str
 export default function Page() {
 	return (
 		<>
+		<Head>
+			<title>Nintendo Graveyard - markski.ar</title>
+			<meta name="og:title" content="Nintendo Graveyard - markski.ar" />
+		</Head>
 		<Layout>
-			<Head>
-				<title>Nintendo Graveyard - markski.ar</title>
-				<meta name="og:title" content="Nintendo Graveyard - markski.ar" />
-			</Head>
-
 			<div className={utilStyles.headingContainer}>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Nintendo Graveyard</p>
 			</div>

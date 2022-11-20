@@ -7,12 +7,11 @@ import Header from '../components/molecules/PageHeader';
 export default function Page() {
 	return (
 		<>
+		<Head>
+			<title>Donate - markski.ar</title>
+			<meta name="og:title" content="Donate - markski.ar" />
+		</Head>
 		<Layout>
-			<Head>
-				<title>Donate - markski.ar</title>
-				<meta name="og:title" content="Donate - markski.ar" />
-			</Head>
-
 			<Header>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Make a donation</p>
 			</Header>
