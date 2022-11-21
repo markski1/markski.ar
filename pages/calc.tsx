@@ -99,7 +99,7 @@ export default function Page() {
 			<meta property="og:title" content="Calculadora de pagos al exterior Argentina" />
 			<meta property="og:description" content="Calcula impuestos de pagos al exterior, Steam, Netflix, Spotify, Epic Games, etc." />
 		</Head>
-		<Layout func={setearMonedas}>
+		<Layout>
 			<Header>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Calculadora de pagos al exterior</p>
 			</Header>
