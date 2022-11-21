@@ -103,6 +103,7 @@ export default function Page() {
 			<Header>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Calculadora de pagos al exterior</p>
 			</Header>
+			<p>21/11/22: Arreglado el bug que no permitia que funcionen las conversiones.</p>
 			<div className={utilStyles.centerContainer}>
 				<p className={utilStyles.headingLg}>Ingresa cuanto vas a cargar</p>
 			</div>

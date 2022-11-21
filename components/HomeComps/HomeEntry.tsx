@@ -1,11 +1,11 @@
 import utilStyles from '../../styles/utils.module.css';
 import Link from 'next/link';
 
-export default function PrintEntry(props: { url: string; text: string; title: string; }) {
+export default function PrintEntry(props: { url: string; text: string; title: string; target?: string }) {
 	return (
 		<div className={utilStyles.entry}>
 			<h3>
-					<Link href={props.url} >
+					<Link href={props.url} rel="noreferrer" target={props.target} >
 						{props.title}
 					</Link>
 				</h3>

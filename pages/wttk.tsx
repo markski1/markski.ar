@@ -45,7 +45,7 @@ export default function Page() {
 				<p className={utilStyles.headingLg}>Download</p>
 			</div>
 			<SectorContainer>
-				<p>You can find the download for the latest version of WTTk <a style={{color: 'cyan'}} href="https://github.com/markski1/WinTweakTool/releases/latest">in this page</a>.</p>
+				<p>You can find the download for the latest version of WTTk <a style={{color: 'cyan'}} href="https://github.com/markski1/WinTweakTool/releases/latest" rel="noreferrer" target="_blank">in this page</a>.</p>
 				<p>
 					WTTk has only been tested on Windows 10.<br/>
 					It -should- work on Windows 11, and it'll -likely- work on 8/8.1, but I cannot guarantee these.
@@ -71,7 +71,7 @@ export default function Page() {
 					</b>
 				</p>
 				<p>
-					It is available in it's <a style={{color: 'cyan'}} data-class="link" href="https://github.com/markski1/WinTweakTool">GitHub repository</a>.
+					It is available in it's <a style={{color: 'cyan'}} data-class="link" href="https://github.com/markski1/WinTweakTool" rel="noreferrer" target="_blank">GitHub repository</a>.
 				</p>
 				<p>
 					<b>

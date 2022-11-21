@@ -47,14 +47,14 @@ export default function Page() {
 			</div>
 			<SectorContainer>
 				<p>To get Rosettes in your server is very straightforwards.</p>
-				<p><b>1. <a style={{color: 'cyan'}} href="https://discord.com/api/oauth2/authorize?client_id=970176524110147605&permissions=275149548624&scope=bot">Invite Rosettes</a> into your server.</b><br/>
+				<p><b>1. <a style={{color: 'cyan'}} href="https://discord.com/api/oauth2/authorize?client_id=970176524110147605&permissions=275149548624&scope=bot" rel="noreferrer" target="_blank">Invite Rosettes</a> into your server.</b><br/>
 				<small>You can remove managing-type permissions if you don't want Rosettes for that.<br/>
 				Everything else will work just fine!</small></p>
-				<p><b>2. [Optional] Check the <a style={{color: 'cyan'}} href="https://snep.markski.ar/rosettes">web panel</a> for available settings.</b><br/>
+				<p><b>2. [Optional] Check the <a style={{color: 'cyan'}} href="https://snep.markski.ar/rosettes" rel="noreferrer" target="_blank">web panel</a> for available settings.</b><br/>
 				<small>The default settings are probably fine for most guilds.</small></p>
 				<p><b>3. Done!</b></p>
 				<p>
-					<small>To see a full list of commands, <a style={{color: 'cyan'}} href="https://snep.markski.ar/rosettes/commands.html">click here</a>.<br/>
+					<small>To see a full list of commands, <a style={{color: 'cyan'}} href="https://snep.markski.ar/rosettes/commands.html" rel="noreferrer" target="_blank">click here</a>.<br/>
 					If you wish to support hosting and development of Rosettes, you can <Link href="/donate"><span style={{color: 'cyan'}}>donate</span></Link>.</small>
 				</p>
 			</SectorContainer>
@@ -93,7 +93,7 @@ export default function Page() {
 					</b>
 				</p>
 				<p>
-					It is available in it's <a style={{color: 'cyan'}} data-class="link" href="https://github.com/markski1/RosettesDiscord">GitHub repository</a>.
+					It is available in it's <a style={{color: 'cyan'}} data-class="link" href="https://github.com/markski1/RosettesDiscord" rel="noreferrer" target="_blank">GitHub repository</a>.
 				</p>
 				<p>
 					<b>

@@ -23,8 +23,8 @@ export default function Page() {
 			</p>
 			<p className={utilStyles.headingLg}>Donation methods</p>
 			<ul>
-				<li>If you live in Argentina, you can use <a href="https://www.cafecito.app/Markski" className={utilStyles.money}>Cafecito</a>, or transfer to CBU alias <span className={utilStyles.money}>markski</span></li>
-				<li>If you live elsewhere in the world, you can use <a href="https://www.ko-fi.com/Markski" className={utilStyles.money}>Ko-Fi</a>.</li>
+				<li>If you live in Argentina, you can use <a href="https://www.cafecito.app/Markski" className={utilStyles.money} rel="noreferrer" target="_blank">Cafecito</a>, or transfer to CBU alias <span className={utilStyles.money}>markski</span></li>
+				<li>If you live elsewhere in the world, you can use <a href="https://www.ko-fi.com/Markski" className={utilStyles.money} rel="noreferrer" target="_blank">Ko-Fi</a>.</li>
 			</ul>
 			<p>If you decide to donate, whichever way you choose, I will be extremely thankful!</p>
 		</Layout>
