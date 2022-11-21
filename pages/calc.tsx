@@ -20,17 +20,17 @@ export default function Page() {
 		values = await response.json();
 
 		obtenidos = true;
-		return;
+		return true;
+	}
+
+	function calcularTrigger(e: { preventDefault: () => any; }) {
+		calcular(e);
+		return e.preventDefault();
 	}
 
 	async function calcular(e: { preventDefault: () => any; }) {
 		if (!obtenidos) {
-			try {
-				await setearMonedas();
-			}
-			catch {
-				// nada xd
-			}
+			await setearMonedas();
 		}
 		var cantidad = parseFloat((document.getElementById('cantidad') as HTMLInputElement).value);
 		var moneda = parseInt((document.getElementById('moneda') as HTMLInputElement).value);
@@ -107,7 +107,7 @@ export default function Page() {
 				<p className={utilStyles.headingLg}>Ingresa cuanto vas a cargar</p>
 			</div>
 			
-			<form onSubmit={calcular} action="#">
+			<form onSubmit={calcularTrigger}>
 				<Grid container spacing={2.5}>
 					<Grid item xs>
 						<select defaultValue={1} className={utilStyles.input} id="moneda">
