@@ -24,17 +24,14 @@ export default function Page() {
 	}
 
 	function calcularTrigger(e: { preventDefault: () => any; }) {
+		// se llama a traves de esta funcion trigger para que no se recargue la pagina.
+		// la solucion real seria re-escribir esto como un hook, pero no tengo tiempo.
 		calcular(e);
 		return e.preventDefault();
 	}
 
 	async function calcular(e: { preventDefault: () => any; }) {
-		if (!obtenidos) {
-			await setearMonedas();
-		}
 		var cantidad = parseFloat((document.getElementById('cantidad') as HTMLInputElement).value);
-		var moneda = parseInt((document.getElementById('moneda') as HTMLInputElement).value);
-		var pvcia = parseInt((document.getElementById('pvcia') as HTMLInputElement).value);
 
 		if (!isNumeric(cantidad)) {
 			alert("Valor no valido. Cualquier numero con el decimal marcado con punto o coma.");
@@ -45,6 +42,23 @@ export default function Page() {
 			alert("Por favor ingresa una cantidad mayor a 0");
 			return e.preventDefault();
 		}
+
+		var moneda = parseInt((document.getElementById('moneda') as HTMLInputElement).value);
+
+		// si todavia no se cargaron las conversiones, cargarlas.
+		if (!obtenidos) {
+			// solo awaitear si no son pesos
+			if (parseInt((document.getElementById('moneda') as HTMLInputElement).value) == 1) {
+				setearMonedas();
+			}
+			else {
+				document.getElementById("botonSubmit").innerText = "Cargando conversiones...";
+				await setearMonedas();
+				document.getElementById("botonSubmit").innerText = "Calcular";
+			}
+		}
+		
+		var pvcia = parseInt((document.getElementById('pvcia') as HTMLInputElement).value);
 
 		if (moneda == 2) {
 			cantidad *= values.usd;
@@ -103,7 +117,6 @@ export default function Page() {
 			<Header>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Calculadora de pagos al exterior</p>
 			</Header>
-			<p>21/11/22: Arreglado el bug que no permitia que funcionen las conversiones.</p>
 			<div className={utilStyles.centerContainer}>
 				<p className={utilStyles.headingLg}>Ingresa cuanto vas a cargar</p>
 			</div>
@@ -131,7 +144,7 @@ export default function Page() {
 							<option value={7}>Salta</option>
 							<option value={0}>Ninguna de las anteriores</option>
 						</select>
-						<input style={{marginTop: '20px'}} type="submit" className={utilStyles.button} value="Calcular" />
+						<button style={{marginTop: '20px'}} type="submit" id="botonSubmit" className={utilStyles.button}>Calcular</button>
 					</Grid>
 				</Grid>
 			</form>
