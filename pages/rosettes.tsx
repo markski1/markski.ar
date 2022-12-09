@@ -54,8 +54,7 @@ export default function Page() {
 				<small>The default settings are probably fine for most guilds.</small></p>
 				<p><b>3. Done!</b></p>
 				<p>
-					<small>To see a full list of commands, <a style={{color: 'cyan'}} href="https://snep.markski.ar/rosettes/commands.html" rel="noreferrer" target="_blank">click here</a>.<br/>
-					If you wish to support hosting and development of Rosettes, you can <Link href="/donate"><span style={{color: 'cyan'}}>donate</span></Link>.</small>
+					<small>If you wish to support hosting and development of Rosettes, you can <Link href="/donate"><span style={{color: 'cyan'}}>donate</span></Link>.</small>
 				</p>
 			</SectorContainer>
 
