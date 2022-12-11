@@ -40,6 +40,7 @@ export default function Page() {
 					<li>Many miscelaneous functions (urban dictionary, reminder alarms, emoji exporter, etc)</li>
 				</ul>
 				<p>Most important of all, Rosettes is in active development, and always accepting feedback for new features.</p>
+				<p>For a list of commands, <Link href="/rosettes/commands"><span style={{color: 'cyan'}}>click here</span></Link>.</p>
 			</SectorContainer>
 
 			<div className={utilStyles.centerContainer}>
