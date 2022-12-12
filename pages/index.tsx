@@ -14,20 +14,17 @@ export default function Home() {
 		</Head>
 		<Layout home>
 			
-			<section className={utilStyles.headingMd}>
-				<h1>markski; computer science student and developer in Argentina.</h1>
-			</section><div className={utilStyles.contactCard}>
-			<Grid container columnSpacing={4} rowSpacing={3}>
+			<div className={utilStyles.contactCard}>
+				<Grid container columnSpacing={4} rowSpacing={3}>
 					<Grid item xs={7}>
 						<div style={{whiteSpace: 'pre-line', minWidth: '17rem'}}>
 							<p>I study Computer Science in the UNLP, and currently work as a freelancer.<br/>&nbsp;<br/>
-							Always interested in work and opportunities. Get in touch:</p>
+							Always interested in work and opportunities.<br/>Get in touch!</p>
 						</div>
 					</Grid>
 					<Grid item xs>
-						<div style={{minWidth: '10rem'}}>
+						<div style={{minWidth: '10rem', marginTop: '.5rem'}}>
 							<GetIcon icon="github" /> <a className={utilStyles.contactLink} href="https://www.github.com/markski1">GitHub</a><br />
-							<GetIcon icon="linkedin" /> <a className={utilStyles.contactLink} href="https://www.linkedin.com/in/juangeido">LinkedIn</a><br />
 							<GetIcon icon="twitter" /> <a className={utilStyles.contactLink} href="https://www.twitter.com/a_markski">Twitter</a><br />
 							<GetIcon icon="telegram" /> <a className={utilStyles.contactLink} href="https://www.telegram.me/Markski">Telegram</a><br />
 							<GetIcon icon="discord" /> <a className={utilStyles.contactLink} href="discord:Markski#7243">Discord</a><br />
@@ -37,39 +34,30 @@ export default function Home() {
 				</Grid>
 			</div>
 			<div className={utilStyles.headingContainer}>
-				<h2 className={utilStyles.headingLg}>Software and Services</h2>
+				<h2 className={utilStyles.headingLg}>software and services</h2>
 			</div>
 			<PrintEntry
-				title = 'WTTk - WinTweakToolkit'
+				title = 'WTTk - windows tweaking toolkit'
 				url = 'wttk'
-				text = 'The lightweight, feature-complete tool kit for common Windows tweaking that would otherwise require having to dive into the registry or other unfriendly places.'
+				text = 'lightweight toolkit for tweaking hidden windows settings.'
 			/>
-			<hr />
 			<PrintEntry
 				title = 'Rosettes'
 				url = 'rosettes'
-				text = 'A simple, free, open source Discord bot.'
+				text = 'simple, free, open source discord bot.'
 			/>
-			<hr />
 			<PrintEntry
 				title = 'Argentine exterior tax calculator [spanish only]'
 				url = 'calc'
-				text = 'Calculates costs of payments to Steam, Netflix, etc.'
+				text = 'calculates costs of payments to Steam, Netflix, etc.'
 			/>
-			<hr />
 			<PrintEntry
 				title = 'CS:GO Text simplifier [spanish only]'
 				url = 'simplecsgo'
-				text = 'Simplifies the in-game chat texts in CS:GO.'
-			/>
-			<hr />
-			<PrintEntry
-				title = 'CS:GO Sensitivity Converter'
-				url = 'csgosens'
-				text = "A tool to keep your perceived sensitivity if you're changing parameters in CS:GO."
+				text = 'simplifies the in-game chat texts in CS:GO.'
 			/>
 			<div className={utilStyles.headingContainer}>
-				<h2 className={utilStyles.headingLg}>Repositories and Libraries</h2>
+				<h2 className={utilStyles.headingLg}>repositories and libraries</h2>
 			</div>
 			<PrintEntry
 				title = 'PSXU'
@@ -77,21 +65,18 @@ export default function Home() {
 				text = 'PSXU is a single-file PHP script to upload files on your webserver through Sharex for quick sharing.'
 				target = '_blank'
 			/>
-			<hr />
 			<PrintEntry
 				title = 'tireFuncs'
 				url = 'https://github.com/markski1/SAMP-tireFuncs'
 				text = 'Provides functions and callbacks for easily handling vehicle tires in SA-MP.'
 				target = '_blank'
 			/>
-			<hr />
 			<PrintEntry
 				title = 'vModData'
 				url = 'https://github.com/markski1/SAMP-vModData'
 				text = 'Library to obtain information about vehicle components in SA-MP.'
 				target = '_blank'
 			/>
-			<hr />
 			<PrintEntry
 				title = '3dspeed'
 				url = 'https://github.com/markski1/SAMP-3dspeed'
@@ -99,8 +84,8 @@ export default function Home() {
 				target = '_blank'
 			/>
 			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
-				<p>Everything in this website is free to use.<br/>
-				If you find something useful, please consider supporting my work with a <Link href="/donate"><span style={{color: 'cyan'}}>donation</span></Link>.</p>
+				<p>everything in this website is free to use.<br/>
+				if you find something useful, please consider supporting my work with a <Link href="/donate"><span style={{color: 'cyan'}}>donation</span></Link>.</p>
 			</div>
 		</Layout>
 		</>

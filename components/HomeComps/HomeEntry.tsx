@@ -5,10 +5,10 @@ export default function PrintEntry(props: { url: string; text: string; title: st
 	return (
 		<div className={utilStyles.entry}>
 			<h3>
-					<Link href={props.url} rel="noreferrer" target={props.target} >
-						{props.title}
-					</Link>
-				</h3>
+				<Link href={props.url} rel="noreferrer" target={props.target} >
+					{props.title}
+				</Link>
+			</h3>
 			<p>
 				{props.text}
 			</p>

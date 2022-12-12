@@ -7,7 +7,7 @@ body {
 	line-height: 1.5;
 	font-size: 18px;
 	color: #DDDDDD;
-	background-color: rgb(49, 29, 70);
+	background-color: #311d46;
 }
 
 * {
@@ -34,7 +34,7 @@ h1 {
 }
 
 h3 {
-	font-size: 1.2rem;
+	font-size: 1.25rem;
 	font-weight: 400;
 	margin-bottom: -1.2rem;
 }

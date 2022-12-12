@@ -10,19 +10,19 @@ export default function Page() {
 	return (
 		<>
 		<Head>
-			<title>Rosettes, The Simple Discord Bot</title>
+			<title>Rosettes, the simple discord bot</title>
 			<meta
 				name="description"
-				content="Rosettes is a simple, open source Discord bot with many easy to use features."
+				content="Rosettes is a simple, open source discord bot with many easy to use features."
 			/>
 			<meta name="og:title" content="Rosettes, The Simple Discord Bot" />
 		</Head>
 		<Layout>
 			<Header>
-				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Rosettes, The Simple Discord Bot</p>
+				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Rosettes, the simple discord bot</p>
 			</Header>
 			<div className={utilStyles.centerContainer}>
-				<p className={utilStyles.headingLg}>About Rosettes</p>
+				<p className={utilStyles.headingLg}>about rosettes</p>
 			</div>
 			<SectorContainer>
 				<p>
@@ -44,7 +44,7 @@ export default function Page() {
 			</SectorContainer>
 
 			<div className={utilStyles.centerContainer}>
-				<p className={utilStyles.headingLg}>Using Rosettes</p>
+				<p className={utilStyles.headingLg}>using rosettes</p>
 			</div>
 			<SectorContainer>
 				<p>To get Rosettes in your server is very straightforwards.</p>
@@ -60,7 +60,7 @@ export default function Page() {
 			</SectorContainer>
 
 			<div className={utilStyles.centerContainer}>
-				<p className={utilStyles.headingLg}>Questions and Answers</p>
+				<p className={utilStyles.headingLg}>questions and answers</p>
 			</div>
 			<SectorContainer>
 				<p>

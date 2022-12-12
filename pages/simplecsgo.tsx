@@ -9,7 +9,7 @@ export default function Page() {
 	return (
 		<>
 		<Head>
-			<title>Chat simple para CSGO - markski.ar</title>
+			<title>Chat simple para CS:GO - markski.ar</title>
 			<meta
 				name="description"
 				content="Modificación para CSGO que simplifica los elementos del chat."
@@ -18,10 +18,10 @@ export default function Page() {
 		</Head>
 		<Layout>
 			<Header>
-				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Chat simple para CSGO</p>
+				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Chat simple para CS:GO</p>
 			</Header>
 			<div className={utilStyles.centerContainer}>
-				<p className={utilStyles.headingLg}>Como se ve</p>
+				<p className={utilStyles.headingLg}>como se ve</p>
 			</div>
 			<SectorContainer>
 				<p>Los rangos tienen un numero indicando progreso:</p>
@@ -39,7 +39,7 @@ export default function Page() {
 				</ul>
 			</SectorContainer>
 			<div className={utilStyles.centerContainer}>
-				<p className={utilStyles.headingLg}>Como instalarlo</p>
+				<p className={utilStyles.headingLg}>como instalarlo</p>
 			</div>
 			<SectorContainer>
 				<ul style={{listStyleType: 'square'}}>
@@ -49,7 +49,7 @@ export default function Page() {
 				</ul>
 			</SectorContainer>
 			<div className={utilStyles.centerContainer}>
-				<p className={utilStyles.headingLg}>Aviso y creditos</p>
+				<p className={utilStyles.headingLg}>aviso y creditos</p>
 			</div>
 			<SectorContainer>
 				<p>Este mod se instala como si fuera un lenguaje alternativo. No hace nada que CSGO no permita. No va a causar bans de VAC, Faceit ni GC.</p>

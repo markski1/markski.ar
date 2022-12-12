@@ -115,10 +115,10 @@ export default function Page() {
 		</Head>
 		<Layout>
 			<Header>
-				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Calculadora de pagos al exterior</p>
+				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>calculadora de pagos al exterior</p>
 			</Header>
 			<div className={utilStyles.centerContainer}>
-				<p className={utilStyles.headingLg}>Ingresa cuanto vas a cargar</p>
+				<p className={utilStyles.headingMd}>ingresá cuanto vas a cargar</p>
 			</div>
 			
 			<form onSubmit={calcularTrigger}>
@@ -155,10 +155,10 @@ export default function Page() {
 			</div>
 			<SectorContainer>
 				<div style={{whiteSpace: 'pre-line', minWidth: '20rem'}}>
-					<p className={utilStyles.headingLg}>En la compra: <span className={utilStyles.money}>AR$<span id="totalCompra">0,00</span></span><br />
+					<p className={utilStyles.headingLg} style={{fontSize: '2rem'}}>En la compra: <span className={utilStyles.money}>AR$<span id="totalCompra">0,00</span></span><br />
 					En impuestos: <span className={utilStyles.money}>AR$<span id="totalImpuestos">0,00</span></span></p>
 					<small>
-						<ul>
+						<ul style={{marginBottom: '0rem'}}>
 							<li>IVA Servicios Digitales <span className={utilStyles.money}>AR$<span id="servdig">0,00</span></span> <b>(21%)</b></li>
 							<li>Percepción RG AFIP 4815 <span className={utilStyles.money}>AR$<span id="afip">0,00</span></span> <b>(45%)</b></li>
 							<li>Ley impuesto PAIS <span className={utilStyles.money}>AR$<span id="pais">0,00</span></span> <b>(8%)</b></li>
@@ -169,9 +169,9 @@ export default function Page() {
 			</SectorContainer>
 
 			<SectorContainer>
-				<p>Si te sirve la herramienta y tenes ganas, podes colaborar:</p>
+				Si te sirve la herramienta y tenes ganas, podes colaborar:
 				<small>
-					<ul>
+					<ul style={{marginBottom: '0rem'}}>
 						<li>Por Mercado Pago: A traves de <a href="https://www.cafecito.app/Markski" className={utilStyles.money}>Cafecito</a></li>
 						<li>Por CBU: <span className={utilStyles.money}>0110337130033713474751</span> o al alias <span className={utilStyles.money}>markski</span></li>
 					</ul>

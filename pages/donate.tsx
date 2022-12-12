@@ -13,7 +13,7 @@ export default function Page() {
 		</Head>
 		<Layout>
 			<Header>
-				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Make a donation</p>
+				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>make a donation</p>
 			</Header>
 			<p>
 				I invest a significant amount of my time creating and maintaining the tools, services and documentation available both in this website and on my GitHub page.
@@ -21,7 +21,7 @@ export default function Page() {
 			<p>
 				Apart from the cost of the personal time I invest in this, there is also a cost associated with hosting and bandwidth which I must cover.
 			</p>
-			<p className={utilStyles.headingLg}>Donation methods</p>
+			<p className={utilStyles.headingLg}>donation methods</p>
 			<ul>
 				<li>If you live in Argentina, you can use <a href="https://www.cafecito.app/Markski" className={utilStyles.money} rel="noreferrer" target="_blank">Cafecito</a>, or transfer to CBU alias <span className={utilStyles.money}>markski</span></li>
 				<li>If you live elsewhere in the world, you can use <a href="https://www.ko-fi.com/Markski" className={utilStyles.money} rel="noreferrer" target="_blank">Ko-Fi</a>.</li>
