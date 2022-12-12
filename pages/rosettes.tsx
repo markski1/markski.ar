@@ -22,7 +22,7 @@ export default function Page() {
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Rosettes, the simple discord bot</p>
 			</Header>
 			<div className={utilStyles.centerContainer}>
-				<p className={utilStyles.headingLg}>about rosettes</p>
+				<p className={utilStyles.headingMd}>about rosettes</p>
 			</div>
 			<SectorContainer>
 				<p>
@@ -44,7 +44,7 @@ export default function Page() {
 			</SectorContainer>
 
 			<div className={utilStyles.centerContainer}>
-				<p className={utilStyles.headingLg}>using rosettes</p>
+				<p className={utilStyles.headingMd}>using rosettes</p>
 			</div>
 			<SectorContainer>
 				<p>To get Rosettes in your server is very straightforwards.</p>
@@ -60,7 +60,7 @@ export default function Page() {
 			</SectorContainer>
 
 			<div className={utilStyles.centerContainer}>
-				<p className={utilStyles.headingLg}>questions and answers</p>
+				<p className={utilStyles.headingMd}>questions and answers</p>
 			</div>
 			<SectorContainer>
 				<p>

@@ -155,8 +155,10 @@ export default function Page() {
 			</div>
 			<SectorContainer>
 				<div style={{whiteSpace: 'pre-line', minWidth: '20rem'}}>
-					<p className={utilStyles.headingLg} style={{fontSize: '2rem'}}>En la compra: <span className={utilStyles.money}>AR$<span id="totalCompra">0,00</span></span><br />
-					En impuestos: <span className={utilStyles.money}>AR$<span id="totalImpuestos">0,00</span></span></p>
+					<span className={utilStyles.headingMd}>
+						En la compra: <span className={utilStyles.money}>AR$<span id="totalCompra">0,00</span></span><br />
+						En impuestos: <span className={utilStyles.money}>AR$<span id="totalImpuestos">0,00</span></span>
+					</span>
 					<small>
 						<ul style={{marginBottom: '0rem'}}>
 							<li>IVA Servicios Digitales <span className={utilStyles.money}>AR$<span id="servdig">0,00</span></span> <b>(21%)</b></li>

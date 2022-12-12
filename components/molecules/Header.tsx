@@ -7,7 +7,7 @@ export default function Header() {
 			<div className={styles.headerContainer}>
 				<div style={{float: 'left'}}>
 					<img
-						src="/images/profileThemed.png"
+						src="/images/profileDesplacement.png"
 						width={144}
 						height={144}
 						alt="logo"

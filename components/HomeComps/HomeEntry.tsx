@@ -9,7 +9,7 @@ export default function PrintEntry(props: { url: string; text: string; title: st
 					{props.title}
 				</Link>
 			</h3>
-			<p>
+			<p style={{color: 'darkgray'}}>
 				{props.text}
 			</p>
 		</div>

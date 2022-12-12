@@ -22,7 +22,7 @@ export default function Page() {
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>WTTk, the windows tweaking toolkit</p>
 			</Header>
 			<div className={utilStyles.centerContainer}>
-				<p className={utilStyles.headingLg}>about</p>
+				<p className={utilStyles.headingMd}>about</p>
 			</div>
 			<SectorContainer>
 				<p>
@@ -42,7 +42,7 @@ export default function Page() {
 			</SectorContainer>
 
 			<div className={utilStyles.centerContainer}>
-				<p className={utilStyles.headingLg}>download</p>
+				<p className={utilStyles.headingMd}>download</p>
 			</div>
 			<SectorContainer>
 				<p>You can find the download for the latest version of WTTk <a style={{color: 'cyan'}} href="https://github.com/markski1/WinTweakTool/releases/latest" rel="noreferrer" target="_blank">in this page</a>.</p>
@@ -54,7 +54,7 @@ export default function Page() {
 			</SectorContainer>
 
 			<div className={utilStyles.centerContainer}>
-				<p className={utilStyles.headingLg}>questions and answers</p>
+				<p className={utilStyles.headingMd}>questions and answers</p>
 			</div>
 			<SectorContainer>
 				<p>

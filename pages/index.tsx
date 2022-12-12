@@ -62,25 +62,25 @@ export default function Home() {
 			<PrintEntry
 				title = 'PSXU'
 				url = 'https://github.com/markski1/PSXU'
-				text = 'PSXU is a single-file PHP script to upload files on your webserver through Sharex for quick sharing.'
+				text = 'single-file PHP script to upload files on your webserver through Sharex for quick sharing.'
 				target = '_blank'
 			/>
 			<PrintEntry
 				title = 'tireFuncs'
 				url = 'https://github.com/markski1/SAMP-tireFuncs'
-				text = 'Provides functions and callbacks for easily handling vehicle tires in SA-MP.'
+				text = 'functions and callbacks for easily handling vehicle tires in SA-MP.'
 				target = '_blank'
 			/>
 			<PrintEntry
 				title = 'vModData'
 				url = 'https://github.com/markski1/SAMP-vModData'
-				text = 'Library to obtain information about vehicle components in SA-MP.'
+				text = 'library to obtain information about vehicle components in SA-MP.'
 				target = '_blank'
 			/>
 			<PrintEntry
 				title = '3dspeed'
 				url = 'https://github.com/markski1/SAMP-3dspeed'
-				text = 'An easy to implement 3D Speedometer for your SA-MP server which exists in the game world itself.'
+				text = 'easy to implement Speedometer for SA-MP server which floats in the physical game world.'
 				target = '_blank'
 			/>
 			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
