@@ -32,14 +32,15 @@ export default function Page() {
 					It's functions include, but are not limited to:
 				</p>
 				<ul>
-					<li>Role management (Assign role on join, AutoRoles)</li>
 					<li>Dice-rolling and coin-flipping commands.</li>
+					<li>Ability to create votes and anonymous polls.</li>
 					<li>Plays music off Youtube, Yandex, Soundcloud and Bandcamp.</li>
-					<li>Displays information about a given user or guild.</li>
+					<li>Role Management (Assign role on join, unlimited custom AutoRoles)</li>
+					<li>Let users set ping alarms for themselves, even in DM's.</li>
 					<li>Extracts video files off twitter links.</li>
-					<li>Many miscelaneous functions (urban dictionary, reminder alarms, emoji exporter, etc)</li>
+					<li>Many miscelaneous functions (urban dictionary, emoji exporter, csgo/ffxiv status checker, shows how many playing when steam game linked, etc)</li>
 				</ul>
-				<p>Most important of all, Rosettes is in active development, and always accepting feedback for new features.</p>
+				<p>Most important of all, Rosettes is in active development, and always accepting feedback and suggestions for new features.</p>
 				<p>For a list of commands, <Link href="/rosettes/commands"><span style={{color: 'cyan'}}>click here</span></Link>.</p>
 			</SectorContainer>
 
