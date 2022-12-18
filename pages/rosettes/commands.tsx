@@ -49,6 +49,9 @@ export default function Page() {
 						<b>/twtvid [tweet url]</b> - Download the video off a provided tweet.
 					</p>
 					<p>
+						<b>/urban [term]</b> - Returns an Urban Dictionary definition of the given term.
+					</p>
+					<p>
 						<b>/alarm [amout in minutes]</b> - Sets an alarm for Rosettes to ping you in the given amount of minutes. May cancel with /cancelalarm.
 					</p>
 					<p>
@@ -71,18 +74,6 @@ export default function Page() {
 					</p>
 					<p>
 						<b>/checkem</b> - Returns a random "roll ID", allows rolling for "dubs" as done in internet messageboards.
-					</p>
-				</div>
-				<h2>Dumb commands</h2>
-				<div style={{marginLeft: '1rem'}}>
-					<p>
-						<b>/fakecat</b> - Returns a fake, AI generated cat.
-					</p>
-					<p>
-						<b>/fakeperson</b> - Returns a fake, AI generated person.
-					</p>
-					<p>
-						<b>/urban [term]</b> - Returns an Urban Dictionary definition of the given term.
 					</p>
 				</div>
 				<h2>Game status commands</h2>
