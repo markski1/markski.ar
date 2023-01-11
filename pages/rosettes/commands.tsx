@@ -58,10 +58,7 @@ export default function Page() {
 						<b>/exportallemoji</b> - Exports all emoji in the guild to a ZIP. May only be used by server owner.
 					</p>
 					<p>
-						<b>/newvote [question]</b> - Creates a simple "vote" with a thumbs up and thumbs down option.
-					</p>
-					<p>
-						<b>/newpoll [question] [options...]</b> - Similar to newvote, creates a poll where the you provide up to 4 options to be voted.
+						<b>/makepoll [question] [options...]</b> - Create a poll with up to 4 choices, the bot will keep track of votes and stop people from voting twice.
 					</p>
 				</div>
 				<h2>Random commands</h2>
@@ -74,6 +71,9 @@ export default function Page() {
 					</p>
 					<p>
 						<b>/checkem</b> - Returns a random "roll ID", allows rolling for "dubs" as done in internet messageboards.
+					</p>
+					<p>
+						<b>/makesweeper [emoji] [optional: difficulty]</b> - Creates a Minesweeper-Like field where the mines are the chosen emoji.
 					</p>
 				</div>
 				<h2>Game status commands</h2>
