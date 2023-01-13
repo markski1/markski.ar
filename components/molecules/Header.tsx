@@ -17,8 +17,8 @@ export default function Header() {
 					<span>
 						<Link className={styles.headerLinks} href="/">home</Link><br/>
 						<Link className={styles.headerLinks} href="/rosettes">rosettes</Link><br/>
-						<Link className={styles.headerLinks} href="wttk">wttk</Link><br/>
-						<Link className={styles.headerLinks} href="calc">calc impuestos</Link>
+						<Link className={styles.headerLinks} href="/wttk">wttk</Link><br/>
+						<Link className={styles.headerLinks} href="/calc">calc impuestos</Link>
 					</span>
 				</div>
 				<div style={{clear: 'both'}}></div>

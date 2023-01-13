@@ -9,12 +9,14 @@ export default function Page() {
 	return (
 		<>
 		<Head>
-			<title>Rosettes, The Simple Discord Bot</title>
+			<title>Rosettes command list - markski.ar</title>
+			<meta name="og:title" content="Rosettes command list - markski.ar" />
+			<meta property="og:description" content="A list with commands for Rosettes, the simple, open source Discord bot." />
+			<meta property="og:image" content="https://markski.ar/images/rosettes.png" />
 			<meta
 				name="description"
-				content="Rosettes is a simple, open source Discord bot with many easy to use features."
+				content="A list with commands for Rosettes, the simple, open source Discord bot."
 			/>
-			<meta name="og:title" content="Rosettes, The Simple Discord Bot" />
 		</Head>
 		{/* Use 'home' parameter to make the back-to-home button not show up. */}
 		<Layout home>
@@ -23,7 +25,7 @@ export default function Page() {
 			</Header>
 			<SectorContainer>
 				<p>
-					The following list comprises a somewhat-complete list of commands that Rosettes is able to run. Be advised some of these will work in DM's too.
+					The following is a somewhat-complete list of commands that Rosettes understands and runs. Some but not all of these might work in DM's	 too.
 				</p>
 				<h2>Music commands</h2>
 				<div style={{marginLeft: '1rem'}}>
@@ -70,21 +72,31 @@ export default function Page() {
 						<b>/coin</b> - Does a coin throw. Can be provided two custom faces.
 					</p>
 					<p>
-						<b>/checkem</b> - Returns a random "roll ID", allows rolling for "dubs" as done in internet messageboards.
-					</p>
-					<p>
-						<b>/makesweeper [emoji] [optional: difficulty]</b> - Creates a Minesweeper-Like field where the mines are the chosen emoji.
+						<b>/makesweeper [emoji] [optional: difficulty, hideZeros, unspoilered]</b> - Creates a Minesweeper-Like field where the mines are the given emoji.
 					</p>
 				</div>
 				<h2>Game status commands</h2>
 				<div style={{marginLeft: '1rem'}}>
 					<p>
-						<b>/csgo</b> - Shows status on CS:GO servers.
+						<b>/csgo</b> - Shows status of CS:GO servers.
 					</p>
 					<p>
 						<b>/ffxiv [optional: server]</b> - Shows status of FFXIV servers.
 					</p>
 				</div>
+				<h2>System commands</h2>
+				<p>
+					<b>/keygen</b> - Generate a login key for the admin panel.
+				</p>
+				<p>
+					<b>/setautorole [id]</b> - Apply an AutoRoles prompt to a channel. The ID is given by the web panel after you set it up.
+				</p>
+				<p>
+					<b>/feedback [text]</b> - Send any feedback such as suggestions, bug reports or other messages directly to me.
+				</p>
+				<p>
+					<b>/memory</b> - Information regarding Rosettes and how it's currently running.
+				</p>
 			</SectorContainer>
 		</Layout>
 		</>

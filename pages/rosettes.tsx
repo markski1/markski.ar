@@ -33,9 +33,9 @@ export default function Page() {
 					width= "20%"
 					style = {{float: 'right'}}
 				/>
-				<p>
+				<span>
 					Rosettes is a simple, free and open source Discord bot.
-				</p>
+				</span>
 				
 				<p>
 					It's objectives are:
@@ -92,25 +92,23 @@ export default function Page() {
 				<p className={utilStyles.headingMd}>functions</p>
 			</div>
 			<SectorContainer>
-				<p>
+				<span>
 					It's functions include, but are not limited to:
-				</p>
+				</span>
 				<ul>
 					<li>Dice-rolling and coin-flipping commands.</li>
 					<li>Easily create polls with anonymous voting.</li>
 					<li>Plays music off Youtube, Yandex, Soundcloud and Bandcamp.</li>
+					<li>Extracts video files off Twitter links.</li>
 					<li>Role Management (Assign role on join, unlimited custom AutoRoles)</li>
 					<li>Let users set ping alarms for themselves, even in DM's.</li>
-					<li>Extracts video files off twitter links.</li>
 					<li>Many miscelaneous functions (urban dictionary, emoji exporter, csgo/ffxiv status checker, shows how many playing when steam game linked, etc)</li>
 				</ul>
-				<p>Want Rosettes to do something not listed here? Just ask for it, and it might be added!</p>
+				<p>Rosettes is in active development, and always looking for new features.<br/>Have an idea, or something doesn't work? Please use the <span style={{color: 'cyan'}}>/feedback</span> command.</p>
 				<p>
-					<small>For a list of commands, <Link href="/rosettes/commands"><span style={{color: 'cyan'}}>click here</span></Link>.</small></p>
-					<small>To suggest a new feature, contact me through any of the methods in the <Link href="/"><span style={{color: 'cyan'}}>main page</span></Link>.</small>
-				<p>
-					<small>If you wish to support hosting and development of Rosettes, you can <Link href="/donate"><span style={{color: 'cyan'}}>donate</span></Link>.</small>
+					<small>For a list of commands, <Link href="/rosettes/commands"><span style={{color: 'cyan'}}>click here</span></Link>.</small>
 				</p>
+				<small>If you wish to support hosting and development of Rosettes, you can <Link href="/donate"><span style={{color: 'cyan'}}>donate</span></Link>.</small>
 			</SectorContainer>
 		</Layout>
 		</>
