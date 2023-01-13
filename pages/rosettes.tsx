@@ -26,9 +26,15 @@ export default function Page() {
 				<p className={utilStyles.headingMd}>about</p>
 			</div>
 			<SectorContainer>
+				<img
+					src = "/images/rosettes.png"
+					width= "20%"
+					style = {{float: 'right'}}
+				/>
 				<p>
 					Rosettes is a simple, free and open source Discord bot.
 				</p>
+				
 				<p>
 					It's objectives are:
 				</p>
