@@ -19,7 +19,7 @@ export default function Page() {
 				I invest a significant amount of my time creating and maintaining the tools, services and documentation available both in this website and on my GitHub page.
 			</p>
 			<p>
-				Apart from the cost of the personal time I invest in this, there is also a cost associated with hosting and bandwidth which I must cover.
+				Apart from the cost of the personal time I invest in this, there is also a cost associated with hosting and bandwidth which I must cover. <span style={{fontSize: '0.8rem'}}>plus the significant overhead of taxes applied by the argentine state on tech.</span>
 			</p>
 			<p className={utilStyles.headingLg}>donation methods</p>
 			<ul>

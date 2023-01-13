@@ -19,14 +19,14 @@ export default function Page() {
 		</Head>
 		<Layout>
 			<Header>
-				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>WTTk, the windows tweaking toolkit</p>
+				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>WTTk</p>
 			</Header>
 			<div className={utilStyles.centerContainer}>
 				<p className={utilStyles.headingMd}>about</p>
 			</div>
 			<SectorContainer>
 				<p>
-					WTTk is a light weight, free and open source Windows Tweaking tool.
+					<b>W</b>indows <b>T</b>weaking <b>T</b>ool<b>k</b>it is a light weight, free and open source Windows Tweaking tool.
 				</p>
 				<p>
 					It's functions include:

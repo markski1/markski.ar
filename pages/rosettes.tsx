@@ -5,6 +5,7 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 import Header from '../components/molecules/PageHeader';
 import SectorContainer from '../components/molecules/SectorContainer';
+import MButton from '../components/atoms/MButton';
 
 export default function Page() {
 	return (
@@ -19,98 +20,88 @@ export default function Page() {
 		</Head>
 		<Layout>
 			<Header>
-				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Rosettes, the simple discord bot</p>
+				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Rosettes</p>
 			</Header>
 			<div className={utilStyles.centerContainer}>
-				<p className={utilStyles.headingMd}>about rosettes</p>
+				<p className={utilStyles.headingMd}>about</p>
 			</div>
 			<SectorContainer>
 				<p>
 					Rosettes is a simple, free and open source Discord bot.
 				</p>
 				<p>
+					It's objectives are:
+				</p>
+				<small>
+					<ul>
+						<li>To be ridiculously simple to set up.</li>
+						<li>To offer it's functionality in the most straightforward way possible.</li>
+						<li>To collect as little user and guild data as possible.</li>
+						<li>To collect absolutely no message data, ever.</li>
+					</ul>
+				</small>
+				<div style={{textAlign: 'center'}}>
+					<a href="https://discord.com/api/oauth2/authorize?client_id=970176524110147605&permissions=275149548624&scope=bot" rel="noreferrer" target="_blank">
+						<MButton
+							text = "invite to server"
+							color = "#2D215C"
+							width = "8rem"
+						/>
+					</a>
+					<a href="https://snep.markski.ar/rosettes" rel="noreferrer" target="_blank">
+						<MButton
+							text = "admin panel"
+							color = "#4D215C"
+							width = "8rem"
+						/>
+					</a>
+					<Link href="/rosettes/commands">
+						<MButton
+							text = "command list"
+							color = "#1D2152"
+							width = "8rem"
+						/>
+					</Link>
+					<Link href="/donate">
+						<MButton
+							text = "donate"
+							color = "#43055C"
+							width = "8rem"
+						/>
+					</Link>
+					<a href="https://github.com/markski1/RosettesDiscord" rel="noreferrer" target="_blank">
+						<MButton
+							text = "github"
+							color = "#521D4F"
+							width = "8rem"
+						/>
+					</a>
+				</div>
+			</SectorContainer>
+
+
+			<div className={utilStyles.centerContainer}>
+				<p className={utilStyles.headingMd}>functions</p>
+			</div>
+			<SectorContainer>
+				<p>
 					It's functions include, but are not limited to:
 				</p>
 				<ul>
 					<li>Dice-rolling and coin-flipping commands.</li>
-					<li>Ability to create votes and anonymous polls.</li>
+					<li>Easily create polls with anonymous voting.</li>
 					<li>Plays music off Youtube, Yandex, Soundcloud and Bandcamp.</li>
 					<li>Role Management (Assign role on join, unlimited custom AutoRoles)</li>
 					<li>Let users set ping alarms for themselves, even in DM's.</li>
 					<li>Extracts video files off twitter links.</li>
 					<li>Many miscelaneous functions (urban dictionary, emoji exporter, csgo/ffxiv status checker, shows how many playing when steam game linked, etc)</li>
 				</ul>
-				<p>Most important of all, Rosettes is in active development, and always accepting feedback and suggestions for new features.</p>
-				<p>For a list of commands, <Link href="/rosettes/commands"><span style={{color: 'cyan'}}>click here</span></Link>.</p>
-			</SectorContainer>
-
-			<div className={utilStyles.centerContainer}>
-				<p className={utilStyles.headingMd}>using rosettes</p>
-			</div>
-			<SectorContainer>
-				<p>To get Rosettes in your server is very straightforwards.</p>
-				<p><b>1. <a style={{color: 'cyan'}} href="https://discord.com/api/oauth2/authorize?client_id=970176524110147605&permissions=275149548624&scope=bot" rel="noreferrer" target="_blank">Invite Rosettes</a> into your server.</b><br/>
-				<small>You can remove managing-type permissions if you don't want Rosettes for that.<br/>
-				Everything else will work just fine!</small></p>
-				<p><b>2. [Optional] Check the <a style={{color: 'cyan'}} href="https://snep.markski.ar/rosettes" rel="noreferrer" target="_blank">web panel</a> for available settings.</b><br/>
-				<small>The default settings are probably fine for most guilds.</small></p>
-				<p><b>3. Done!</b></p>
+				<p>Want Rosettes to do something not listed here? Just ask for it, and it might be added!</p>
+				<p>
+					<small>For a list of commands, <Link href="/rosettes/commands"><span style={{color: 'cyan'}}>click here</span></Link>.</small></p>
+					<small>To suggest a new feature, contact me through any of the methods in the <Link href="/"><span style={{color: 'cyan'}}>main page</span></Link>.</small>
 				<p>
 					<small>If you wish to support hosting and development of Rosettes, you can <Link href="/donate"><span style={{color: 'cyan'}}>donate</span></Link>.</small>
-				</p>
-			</SectorContainer>
-
-			<div className={utilStyles.centerContainer}>
-				<p className={utilStyles.headingMd}>questions and answers</p>
-			</div>
-			<SectorContainer>
-				<p>
-					<b>
-						Why "Rosettes"?
-					</b>
-				</p>
-				<p>Rosettes is the name of the pattern on the fur of snow leopards, which I quite like.</p>
-				<p>
-					<b>
-						Are messages logged?
-					</b>
-				</p>
-				<p>
-					No, Rosettes keeps logs of nothing.<br/>
-					What little data gets stored is not personal beyond usernames, which are public anyways.
-				</p>
-				<p>
-					<b>
-						Why does Rosettes not have a Discord group like other bots?
-					</b>
-				</p>
-				<p>
-					Rosettes has very few users, there's not much of a community to be built around it.<br/>
-					For any inquiries regarding Rosettes, you are more than welcome to contact me directly.
-				</p>
-				<p>
-					<b>
-						Where is the source code?
-					</b>
-				</p>
-				<p>
-					It is available in it's <a style={{color: 'cyan'}} data-class="link" href="https://github.com/markski1/RosettesDiscord" rel="noreferrer" target="_blank">GitHub repository</a>.
-				</p>
-				<p>
-					<b>
-						Can I suggest new features?
-					</b>
-				</p>
-				<p>
-					Yes! Feedback is always welcome. To suggest new features, improvements or bug reports, simply contact me.
-				</p>
-				<p>
-					<b>
-						How can I contact you?
-					</b>
-				</p>
-				<p>
-					With the methods listed at the top of the <Link href="/"><span style={{color: 'cyan'}}>homepage</span></Link>.
 				</p>
 			</SectorContainer>
 		</Layout>

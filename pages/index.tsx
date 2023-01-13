@@ -37,24 +37,26 @@ export default function Home() {
 				<h2 className={utilStyles.headingLg}>software and services</h2>
 			</div>
 			<PrintEntry
-				title = 'WTTk - windows tweaking toolkit'
-				url = 'wttk'
-				text = 'lightweight toolkit for tweaking hidden windows settings.'
-			/>
-			<PrintEntry
 				title = 'Rosettes'
 				url = 'rosettes'
 				text = 'simple, free, open source discord bot.'
 			/>
 			<PrintEntry
-				title = 'Argentine exterior tax calculator [spanish only]'
-				url = 'calc'
-				text = 'calculates costs of payments to Steam, Netflix, etc.'
+				title = 'WTTk'
+				url = 'wttk'
+				text = 'the windows tweaking toolkit allows tweaking hidden windows settings.'
 			/>
 			<PrintEntry
-				title = 'CS:GO Text simplifier [spanish only]'
+				title = 'Argentine exterior tax calculator'
+				url = 'calc'
+				text = 'calculate costs of payments from argentina to foreign services such as steam'
+				spanishOnly
+			/>
+			<PrintEntry
+				title = 'CS:GO Text simplifier'
 				url = 'simplecsgo'
-				text = 'simplifies the in-game chat texts in CS:GO.'
+				text = 'simplifies the in-game chat texts in counter-strike: global offensive.'
+				spanishOnly
 			/>
 			<div className={utilStyles.headingContainer}>
 				<h2 className={utilStyles.headingLg}>repositories and libraries</h2>
