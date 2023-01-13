@@ -13,6 +13,8 @@ export default function Layout({ children, home=false }) {
 					content="Desarrollador, estudiante de informatica. / Developer, Comp Sci student."
 				/>
 				<meta name="og:title" content="markski.ar" />
+				<meta property="og:image" content="https://markski.ar/images/profileDesplacement.png" />
+				<meta property="og:description" content="Desarrollador, estudiante de informatica. / Developer, Comp Sci student." />
 			</Head>
 			<div className={styles.container}>
 				<main style={{width: "98%", margin: "-2rem auto"}}>

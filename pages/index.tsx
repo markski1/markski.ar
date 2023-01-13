@@ -11,6 +11,13 @@ export default function Home() {
 		<>
 		<Head>
 			<title>Home - markski.ar</title>
+			<meta
+				name="description"
+				content="Desarrollador, estudiante de informatica. / Developer, Comp Sci student."
+			/>
+			<meta name="og:title" content="markski.ar" />
+			<meta property="og:description" content="Desarrollador, estudiante de informatica. / Developer, Comp Sci student." />
+			<meta property="og:image" content="https://markski.ar/images/profileDesplacement.png" />
 		</Head>
 		<Layout home>
 			

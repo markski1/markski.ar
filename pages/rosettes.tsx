@@ -12,11 +12,13 @@ export default function Page() {
 		<>
 		<Head>
 			<title>Rosettes, the simple discord bot</title>
+			<meta name="og:title" content="Rosettes, The Simple Discord Bot" />
+			<meta property="og:description" content="Rosettes is a simple, open source discord bot with many easy to use features." />
+			<meta property="og:image" content="https://markski.ar/images/rosettes.png" />
 			<meta
 				name="description"
 				content="Rosettes is a simple, open source discord bot with many easy to use features."
 			/>
-			<meta name="og:title" content="Rosettes, The Simple Discord Bot" />
 		</Head>
 		<Layout>
 			<Header>

@@ -15,6 +15,8 @@ export default function Page() {
 				content="Modificación para CSGO que simplifica los elementos del chat."
 			/>
 			<meta name="og:title" content="Chat simple para CSGO - markski.ar" />
+			<meta property="og:image" content="https://markski.ar/images/profileDesplacement.png" />
+			<meta property="og:description" content="Desarrollador, estudiante de informatica. / Developer, Comp Sci student." />
 		</Head>
 		<Layout>
 			<Header>

@@ -32,6 +32,12 @@ export default function Page() {
 		<Head>
 			<title>Nintendo Graveyard - markski.ar</title>
 			<meta name="og:title" content="Nintendo Graveyard - markski.ar" />
+			<meta property="og:description" content="A collection of all things killed by nintendo" />
+			<meta property="og:image" content="https://markski.ar/images/profileDesplacement.png" />
+			<meta
+				name="description"
+				content="A collection of all things killed by nintendo."
+			/>
 		</Head>
 		<Layout>
 			<div className={utilStyles.headingContainer}>

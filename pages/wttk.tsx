@@ -16,6 +16,8 @@ export default function Page() {
 				content="The lightweight, feature-complete tool kit for common Windows tweaking that would otherwise require having to dive into the registry or other unfriendly places."
 			/>
 			<meta name="og:title" content="WTTk, the Windows Tweaking Toolkit" />
+			<meta property="og:image" content="https://markski.ar/images/profileDesplacement.png" />
+			<meta property="og:description" content="The lightweight, feature-complete tool kit for common Windows tweaking that would otherwise require having to dive into the registry or other unfriendly places." />
 		</Head>
 		<Layout>
 			<Header>
