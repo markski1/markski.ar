@@ -84,19 +84,42 @@ export default function Page() {
 						<b>/ffxiv [optional: server]</b> - Shows status of FFXIV servers.
 					</p>
 				</div>
+				<h2>Fishing minigame commands</h2>
+				<div style={{marginLeft: '1rem'}}>
+					<p>
+						<b>/fish</b> - Try and catch a fish. Can be used every hour.
+					</p>
+					<p>
+						<b>/fish-inventory</b> - Show your fish.
+					</p>
+					<p>
+						<b>/fish-make [item]</b> - Use your fish to make an item.
+					</p>
+					<p>
+						<b>/fish-give [item]</b> - Give a selected item to other user.
+					</p>
+					<p>
+						<b>/fish-use [item] [optional:user]</b> - Use an item, optionally with another user.
+					</p>
+					<p>
+						<b>/fish-top</b> - List the top users in the server by total fish in their inventory.
+					</p>
+				</div>
 				<h2>System commands</h2>
-				<p>
-					<b>/keygen</b> - Generate a login key for the admin panel.
-				</p>
-				<p>
-					<b>/setautorole [id]</b> - Apply an AutoRoles prompt to a channel. The ID is given by the web panel after you set it up.
-				</p>
-				<p>
-					<b>/feedback [text]</b> - Send any feedback such as suggestions, bug reports or other messages directly to me.
-				</p>
-				<p>
-					<b>/memory</b> - Information regarding Rosettes and how it's currently running.
-				</p>
+				<div style={{marginLeft: '1rem'}}>
+					<p>
+						<b>/keygen</b> - Generate a login key for the admin panel.
+					</p>
+					<p>
+						<b>/setautorole [id]</b> - Apply an AutoRoles prompt to a channel. The ID is given by the web panel after you set it up.
+					</p>
+					<p>
+						<b>/feedback [text]</b> - Send any feedback such as suggestions, bug reports or other messages directly to me.
+					</p>
+					<p>
+						<b>/memory</b> - Information regarding Rosettes and how it's currently running.
+					</p>
+				</div>
 			</SectorContainer>
 		</Layout>
 		</>
