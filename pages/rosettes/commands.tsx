@@ -84,25 +84,28 @@ export default function Page() {
 						<b>/ffxiv [optional: server]</b> - Shows status of FFXIV servers.
 					</p>
 				</div>
-				<h2>Fishing minigame commands</h2>
+				<h2>RPG System commands</h2>
 				<div style={{marginLeft: '1rem'}}>
 					<p>
-						<b>/fish</b> - Try and catch a fish. Can be used every hour.
+						<b>/rpg inventory</b> - Show your inventory items.
 					</p>
 					<p>
-						<b>/fish-inventory</b> - Show your fish.
+						<b>/rpg shop [optional:buy/sell]</b> - List items that you can buy or sale, or provide an option to execute a buy or sale.
 					</p>
 					<p>
-						<b>/fish-make [item]</b> - Use your fish to make an item.
+						<b>/rpg craft [item]</b> - Combine your inventory items to make an item.
 					</p>
 					<p>
-						<b>/fish-give [item]</b> - Give a selected item to other user.
+						<b>/rpg give [item]</b> - Give a selected item to other user.
 					</p>
 					<p>
-						<b>/fish-use [item] [optional:user]</b> - Use an item, optionally with another user.
+						<b>/rpg use [item] [optional:user]</b> - Use an item, optionally with another user.
 					</p>
 					<p>
-						<b>/fish-top</b> - List the top users in the server by total fish in their inventory.
+						<b>/rpg fish</b> - Try to catch a fish. Can be used every hour.
+					</p>
+					<p>
+						<b>/rpg food-leader</b> - Show a leaderboard by amount of food crafted.
 					</p>
 				</div>
 				<h2>System commands</h2>

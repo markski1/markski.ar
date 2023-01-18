@@ -101,7 +101,7 @@ export default function Page() {
 					<li>Plays music from given links or search terms.</li>
 					<li>Extracts video files off Twitter links.</li>
 					<li>Role management (Role-on-Join and custom AutoRoles with reactions)</li>
-					<li>Small fishing minigame/system</li>
+					<li>Simple RPG system with economy and miscelaneous commands.</li>
 					<li>Let users set reminder alarms for themselves, even in DM's.</li>
 					<li>Many more miscelaneous functions (urban dictionary, emoji exporter, csgo/ffxiv status checker, shows how many playing when steam game linked, etc)</li>
 				</ul>
