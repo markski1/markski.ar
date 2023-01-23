@@ -111,6 +111,9 @@ export default function Page() {
 				<h2>System commands</h2>
 				<div style={{marginLeft: '1rem'}}>
 					<p>
+						<b>/setlogchan [optional:disable]</b> - Send this command in the channel where you'd like Rosettes to report users joining and leaving.
+					</p>
+					<p>
 						<b>/keygen</b> - Generate a login key for the admin panel.
 					</p>
 					<p>

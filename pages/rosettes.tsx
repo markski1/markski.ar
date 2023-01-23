@@ -42,8 +42,8 @@ export default function Page() {
 				</p>
 				<small>
 					<ul>
-						<li>To be ridiculously simple to set up.</li>
-						<li>To offer it's functionality in the most straightforward way possible.</li>
+						<li>To be simple to set up.</li>
+						<li>To be as straightforwards as possible in all it's functions.</li>
 						<li>To collect as little user and guild data as possible.</li>
 						<li>To collect absolutely no message data, ever.</li>
 					</ul>
@@ -101,8 +101,9 @@ export default function Page() {
 					<li>Plays music from given links or search terms.</li>
 					<li>Extracts video files off Twitter links.</li>
 					<li>Role management (Role-on-Join and custom AutoRoles with reactions)</li>
-					<li>Simple RPG system with economy and miscelaneous commands.</li>
+					<li>Displays users who joined and left if you specify a channel for it.</li>
 					<li>Let users set reminder alarms for themselves, even in DM's.</li>
+					<li>Simple gimmicky RPG fishing minigame thing.</li>
 					<li>Many more miscelaneous functions (urban dictionary, emoji exporter, csgo/ffxiv status checker, shows how many playing when steam game linked, etc)</li>
 				</ul>
 				<small>Most of these features can be individualy disabled from the admin panel, if desired.</small>
