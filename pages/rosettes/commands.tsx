@@ -60,7 +60,7 @@ export default function Page() {
 						<b>/exportallemoji</b> - Exports all emoji in the guild to a ZIP. May only be used by server owner.
 					</p>
 					<p>
-						<b>/makepoll [question] [options...]</b> - Create a poll with up to 4 choices, the bot will keep track of votes and stop people from voting twice.
+						<b>/makepoll</b> - Provides an UI to create a poll with up to 4 choices, the bot will keep track of votes and prevent repeat votes.
 					</p>
 				</div>
 				<h2>Random commands</h2>
@@ -120,7 +120,7 @@ export default function Page() {
 						<b>/feedback [text]</b> - Send any feedback such as suggestions, bug reports or other messages directly to me.
 					</p>
 					<p>
-						<b>/memory</b> - Information regarding Rosettes and how it's currently running.
+						<b>/about</b> - Information about Rosettes.
 					</p>
 				</div>
 			</SectorContainer>
