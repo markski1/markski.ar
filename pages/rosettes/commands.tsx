@@ -87,13 +87,10 @@ export default function Page() {
 				<h2>RPG System commands</h2>
 				<div style={{marginLeft: '1rem'}}>
 					<p>
-						<b>/rpg inventory</b> - Show your inventory items.
+						<b>/rpg inventory</b> - Show your inventory items and pets. Also the place to craft items.
 					</p>
 					<p>
-						<b>/rpg shop [optional:buy/sell]</b> - List items that you can buy or sale, or provide an option to execute a buy or sale.
-					</p>
-					<p>
-						<b>/rpg craft [item]</b> - Combine your inventory items to make an item.
+						<b>/rpg shop</b> - Buy and sell items.
 					</p>
 					<p>
 						<b>/rpg give [item]</b> - Give a selected item to other user.
@@ -104,14 +101,14 @@ export default function Page() {
 					<p>
 						<b>/rpg fish</b> - Try to catch a fish. Can be used every hour.
 					</p>
-					<p>
-						<b>/rpg food-leader</b> - Show a leaderboard by amount of food crafted.
-					</p>
 				</div>
 				<h2>System commands</h2>
 				<div style={{marginLeft: '1rem'}}>
 					<p>
-						<b>/setlogchan [optional:disable]</b> - Send this command in the channel where you'd like Rosettes to report users joining and leaving.
+						<b>/setlogchan [optional:disable]</b> - Sets showing user join and leave to a given channel.
+					</p>
+					<p>
+						<b>/setrpgchan [optional:disable]</b> - Restricts RPG commands to a given channel.
 					</p>
 					<p>
 						<b>/keygen</b> - Generate a login key for the admin panel.

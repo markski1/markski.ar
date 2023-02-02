@@ -96,14 +96,14 @@ export default function Page() {
 					It's functions include, but are not limited to:
 				</span>
 				<ul>
-					<li>Dice and coin commands.</li>
 					<li>Easily create polls with anonymous voting.</li>
 					<li>Plays music from given links or search terms.</li>
 					<li>Extracts video files off Twitter links.</li>
 					<li>Role management (Role-on-Join and custom AutoRoles with reactions)</li>
 					<li>Displays users who joined and left if you specify a channel for it.</li>
 					<li>Let users set reminder alarms for themselves, even in DM's.</li>
-					<li>Simple gimmicky RPG fishing minigame thing.</li>
+					<li>Simple, gimmicky RPG minigame.</li>
+					<li>Dice and Coin commands.</li>
 					<li>Many more miscelaneous functions (urban dictionary, emoji exporter, csgo/ffxiv status checker, shows how many playing when steam game linked, etc)</li>
 				</ul>
 				<small>Most of these features can be individualy disabled from the admin panel, if desired.</small>
