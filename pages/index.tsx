@@ -35,7 +35,7 @@ export default function Home() {
 							<GetIcon icon="twitter" /> <a className={utilStyles.contactLink} href="https://www.twitter.com/a_markski">Twitter</a><br />
 							<GetIcon icon="telegram" /> <a className={utilStyles.contactLink} href="https://www.telegram.me/Markski">Telegram</a><br />
 							<GetIcon icon="discord" /> <a className={utilStyles.contactLink} href="discord:Markski#7243">Discord</a><br />
-							<GetIcon icon="email" /> <a className={utilStyles.contactLink} href="mailto:immarkski@proton.me">immarkski@proton.me</a>
+							<GetIcon icon="email" /> <a className={utilStyles.contactLink} href="mailto:me@markski.ar">me@markski.ar</a>
 						</div>
 					</Grid>
 				</Grid>

@@ -130,7 +130,7 @@ export default function Page() {
 			<ul>
 				<li>Project M is not included as it was taken down by it's devs before legal action.</li>
 				<li>I understand that some of the items listed were illegal. This list isn't meant to be composed of only unfair instances.</li>
-				<li>This list is incomplete. Send submissions to immarkski@proton.me or to @a_markski on Twitter</li>
+				<li>This list is incomplete. Send submissions to me@markski.ar or to @a_markski on Twitter</li>
 			</ul>
 
 		</Layout>
