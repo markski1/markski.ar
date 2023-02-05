@@ -102,7 +102,7 @@ export default function Page() {
 					<li>Role management (Role-on-Join and custom AutoRoles with reactions)</li>
 					<li>Displays users who joined and left if you specify a channel for it.</li>
 					<li>Let users set reminder alarms for themselves, even in DM's.</li>
-					<li>Simple, gimmicky RPG minigame.</li>
+					<li>Farming and fishing minigame.</li>
 					<li>Dice and Coin commands.</li>
 					<li>Many more miscelaneous functions (urban dictionary, emoji exporter, csgo/ffxiv status checker, shows how many playing when steam game linked, etc)</li>
 				</ul>

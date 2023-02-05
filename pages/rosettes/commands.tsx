@@ -84,22 +84,25 @@ export default function Page() {
 						<b>/ffxiv [optional: server]</b> - Shows status of FFXIV servers.
 					</p>
 				</div>
-				<h2>RPG System commands</h2>
+				<h2>Farming minigame commands</h2>
 				<div style={{marginLeft: '1rem'}}>
 					<p>
-						<b>/rpg inventory</b> - Show your inventory items and pets. Also the place to craft items.
+						<b>/farm view</b> - View what is happening in your farm, and buttons with your possible actions.
 					</p>
 					<p>
-						<b>/rpg shop</b> - Buy and sell items.
+						<b>/farm inventory</b> - Show your inventory items and pets.
 					</p>
 					<p>
-						<b>/rpg give [item]</b> - Give a selected item to other user.
+						<b>/farm fish</b> - Try to catch a fish. Can be used every hour.
 					</p>
 					<p>
-						<b>/rpg use [item] [optional:user]</b> - Use an item, optionally with another user.
+						<b>/farm shop</b> - Buy and sell items.
 					</p>
 					<p>
-						<b>/rpg fish</b> - Try to catch a fish. Can be used every hour.
+						<b>/farm give [item]</b> - Give a selected item to other user.
+					</p>
+					<p>
+						<b>/farm use [item] [optional:user]</b> - Use an item, optionally with another user.
 					</p>
 				</div>
 				<h2>System commands</h2>
