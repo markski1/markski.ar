@@ -4,13 +4,14 @@ import Layout from '../../components/layout';
 import utilStyles from '../../styles/utils.module.css';
 import Header from '../../components/molecules/PageHeader';
 import SectorContainer from '../../components/molecules/SectorContainer';
+import CommandEntry from '../../components/atoms/CommandEntry';
 
 export default function Page() {
 	return (
 		<>
 		<Head>
-			<title>Rosettes command list - markski.ar</title>
-			<meta name="og:title" content="Rosettes command list - markski.ar" />
+			<title>Rosettes command list<br/>markski.ar</title>
+			<meta name="og:title" content="Rosettes command list<br/>markski.ar" />
 			<meta property="og:description" content="A list with commands for Rosettes, the simple, open source Discord bot." />
 			<meta property="og:image" content="https://markski.ar/images/rosettes.png" />
 			<meta
@@ -29,102 +30,154 @@ export default function Page() {
 				</p>
 				<h2>Music commands</h2>
 				<div style={{marginLeft: '1rem'}}>
-					<p>
-						<b>/play [url or search term]</b> - Joins your voice channel and starts playing the given track. If a song is already playing, it'll be added to the queue.
-					</p>
-					<p>
-						<b>/skip</b> - Skip to the next song in the queue, if applicable.
-					</p>
-					<p>
-						<b>/stop</b> - Stops the music playback.
-					</p>
-					<p>
-						<b>/leave</b> - Make Rosettes leave the voicechat. Please use when you're done with it.
-					</p>
-					<p>
-						<b>/toggle</b> - Use to pause and resume playback without stopping the entire song.
-					</p>
+					<CommandEntry
+						name = "/play"
+						parameters = "[url or search term]"
+						description = "Joins your voice channel and starts playing the given track. If a song is already playing, it'll be added to the queue."
+					/>
+					<CommandEntry
+						name = "/skip"
+						description = "Skip to the next song in the queue, if applicable."
+					/>
+					<CommandEntry
+						name = "/stop"
+						description = "Stops the music playback."
+					/>
+					<CommandEntry
+						name = "/leave"
+						description = "Make Rosettes leave the voicechat. Please use when you're done with it."
+					/>
+					<CommandEntry
+						name = "/toggle"
+						description = "Use to pause and resume playback without stopping the entire song."
+					/>
 				</div>
 				<h2>Utility commands</h2>
 				<div style={{marginLeft: '1rem'}}>
-					<p>
-						<b>/twtvid [tweet url]</b> - Download the video off a provided tweet.
-					</p>
-					<p>
-						<b>/urban [term]</b> - Returns an Urban Dictionary definition of the given term.
-					</p>
-					<p>
-						<b>/alarm [amout in minutes]</b> - Sets an alarm for Rosettes to ping you in the given amount of minutes. May cancel with /cancelalarm.
-					</p>
-					<p>
-						<b>/exportallemoji</b> - Exports all emoji in the guild to a ZIP. May only be used by server owner.
-					</p>
-					<p>
-						<b>/makepoll</b> - Provides an UI to create a poll with up to 4 choices, the bot will keep track of votes and prevent repeat votes.
-					</p>
+					<CommandEntry
+						name = "/twtvid"
+						parameters = "[tweet url]"
+						appCommand = {true}
+						description = "Download the video off a provided tweet."
+					/>
+					<CommandEntry
+						name = "/urban"
+						parameters = "[term]"
+						description = "Returns an Urban Dictionary definition of the given term."
+					/>
+					<CommandEntry
+						name = "/alarm"
+						parameters = "[amout] [optional: time unit]"
+						description = "Sets an alarm for Rosettes to ping you in the given amount of minutes. May cancel with /cancelalarm."
+					/>
+					<CommandEntry
+						name = "/exportallemoji"
+						description = "Exports all emoji in the guild to a ZIP. May only be used by server owner."
+					/>
+					<CommandEntry
+						name = "/makepoll"
+						description = "Provides an UI to create a poll with up to 4 choices, the bot will keep track of votes and prevent repeat votes."
+					/>
 				</div>
-				<h2>Random commands</h2>
+				<h2>Gambling commands</h2>
 				<div style={{marginLeft: '1rem'}}>
-					<p>
-						<b>/dice [number]</b> - Rolls a dice, from 1 to the given number.
-					</p>
-					<p>
-						<b>/coin</b> - Does a coin throw. Can be provided two custom faces.
-					</p>
-					<p>
-						<b>/makesweeper [emoji] [optional: difficulty, hideZeros, unspoilered]</b> - Creates a Minesweeper-Like field where the mines are the given emoji.
-					</p>
+					<CommandEntry
+						name = "/dice"
+						parameters = "[number]"
+						description = "Rolls a dice, from 1 to the given number."
+					/>
+					<CommandEntry
+						name = "/coin"
+						description = "Does a coin throw. Can be provided two custom faces."
+					/>
 				</div>
-				<h2>Game status commands</h2>
+				<h2>Miscelaneous commands</h2>
 				<div style={{marginLeft: '1rem'}}>
-					<p>
-						<b>/csgo</b> - Shows status of CS:GO servers.
-					</p>
-					<p>
-						<b>/ffxiv [optional: server]</b> - Shows status of FFXIV servers.
-					</p>
+					<CommandEntry
+						name = "/reversegif"
+						parameters = "[url to gif]"
+						appCommand = {true}
+						description = "Reverses the provided gif."
+					/>
+					<CommandEntry
+						name = "/throwbrick"
+						parameters = "[emoji/user] [optional: reversed]"
+						appCommand = {true}
+						description = 'Generates a GIF of the "throwing brick" meme with the provided image.'
+					/>
+					<CommandEntry
+						name = "/makesweeper"
+						parameters = "[emoji] [optional: difficulty]"
+						description = "Creates a Minesweeper-Like field where the mines are the given emoji."
+					/>
+					<CommandEntry
+						name = "/csgo"
+						description = "Shows status of CS:GO servers."
+					/>
+					<CommandEntry
+						name = "/ffxiv"
+						parameters = "[optional: server]"
+						description = "Shows status of FFXIV servers."
+					/>
 				</div>
 				<h2>Farming minigame commands</h2>
 				<div style={{marginLeft: '1rem'}}>
-					<p>
-						<b>/farm view</b> - View what is happening in your farm, and buttons with your possible actions.
-					</p>
-					<p>
-						<b>/farm inventory</b> - Show your inventory items and pets.
-					</p>
-					<p>
-						<b>/farm fish</b> - Try to catch a fish. Can be used every hour.
-					</p>
-					<p>
-						<b>/farm shop</b> - Buy and sell items.
-					</p>
-					<p>
-						<b>/farm give [item]</b> - Give a selected item to other user.
-					</p>
-					<p>
-						<b>/farm use [item] [optional:user]</b> - Use an item, optionally with another user.
-					</p>
+					<CommandEntry
+						name = "/farm view"
+						 description = "View what is happening in your farm, and buttons with your possible actions."
+					/>
+					<CommandEntry
+						name = "/farm inventory"
+						 description = "Show your inventory items and pets."
+					/>
+					<CommandEntry
+						name = "/farm fish"
+						 description = "Try to catch a fish. Can be used every hour."
+					/>
+					<CommandEntry
+						name = "/farm shop give"
+						 description = "Buy and sell items."
+					/>
+					<CommandEntry
+						name = "/farm"
+						 parameters = "[item] [amount] [user]"
+						 description = "Give a selected item to other user."
+					/>
+					<CommandEntry
+						name = "/farm top"
+						 description = "Minigame leaderboard for the guild."
+					/>
 				</div>
 				<h2>System commands</h2>
 				<div style={{marginLeft: '1rem'}}>
-					<p>
-						<b>/setlogchan [optional:disable]</b> - Sets showing user join and leave to a given channel.
-					</p>
-					<p>
-						<b>/setrpgchan [optional:disable]</b> - Restricts RPG commands to a given channel.
-					</p>
-					<p>
-						<b>/keygen</b> - Generate a login key for the admin panel.
-					</p>
-					<p>
-						<b>/setautorole [id]</b> - Apply an AutoRoles prompt to a channel. The ID is given by the web panel after you set it up.
-					</p>
-					<p>
-						<b>/feedback [text]</b> - Send any feedback such as suggestions, bug reports or other messages directly to me.
-					</p>
-					<p>
-						<b>/about</b> - Information about Rosettes.
-					</p>
+					<CommandEntry
+						name = "/setlogchan"
+						parameters = "[optional:disable]"
+						description = "Sets showing user join and leave to a given channel."
+					/>
+					<CommandEntry
+						name = "/setrpgchan"
+						parameters = "[optional:disable]"
+						description = "Restricts RPG commands to a given channel."
+					/>
+					<CommandEntry
+						name = "/keygen"
+						description = "Generate a login key for the admin panel."
+					/>
+					<CommandEntry
+						name = "/setautorole"
+						parameters = "[id]"
+						description = "Apply an AutoRoles prompt to a channel. The ID is given by the web panel after you set it up."
+					/>
+					<CommandEntry
+						name = "/feedback"
+						parameters = "[text]"
+						description = "Send any feedback such as suggestions, bug reports or other messages directly to me."
+					/>
+					<CommandEntry
+						name = "/about"
+						description = "Information about Rosettes."
+					/>
 				</div>
 			</SectorContainer>
 		</Layout>
