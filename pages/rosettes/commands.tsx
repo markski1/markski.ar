@@ -151,6 +151,10 @@ export default function Page() {
 				<h2>System commands</h2>
 				<div style={{marginLeft: '1rem'}}>
 					<CommandEntry
+						name = "/settings"
+						description = "Allow changing certain Rosettes settings for your guild."
+					/>
+					<CommandEntry
 						name = "/setlogchan"
 						parameters = "[optional:disable]"
 						description = "Sets showing user join and leave to a given channel."

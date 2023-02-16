@@ -4,12 +4,12 @@
 	},
 	"dependencies": {
 		"@emotion/react": "^11.10.5",
-		"@emotion/styled": "^11.9.3",
+		"@emotion/styled": "^11.10.5",
 		"framer-motion": "^7.10.3",
-		"@mui/material": "^5.11.5",
+		"@mui/material": "^5.11.6",
 		"@mui/icons-material": "^5.11.0",
-		"eslint-config-next": "^13.1.4",
-		"next": "^13.1.4",
+		"eslint-config-next": "^13.1.5",
+		"next": "^13.1.5",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0"
 	},

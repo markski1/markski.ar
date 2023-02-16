@@ -104,7 +104,7 @@ export default function Page() {
 					<li>Let users set reminder alarms for themselves, even in DM's.</li>
 					<li>Farming and fishing minigame.</li>
 					<li>Dice and Coin commands.</li>
-					<li>Many more miscelaneous functions (urban dictionary, emoji exporter, csgo/ffxiv status checker, shows how many playing when steam game linked, etc)</li>
+					<li>Many more miscelaneous functions (Monitor voicechat joins and quits, emoji exporter, Steam game checkers, etc)</li>
 				</ul>
 				<small>Most of these features can be individualy disabled from the admin panel, if desired.</small>
 				<p>Rosettes is in active development, and always looking for new features.<br/>Have an idea, or something doesn't work? Please use the <span style={{color: 'cyan'}}>/feedback</span> command.</p>
