@@ -8,8 +8,8 @@ import SectorContainer from '../components/molecules/SectorContainer';
 
 export default function Page() {
 	let pvcPorcentaje: number[];
-	//               N/A  CABA  CHACO  CRDB  LPMP  NEUQ  RNGR  SALTA
-	pvcPorcentaje = [0.0, 0.02, 0.055, 0.03, 0.01, 0.03, 0.05, 0.036];
+	//               N/A  CABA  CHACO  CRDB  LPMP  NEUQ  RNGR  SALTA  TDF
+	pvcPorcentaje = [0.0, 0.02, 0.055, 0.03, 0.01, 0.03, 0.05, 0.036, 0.0];
 
 	let values: { eur: number; usd: number; brs: number; };
 
@@ -34,8 +34,7 @@ export default function Page() {
 		var cantidad = parseFloat((document.getElementById('cantidad') as HTMLInputElement).value);
 
 		if (!isNumeric(cantidad)) {
-			alert("Valor no valido. Cualquier numero con el decimal marcado con punto o coma.");
-			return e.preventDefault();
+			cantidad = 0;
 		}
 
 		if (cantidad < 0) {
@@ -79,8 +78,15 @@ export default function Page() {
 			return e.preventDefault();
 		}
 
-		var servdig = cantidad * 0.21;
-		servdig = cantidad * 0.21;
+		var servdig:number;
+		if (pvcia == 8) {
+			servdig = 0; // TDF no paga IVA
+			document.getElementById("tdf-alerta").style.display = 'block';
+		} 
+		else {
+			servdig = cantidad * 0.21;
+			document.getElementById("tdf-alerta").style.display = 'none';
+		}
 		var afip = cantidad * 0.45;
 		var pais = cantidad * 0.08;
 		var pvc = 0.0;
@@ -125,16 +131,16 @@ export default function Page() {
 			<form onSubmit={calcularTrigger}>
 				<Grid container spacing={2.5}>
 					<Grid item xs>
-						<select defaultValue={1} className={utilStyles.input} id="moneda">
+						<select defaultValue={1} onChange={calcularTrigger} className={utilStyles.input} id="moneda">
 							<option value={1}>AR$</option>
 							<option value={2}>USD</option>
 							<option value={3}>EUR</option>
 							<option value={4}>BR$</option>
 						</select>
-						<input style={{marginTop: '20px'}} className={utilStyles.input} id="cantidad" placeholder="Cantidad $" type="number" pattern="[0-9]+([\.,][0-9]+)?" step="0.01" title="Numero con no mas de 2 decimales." />
+						<input style={{marginTop: '20px'}} onChange={calcularTrigger} className={utilStyles.input} id="cantidad" placeholder="Cantidad $" type="number" pattern="[0-9]+([\.,][0-9]+)?" step="0.01" title="Numero con no mas de 2 decimales." />
 					</Grid>
 					<Grid item xs>
-						<select defaultValue={0} className={utilStyles.input} id="pvcia">
+						<select defaultValue={0} onChange={calcularTrigger} className={utilStyles.input} id="pvcia">
 							<option value={0}>Provincia</option>
 							<option value={1}>Buenos Aires o CABA</option>
 							<option value={2}>Chaco</option>
@@ -143,6 +149,7 @@ export default function Page() {
 							<option value={5}>Neuquén</option>
 							<option value={6}>Rio Negro</option>
 							<option value={7}>Salta</option>
+							<option value={8}>Tierra del Fuego</option>
 							<option value={0}>Ninguna de las anteriores</option>
 						</select>
 						<button style={{marginTop: '20px'}} type="submit" id="botonSubmit" className={utilStyles.button}>Calcular</button>
@@ -162,13 +169,25 @@ export default function Page() {
 					</span>
 					<small>
 						<ul style={{marginBottom: '0rem'}}>
-							<li>IVA Servicios Digitales <span className={utilStyles.money}>AR$<span id="servdig">0,00</span></span> <b>(21%)</b></li>
+							<li>IVA Servicios Digitales <span className={utilStyles.money}>AR$<span id="servdig">0,00</span></span> <b>(21%)</b> <span id="tdf-alerta" style={{display: 'none'}}>* Tiera del Fuego no lo paga</span></li>
 							<li>Percepción RG AFIP 4815 <span className={utilStyles.money}>AR$<span id="afip">0,00</span></span> <b>(45%)</b></li>
 							<li>Ley impuesto PAIS <span className={utilStyles.money}>AR$<span id="pais">0,00</span></span> <b>(8%)</b></li>
 							<li>Impuestos provinciales <span className={utilStyles.money}>AR$<span id="pvc">0,00</span></span> <b>(<span id="impuestlol">?</span>%)</b></li>
 						</ul>
 					</small>
 				</div>
+			</SectorContainer>
+
+			<SectorContainer>
+				<span className={utilStyles.headingMd}>¿Que tan exacto es el resultado?</span>
+				<br/>
+				<p><small>
+					Depende. Suele ser muy cercano (±2%) si se calcula en pesos.<br/>
+					Si estas calculando en otra divisa, hay una buena posibilidad de que tu banco use una conversion un poco distinta a la nuestra. En algunos casos pague hasta 5% mas de lo calculado, asi que hay que estar preparado para todo.<br/>
+				</small></p>
+				<span><small>
+					Esta calculadora asume un caso "generico", lo que se pagaria a los servicios mas comunes. Para estar seguros, recomiendo <a className={utilStyles.money} href="https://www.mercadopago.com.ar/ayuda/pagos-en-moneda-extranjera_4063">revisar esta guia</a>. Es de Mercado Pago, pero aplica a la mayoria de las tarjetas.
+				</small></span>
 			</SectorContainer>
 
 			<SectorContainer>
