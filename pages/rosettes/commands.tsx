@@ -91,20 +91,34 @@ export default function Page() {
 						description = "Does a coin throw. Can be provided two custom faces."
 					/>
 				</div>
-				<h2>Miscelaneous commands</h2>
+				<h2>Image commands</h2>
 				<div style={{marginLeft: '1rem'}}>
 					<CommandEntry
+						name = "/saucenao"
+						parameters = "[image url]"
+						appCommand = {true}
+						description = "Finds the source for a provided piece of artwork."
+					/>
+					<CommandEntry
+						name = "/convert"
+						parameters = "[image url]"
+						appCommand = {true}
+						description = "Finds the source for a provided piece of artwork."
+					/>
+					<CommandEntry
 						name = "/reversegif"
-						parameters = "[url to gif]"
+						parameters = "[gif url]"
 						appCommand = {true}
 						description = "Reverses the provided gif."
 					/>
 					<CommandEntry
 						name = "/throwbrick"
-						parameters = "[emoji/user] [optional: reversed]"
-						appCommand = {true}
+						parameters = "[emoji/user/url] [optional: reversed]"
 						description = 'Generates a GIF of the "throwing brick" meme with the provided image.'
 					/>
+				</div>
+				<h2>Miscelaneous commands</h2>
+				<div style={{marginLeft: '1rem'}}>
 					<CommandEntry
 						name = "/makesweeper"
 						parameters = "[emoji] [optional: difficulty]"

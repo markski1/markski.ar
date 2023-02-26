@@ -93,24 +93,24 @@ export default function Page() {
 			</div>
 			<SectorContainer>
 				<span>
-					It's functions include, but are not limited to:
+					Rosettes can add many features to your server, useful to admins and users alike.<br/>
+					If you don't want something, you may disable it from <span style={{color: 'cyan'}}>/settings</span>.
 				</span>
 				<ul>
-					<li>Easily create polls with anonymous voting.</li>
-					<li>Plays music from given links or search terms.</li>
-					<li>Extracts video files off Twitter links.</li>
-					<li>Role management (Role-on-Join and custom AutoRoles with reactions)</li>
-					<li>Displays users who joined and left if you specify a channel for it.</li>
-					<li>Let users set reminder alarms for themselves, even in DM's.</li>
-					<li>Farming and fishing minigame.</li>
-					<li>Dice and Coin commands.</li>
-					<li>Many more miscelaneous functions (Monitor voicechat joins and quits, emoji exporter, Steam game checkers, etc)</li>
+					<li><b>Role management</b><br/>Create AutoRoles for users to automatically assign themselves roles.</li>
+					<li><b>Image functions</b><br/>SauceNAO to find artwork sources, GIF reversing, converting image formats, etc.</li>
+					<li><b>Downloading Twitter videos</b><br/>Uploads a video file from any tweet you give it.</li>
+					<li><b>Polls</b><br/>Easily create polls where people can anonymously vote.</li>
+					<li><b>Playing music</b><br/>Rosettes can join your voicechats and play music as requested.</li>
+					<li><b>Reminders</b><br/>Let users set reminder alarms for themselves, even in DM's.</li>
+					<li><b>Minigame</b><br/>Your average time-wasting Discord bot minigame, featuring farming and fishing.</li>
+					<li><b>Miscelaneous</b><br/>- Display who joins and leaves the server<br/>- Provide status information for certain games<br/>- Throwing dice and coins<br/>- Even more.</li>
 				</ul>
-				<small>Most of these features can be individualy disabled from the admin panel, if desired.</small>
-				<p>Rosettes is in active development, and always looking for new features.<br/>Have an idea, or something doesn't work? Please use the <span style={{color: 'cyan'}}>/feedback</span> command.</p>
 				<p>
 					<small>For a list of commands, <Link href="/rosettes/commands"><span style={{color: 'cyan'}}>click here</span></Link>.</small>
 				</p>
+				<p>Rosettes is in active development, and always looking for new features.<br/>Have an idea, or something doesn't work? Please use the <span style={{color: 'cyan'}}>/feedback</span> command.</p>
+				
 				<small>If you wish to support hosting and development of Rosettes, you can <Link href="/donate"><span style={{color: 'cyan'}}>donate</span></Link>.</small>
 			</SectorContainer>
 		</Layout>

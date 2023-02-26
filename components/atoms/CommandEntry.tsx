@@ -1,7 +1,7 @@
 export default function CommandEntry(props: { appCommand?: boolean; name: string; description: string; parameters?: string;}) {
 	let cmdtxt: JSX.Element;
 	if (props.appCommand) {
-		cmdtxt = <><br/><small style={{color: 'darkgray'}}>&nbsp;Also available as an application menu option.</small></>;
+		cmdtxt = <><br/><small style={{color: 'darkgray'}}>&nbsp;Available as an application feature.</small></>;
 	}
 	return (
 		<p>
