@@ -28,30 +28,6 @@ export default function Page() {
 				<p>
 					The following is a somewhat-complete list of commands that Rosettes understands and runs. Some but not all of these might work in DM's	 too.
 				</p>
-				<h2>Music commands</h2>
-				<div style={{marginLeft: '1rem'}}>
-					<CommandEntry
-						name = "/play"
-						parameters = "[url or search term]"
-						description = "Joins your voice channel and starts playing the given track. If a song is already playing, it'll be added to the queue."
-					/>
-					<CommandEntry
-						name = "/skip"
-						description = "Skip to the next song in the queue, if applicable."
-					/>
-					<CommandEntry
-						name = "/stop"
-						description = "Stops the music playback."
-					/>
-					<CommandEntry
-						name = "/leave"
-						description = "Make Rosettes leave the voicechat. Please use when you're done with it."
-					/>
-					<CommandEntry
-						name = "/toggle"
-						description = "Use to pause and resume playback without stopping the entire song."
-					/>
-				</div>
 				<h2>Utility commands</h2>
 				<div style={{marginLeft: '1rem'}}>
 					<CommandEntry
@@ -77,18 +53,6 @@ export default function Page() {
 					<CommandEntry
 						name = "/makepoll"
 						description = "Provides an UI to create a poll with up to 4 choices, the bot will keep track of votes and prevent repeat votes."
-					/>
-				</div>
-				<h2>Gambling commands</h2>
-				<div style={{marginLeft: '1rem'}}>
-					<CommandEntry
-						name = "/dice"
-						parameters = "[number]"
-						description = "Rolls a dice, from 1 to the given number."
-					/>
-					<CommandEntry
-						name = "/coin"
-						description = "Does a coin throw. Can be provided two custom faces."
 					/>
 				</div>
 				<h2>Image commands</h2>
@@ -117,20 +81,66 @@ export default function Page() {
 						description = 'Generates a GIF of the "throwing brick" meme with the provided image.'
 					/>
 				</div>
-				<h2>Miscelaneous commands</h2>
+				<h2>Music commands</h2>
 				<div style={{marginLeft: '1rem'}}>
 					<CommandEntry
-						name = "/makesweeper"
-						parameters = "[emoji] [optional: difficulty]"
-						description = "Creates a Minesweeper-Like field where the mines are the given emoji."
+						name = "/play"
+						parameters = "[url or search term]"
+						description = "Joins your voice channel and starts playing the given track. If a song is already playing, it'll be added to the queue."
 					/>
 					<CommandEntry
-						name = "/csgo"
-						description = "Shows status of CS:GO servers."
+						name = "/skip"
+						description = "Skip to the next song in the queue, if applicable."
 					/>
 					<CommandEntry
-						name = "/ffxiv"
-						parameters = "[optional: server]"
+						name = "/stop"
+						description = "Stops the music playback."
+					/>
+					<CommandEntry
+						name = "/leave"
+						description = "Make Rosettes leave the voicechat. Please use when you're done with it."
+					/>
+					<CommandEntry
+						name = "/toggle"
+						description = "Use to pause and resume playback without stopping the entire song."
+					/>
+				</div>
+				<h2>Gambling commands</h2>
+				<div style={{marginLeft: '1rem'}}>
+					<CommandEntry
+						name = "/dice"
+						parameters = "[number]"
+						description = "Rolls a dice, from 1 to the given number."
+					/>
+					<CommandEntry
+						name = "/coin"
+						description = "Does a coin throw. Can be provided two custom faces."
+					/>
+				</div>
+				<h2>Status commands</h2>
+				<div style={{marginLeft: '1rem'}}>
+					<CommandEntry
+						name = "/status website"
+						parameters = "[website url]"
+						description = "Checks if the provided website can be reached and it's status."
+					/>
+					<CommandEntry
+						name = "/status ping"
+						parameters = "[hostname or ip address]"
+						description = "Attempts to ping a provided IP address and show it's state."
+					/>
+					<CommandEntry
+						name = "/status minecraft"
+						parameters = "[hostname or ip address] [bedrock]"
+						description = "Shows status of a provided Minecraft server."
+					/>
+					<CommandEntry
+						name = "/status csgo"
+						description = "Shows status of Steam and CS:GO servers."
+					/>
+					<CommandEntry
+						name = "/status ffxiv"
+						parameters = "[optional: datacenter]"
 						description = "Shows status of FFXIV servers."
 					/>
 				</div>
@@ -162,6 +172,28 @@ export default function Page() {
 						 description = "Minigame leaderboard for the guild."
 					/>
 				</div>
+				<h2>Miscelaneous commands</h2>
+				<div style={{marginLeft: '1rem'}}>
+					<CommandEntry
+						name = "/serverinfo"
+						description = "Shows information about the current server."
+					/>
+					<CommandEntry
+						name = "/profile"
+						parameters = "[optional:user]"
+						description = "Shows information about yourself or the provided user."
+					/>
+					<CommandEntry
+						name = "/makesweeper"
+						parameters = "[emoji] [optional: difficulty]"
+						description = "Creates a Minesweeper-Like field where the mines are the given emoji."
+					/>
+					<CommandEntry
+						name = "/sus"
+						parameters = "[emoji]"
+						description = "Draws a 'crewmate' shape using the provided emoji as fill."
+					/>
+				</div>
 				<h2>System commands</h2>
 				<div style={{marginLeft: '1rem'}}>
 					<CommandEntry
@@ -174,7 +206,7 @@ export default function Page() {
 						description = "Sets showing user join and leave to a given channel."
 					/>
 					<CommandEntry
-						name = "/setrpgchan"
+						name = "/setfarmchan"
 						parameters = "[optional:disable]"
 						description = "Restricts RPG commands to a given channel."
 					/>
