@@ -10,8 +10,8 @@ export default function Page() {
 	return (
 		<>
 		<Head>
-			<title>Rosettes command list<br/>markski.ar</title>
-			<meta name="og:title" content="Rosettes command list<br/>markski.ar" />
+			<title>Rosettes command list - markski.ar</title>
+			<meta name="og:title" content="Rosettes command list - markski.ar" />
 			<meta property="og:description" content="A list with commands for Rosettes, the simple, open source Discord bot." />
 			<meta property="og:image" content="https://markski.ar/images/rosettes.png" />
 			<meta
@@ -44,10 +44,10 @@ export default function Page() {
 					<CommandEntry
 						name = "/alarm"
 						parameters = "[amout] [optional: time unit]"
-						description = "Sets an alarm for Rosettes to ping you in the given amount of minutes. May cancel with /cancelalarm."
+						description = "Sets an alarm for Rosettes to ping you in the given amount of minutes. May cancel with /alarm-cancel."
 					/>
 					<CommandEntry
-						name = "/exportallemoji"
+						name = "/exportemoji"
 						description = "Exports all emoji in the guild to a ZIP. May only be used by server owner."
 					/>
 					<CommandEntry
@@ -58,50 +58,51 @@ export default function Page() {
 				<h2>Image commands</h2>
 				<div style={{marginLeft: '1rem'}}>
 					<CommandEntry
-						name = "/saucenao"
+						name = "/image saucenao"
 						parameters = "[image url]"
 						appCommand = {true}
 						description = "Finds the source for a provided piece of artwork."
 					/>
 					<CommandEntry
-						name = "/convert"
+						name = "/image convert"
 						parameters = "[image url]"
 						appCommand = {true}
 						description = "Finds the source for a provided piece of artwork."
 					/>
 					<CommandEntry
-						name = "/reversegif"
+						name = "/image reversegif"
 						parameters = "[gif url]"
 						appCommand = {true}
 						description = "Reverses the provided gif."
 					/>
 					<CommandEntry
-						name = "/throwbrick"
+						name = "/image throwbrick"
 						parameters = "[emoji/user/url] [optional: reversed]"
 						description = 'Generates a GIF of the "throwing brick" meme with the provided image.'
 					/>
 				</div>
 				<h2>Music commands</h2>
 				<div style={{marginLeft: '1rem'}}>
+					<p><small>Upon using 'Music Play', a music player message with interactive buttons is spawned, so most of these commands shouldn't be needed after 'play'.</small></p>
 					<CommandEntry
-						name = "/play"
+						name = "/music play"
 						parameters = "[url or search term]"
 						description = "Joins your voice channel and starts playing the given track. If a song is already playing, it'll be added to the queue."
 					/>
 					<CommandEntry
-						name = "/skip"
+						name = "/music skip"
 						description = "Skip to the next song in the queue, if applicable."
 					/>
 					<CommandEntry
-						name = "/stop"
+						name = "/music stop"
 						description = "Stops the music playback."
 					/>
 					<CommandEntry
-						name = "/leave"
+						name = "/music leave"
 						description = "Make Rosettes leave the voicechat. Please use when you're done with it."
 					/>
 					<CommandEntry
-						name = "/toggle"
+						name = "/music toggle"
 						description = "Use to pause and resume playback without stopping the entire song."
 					/>
 				</div>

@@ -51,7 +51,7 @@ export default function Page() {
 				<div style={{textAlign: 'center'}}>
 					<a href="https://discord.com/api/oauth2/authorize?client_id=970176524110147605&permissions=275149548624&scope=bot" rel="noreferrer" target="_blank">
 						<MButton
-							text = "invite to server"
+							text = "add to server"
 							color = "#2D215C"
 							width = "8rem"
 						/>
