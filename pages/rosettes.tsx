@@ -104,12 +104,13 @@ export default function Page() {
 					<li><b>Playing music</b><br/>Rosettes can join your voicechats and play music as requested.</li>
 					<li><b>Reminders</b><br/>Let users set reminder alarms for themselves, even in DM's.</li>
 					<li><b>Minigame</b><br/>Your average time-wasting Discord bot minigame, featuring farming and fishing.</li>
+					<li><b>Custom commands</b><br/>Add your own commands to let your users see information and manage their own roles.</li>
 					<li><b>Miscelaneous</b><br/>- Display who joins and leaves the server<br/>- Provide status information for certain games<br/>- Throwing dice and coins<br/>- Even more.</li>
+					<li><b>What else would you like?</b><br/>If Rosettes lacks a feature you want, use <span style={{color: 'cyan'}}>/feedback</span>.<br/>I am always adding new things, and welcoming new ideas.</li>
 				</ul>
 				<p>
 					<small>For a list of commands, <Link href="/rosettes/commands"><span style={{color: 'cyan'}}>click here</span></Link>.</small>
 				</p>
-				<p>Rosettes is in active development, and always looking for new features.<br/>Have an idea, or something doesn't work? Please use the <span style={{color: 'cyan'}}>/feedback</span> command.</p>
 				
 				<small>If you wish to support hosting and development of Rosettes, you can <Link href="/donate"><span style={{color: 'cyan'}}>donate</span></Link>.</small>
 			</SectorContainer>
