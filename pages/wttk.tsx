@@ -36,11 +36,11 @@ export default function Page() {
 				<ul>
 					<li>Shortcuts to hidden or obscure Windows native tools.</li>
 					<li>Ability to change publicly unavailable desktop settings.</li>
-					<li>Ability to disable many annoying Windows features.</li>
+					<li>Ability to change and disable many Windows behaviours which cannot be changed from any of Windows' front-facing UI.</li>
 					<li>A shutdown scheduler.</li>
 				</ul>
-					<img src="./images/wttk.png" />
-				<p>Most important of all, WTTk is in active development, and always accepting feedback for new features.</p>
+					<img style={{margin: 'auto'}}src="./images/wttk.png" />
+				<p>Most important of all, WTTk is in active development, and always accepting feedback and suggestions for new features.</p>
 			</SectorContainer>
 
 			<div className={utilStyles.centerContainer}>
@@ -49,8 +49,8 @@ export default function Page() {
 			<SectorContainer>
 				<p>You can find the download for the latest version of WTTk <a style={{color: 'cyan'}} href="https://github.com/markski1/WinTweakTool/releases/latest" rel="noreferrer" target="_blank">in this page</a>.</p>
 				<p>
-					WTTk has only been tested on Windows 10.<br/>
-					It -should- work on Windows 11, and it'll -likely- work on 8/8.1, but I cannot guarantee these.
+					WTTk is built for Windows 10.<br/>
+					It works on Windows 11, but certain features (such as 'disabling shortcut indicators') are a little buggy. If any problem arises, simply disable the troublesome feature and restart.
 				</p>
 				<p><small>If you find WTTk useful and wish to help, please consider making a <Link href="/donate"><span style={{color: 'cyan'}}>donation</span></Link>.</small></p>
 			</SectorContainer>
@@ -77,19 +77,11 @@ export default function Page() {
 				</p>
 				<p>
 					<b>
-						Can I suggest new features?
+						Why do I get a Windows SmartScreen warning?
 					</b>
 				</p>
 				<p>
-					Yes! Feedback is always welcome. To suggest new features, improvements or bug reports, simply contact me or post them in the repository above.
-				</p>
-				<p>
-					<b>
-						How can I contact you?
-					</b>
-				</p>
-				<p>
-					With the methods listed at the top of the <Link href="/"><span style={{color: 'cyan'}}>homepage</span></Link>.
+					WTTk is distributed as an unsigned executable, because it's expensive to get a digital signature. Because WTTk is not a popular application, Windows Smartscreen has a tiny dataset to decide if it's a legitimate application or not, and throws a pre-emptive warning. Simply click 'More information', then 'Run anyways'.
 				</p>
 				<p>
 					<b>

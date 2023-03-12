@@ -13,7 +13,7 @@ export default function Header() {
 						alt="logo"
 						/>
 				</div>
-				<div style={{float: 'right', textAlign: 'right', marginTop: '0.5rem'}}>
+				<div style={{float: 'right', textAlign: 'right', marginTop: '0.5rem', marginRight: '0.25rem'}}>
 					<span>
 						<Link className={styles.headerLinks} href="/">home</Link><br/>
 						<Link className={styles.headerLinks} href="/rosettes">rosettes</Link><br/>
