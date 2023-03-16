@@ -1,33 +1,25 @@
 import * as React from 'react';
-import Head from 'next/head';
 import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
-import Header from '../components/molecules/PageHeader';
-import SectorContainer from '../components/molecules/SectorContainer';
+import Header from '../components/atoms/PageHeader';
 import MButton from '../components/atoms/MButton';
+import HeadParams from '../components/atoms/HeadParams';
+import Section from '../components/molecules/Section';
 
 export default function Page() {
 	return (
 		<>
-		<Head>
-			<title>Rosettes, the simple discord bot - markski.ar</title>
-			<meta name="og:title" content="Rosettes, the simple discord bot - markski.ar" />
-			<meta property="og:description" content="Rosettes is a simple, open source discord bot with many easy to use features." />
-			<meta property="og:image" content="https://markski.ar/images/rosettes.png" />
-			<meta
-				name="description"
-				content="Rosettes is a simple, open source discord bot with many easy to use features."
-			/>
-		</Head>
+		<HeadParams
+			title = 'Rosettes, the simple discord bot'
+			description = 'Rosettes is a simple, open source discord bot with many easy to use features.'
+			image = 'https://markski.ar/images/rosettes.png'
+		/>
 		<Layout>
 			<Header>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Rosettes</p>
 			</Header>
-			<div className={utilStyles.centerContainer}>
-				<p className={utilStyles.headingMd}>about</p>
-			</div>
-			<SectorContainer>
+			<Section title="about">
 				<img
 					src = "/images/rosettes.png"
 					width= "20%"
@@ -85,13 +77,9 @@ export default function Page() {
 						/>
 					</a>
 				</div>
-			</SectorContainer>
+			</Section>
 
-
-			<div className={utilStyles.centerContainer}>
-				<p className={utilStyles.headingMd}>functions</p>
-			</div>
-			<SectorContainer>
+			<Section title="functions">
 				<span>
 					Rosettes can add many features to your server, useful to admins and users alike.<br/>
 					If you don't want something, you may disable it from <span style={{color: 'cyan'}}>/settings</span>.
@@ -113,7 +101,7 @@ export default function Page() {
 				</p>
 				
 				<small>If you wish to support hosting and development of Rosettes, you can <Link href="/donate"><span style={{color: 'cyan'}}>donate</span></Link>.</small>
-			</SectorContainer>
+			</Section>
 		</Layout>
 		</>
 	);

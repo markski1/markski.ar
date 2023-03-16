@@ -3,8 +3,9 @@ import Head from 'next/head';
 import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import Grid from '@mui/material/Grid';
-import Header from '../components/molecules/PageHeader';
-import SectorContainer from '../components/molecules/SectorContainer';
+import Header from '../components/atoms/PageHeader';
+import SectorContainer from '../components/atoms/SectionContainer';
+import HeadParams from '../components/atoms/HeadParams';
 
 export default function Page() {
 	let pvcPorcentaje: number[];
@@ -110,16 +111,10 @@ export default function Page() {
 
 	return (
 		<>
-		<Head>
-			<title>Calculadora de pagos al exterior Argentina - markski.ar</title>
-			<meta property="og:title" content="Calculadora de pagos al exterior Argentina - markski.ar" />
-			<meta property="og:description" content="Calcula impuestos de pagos al exterior, Steam, Netflix, Spotify, Epic Games, etc." />
-			<meta property="og:image" content="https://markski.ar/images/profileDesplacement.png" />
-			<meta
-				name="description"
-				content="Calcula impuestos de pagos a Steam, Netflix, Spotify, Epic Games, etc."
+		<HeadParams
+			title = "Calculadora de pagos al exterior Argentina"
+			description = "Calcula impuestos de pagos al exterior, Steam, Netflix, Spotify, Epic Games, etc."
 			/>
-		</Head>
 		<Layout>
 			<Header>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>calculadora de pagos al exterior</p>

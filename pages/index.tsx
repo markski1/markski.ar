@@ -1,24 +1,18 @@
-import Head from 'next/head';
 import Grid from '@mui/material/Grid';
 import Link from 'next/link';
 import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
-import PrintEntry from '../components/HomeComps/HomeEntry'
-import GetIcon from '../components/HomeComps/Icons';
+import PrintEntry from '../components/atoms/HomeEntry'
+import GetIcon from '../components/atoms/Icons';
+import HeadParams from '../components/atoms/HeadParams';
 
 export default function Home() {
 	return (
 		<>
-		<Head>
-			<title>Home - markski.ar</title>
-			<meta
-				name="description"
-				content="Desarrollador, estudiante de informatica. / Developer, Comp Sci student."
+		<HeadParams
+			title = "Home"
+			description = "Desarrollador, estudiante de informatica. / Developer, Comp Sci student."
 			/>
-			<meta name="og:title" content="Home - markski.ar" />
-			<meta property="og:description" content="Desarrollador, estudiante de informatica. / Developer, Comp Sci student." />
-			<meta property="og:image" content="https://markski.ar/images/profileDesplacement.png" />
-		</Head>
 		<Layout home>
 			
 			<div className={utilStyles.contactCard}>

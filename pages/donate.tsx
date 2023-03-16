@@ -2,7 +2,7 @@ import * as React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
-import Header from '../components/molecules/PageHeader';
+import Header from '../components/atoms/PageHeader';
 
 export default function Page() {
 	return (
