@@ -37,11 +37,6 @@ export default function Page() {
 						description = "Download the video off a provided tweet."
 					/>
 					<CommandEntry
-						name = "/urban"
-						parameters = "[term]"
-						description = "Returns an Urban Dictionary definition of the given term."
-					/>
-					<CommandEntry
 						name = "/alarm"
 						parameters = "[amout] [optional: time unit]"
 						description = "Sets an alarm for Rosettes to ping you in the given amount of minutes. May cancel with /alarm-cancel."
@@ -106,6 +101,32 @@ export default function Page() {
 						description = "Use to pause and resume playback without stopping the entire song."
 					/>
 				</div>
+				<h2>Search commands</h2>
+					<CommandEntry
+						name = "/find urban"
+						parameters = "[term]"
+						description = "Finds an Urban Dictionary definition of the given term."
+					/>
+					<CommandEntry
+						name = "/find pokemon"
+						parameters = "[name or id]"
+						description = "Finds information about the specified Pokémon."
+					/>
+					<CommandEntry
+						name = "/find anime"
+						parameters = "[name]"
+						description = "Finds information about the specified Anime."
+					/>
+					<CommandEntry
+						name = "/find manga"
+						parameters = "[name]"
+						description = "Finds information about the specified Manga."
+					/>
+					<CommandEntry
+						name = "/find character"
+						parameters = "[name]"
+						description = "Finds the specified character from animated media or manga."
+					/>
 				<h2>Gambling commands</h2>
 				<div style={{marginLeft: '1rem'}}>
 					<CommandEntry
@@ -188,11 +209,6 @@ export default function Page() {
 						name = "/makesweeper"
 						parameters = "[emoji] [optional: difficulty]"
 						description = "Creates a Minesweeper-Like field where the mines are the given emoji."
-					/>
-					<CommandEntry
-						name = "/sus"
-						parameters = "[emoji]"
-						description = "Draws a 'crewmate' shape using the provided emoji as fill."
 					/>
 				</div>
 				<h2>System commands</h2>
