@@ -78,7 +78,7 @@ export default function Page() {
 				</div>
 				<h2>Music commands</h2>
 				<div style={{marginLeft: '1rem'}}>
-					<p><small>Upon using 'Music Play', a music player message with interactive buttons is spawned, so most of these commands shouldn't be needed after 'play'.</small></p>
+					<p><small>Upon using 'Music Play', a player with buttons is spawned, so most of these commands shouldn't be needed.</small></p>
 					<CommandEntry
 						name = "/music play"
 						parameters = "[url or search term]"
@@ -93,15 +93,12 @@ export default function Page() {
 						description = "Stops the music playback."
 					/>
 					<CommandEntry
-						name = "/music leave"
-						description = "Make Rosettes leave the voicechat. Please use when you're done with it."
-					/>
-					<CommandEntry
 						name = "/music toggle"
 						description = "Use to pause and resume playback without stopping the entire song."
 					/>
 				</div>
 				<h2>Search commands</h2>
+				<div style={{marginLeft: '1rem'}}>
 					<CommandEntry
 						name = "/find urban"
 						parameters = "[term]"
@@ -127,6 +124,7 @@ export default function Page() {
 						parameters = "[name]"
 						description = "Finds the specified character from animated media or manga."
 					/>
+				</div>
 				<h2>Gambling commands</h2>
 				<div style={{marginLeft: '1rem'}}>
 					<CommandEntry

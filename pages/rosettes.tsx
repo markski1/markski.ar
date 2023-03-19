@@ -91,10 +91,11 @@ export default function Page() {
 					<li><b>Polls</b><br/>Easily create polls where people can anonymously vote.</li>
 					<li><b>Playing music</b><br/>Rosettes can join your voicechats and play music as requested.</li>
 					<li><b>Reminders</b><br/>Let users set reminder alarms for themselves, even in DM's.</li>
+					<li><b>Searching</b><br/>Quickly get information for Pokémon, Anime, Manga, etc.</li>
 					<li><b>Minigame</b><br/>Your average time-wasting Discord bot minigame, featuring farming and fishing.</li>
-					<li><b>Custom commands</b><br/>Add your own commands to let your users see information and manage their own roles.</li>
+					<li><b>Custom commands</b><br/>Add your own guild commands to let users see information and manage roles.</li>
 					<li><b>Miscelaneous</b><br/>- Display who joins and leaves the server<br/>- Provide status information for certain games<br/>- Throwing dice and coins<br/>- Even more.</li>
-					<li><b>What else would you like?</b><br/>If Rosettes lacks a feature you want, use <span style={{color: 'cyan'}}>/feedback</span>.<br/>I am always adding new things, and welcoming new ideas.</li>
+					<li><b>What else would you like?</b><br/>If Rosettes lacks a feature you want, use <span style={{color: 'cyan'}}>/feedback</span>, or contact me directly.<br/>I am always adding new things, and welcoming new ideas.</li>
 				</ul>
 				<p>
 					<small>For a list of commands, <Link href="/rosettes/commands"><span style={{color: 'cyan'}}>click here</span></Link>.</small>
