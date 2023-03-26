@@ -5,8 +5,12 @@ import utilStyles from '../styles/utils.module.css';
 import PrintEntry from '../components/atoms/HomeEntry'
 import GetIcon from '../components/atoms/Icons';
 import HeadParams from '../components/atoms/HeadParams';
+import fs from 'fs'
+import path from 'path'
+import matter from 'gray-matter'
 
-export default function Home() {
+export default function Home({ posts }) {
+	let id:number = 0;
 	return (
 		<>
 		<HeadParams
@@ -34,6 +38,7 @@ export default function Home() {
 					</Grid>
 				</Grid>
 			</div>
+
 			<div className={utilStyles.headingContainer}>
 				<h2 className={utilStyles.headingLg}>software and services</h2>
 			</div>
@@ -53,12 +58,21 @@ export default function Home() {
 				text = 'calculate costs of payments from argentina to foreign services such as steam'
 				spanishOnly
 			/>
-			<PrintEntry
-				title = 'CS:GO Text simplifier'
-				url = 'simplecsgo'
-				text = 'simplifies the in-game chat texts in counter-strike: global offensive.'
-				spanishOnly
-			/>
+
+			<div className={utilStyles.headingContainer}>
+				<h2 className={utilStyles.headingLg}>blog</h2>
+			</div>
+			{posts.map((post: { frontMatter: { title: string; description: string; }; slug: string; }) => (
+				<PrintEntry
+					key = {id++}
+					title = {post.frontMatter.title}
+					url = {'/blog/' + post.slug}
+					text = {post.frontMatter.description}
+					// date = {post.frontMatter.date}
+				/>
+			))}
+
+
 			<div className={utilStyles.headingContainer}>
 				<h2 className={utilStyles.headingLg}>repositories and libraries</h2>
 			</div>
@@ -86,11 +100,24 @@ export default function Home() {
 				text = 'easy to implement Speedometer for SA-MP server which floats in the physical game world.'
 				target = '_blank'
 			/>
-			<div className={utilStyles.headingContainer} style={{padding: '10px 20px'}}>
-				<p>everything in this website is free to use.<br/>
-				if you find something useful, please consider supporting my work with a <Link href="/donate"><span style={{color: 'cyan'}}>donation</span></Link>.</p>
-			</div>
 		</Layout>
 		</>
 	);
 }
+
+export const getStaticProps = async () => {
+	const files = fs.readdirSync(path.join('posts'))
+	const posts = files.map(filename => {
+	  const markdownWithMeta = fs.readFileSync(path.join('posts', filename), 'utf-8')
+	  const { data: frontMatter } = matter(markdownWithMeta)
+	  return {
+		frontMatter,
+		slug: filename.split('.')[0]
+	  }
+	})
+	return {
+	  props: {
+		posts
+	  }
+	}
+  }

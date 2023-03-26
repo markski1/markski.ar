@@ -15,7 +15,6 @@ export default function PrintEntry(props: { spanishOnly?: boolean; url: string; 
 				{sptxt}
 			</h3>
 			<p style={{color: 'darkgray'}}>
-				
 				{props.text}
 			</p>
 		</div>
