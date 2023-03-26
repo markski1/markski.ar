@@ -53,6 +53,8 @@ chmod -R 776 <dirname>
         `}
     </SyntaxHighlighter>
 
+    By now, trying to access that directory should result in a '403 forbidden' message. If that's not the case, just create an empty index.php file with '`touch index.php`''.
+
     That's all as far as the webserver goes. Depending on your usage, you might want to increase the maximum allowed file upload size in PHP. If you use a managed web server, you might do this from your host's panel. Otherwise, you'll need to look into `php.ini`.
 </Section>
 
