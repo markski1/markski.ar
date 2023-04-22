@@ -25,9 +25,8 @@ export default function Page() {
 					width= "20%"
 					style = {{float: 'right'}}
 				/>
-				<span>
-					Rosettes is a simple, free and open source Discord bot.
-				</span>
+				
+				Rosettes is a simple, free and open source Discord bot.
 				
 				<p>
 					It's objectives are:
@@ -92,7 +91,7 @@ export default function Page() {
 					<li><b>Playing music</b><br/>Rosettes can join your voicechats and play music as requested.</li>
 					<li><b>Reminders</b><br/>Let users set reminder alarms for themselves, even in DM's.</li>
 					<li><b>Searching</b><br/>Quickly get information for Pokémon, Anime, Manga, etc.</li>
-					<li><b>Minigame</b><br/>Your average time-wasting Discord bot minigame, featuring farming and fishing.</li>
+					<li><b>Minigames</b><br/>- Farming and fishing system, with shop, inventory and the expected stuff.<br/>- A pet ownership and interaction system.</li>
 					<li><b>Custom commands</b><br/>Add your own guild commands to let users see information and manage roles.</li>
 					<li><b>Miscelaneous</b><br/>- Display who joins and leaves the server<br/>- Provide status information for certain games<br/>- Throwing dice and coins<br/>- Even more.</li>
 					<li><b>What else would you like?</b><br/>If Rosettes lacks a feature you want, use <span style={{color: 'cyan'}}>/feedback</span>, or contact me directly.<br/>I am always adding new things, and welcoming new ideas.</li>

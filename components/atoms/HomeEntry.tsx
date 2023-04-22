@@ -6,16 +6,19 @@ export default function PrintEntry(props: { spanishOnly?: boolean; url: string; 
 	if (props.spanishOnly) {
 		sptxt = <>&nbsp;<span style={{fontSize: '0.8rem', color: 'gray'}}>spanish only</span><br/></>;
 	}
+	// I don't capitalize in descriptions
+	let description:string = props.text.charAt(0).toLowerCase() + props.text.slice(1);
+	
 	return (
 		<div className={utilStyles.entry}>
-			<h3>
+			<h3 style={{marginBottom: "-1.2rem"}}>
 				<Link href={props.url} rel="noreferrer" target={props.target} >
 					{props.title}
 				</Link>
 				{sptxt}
 			</h3>
 			<p style={{color: 'darkgray'}}>
-				{props.text}
+				{description}
 			</p>
 		</div>
 	);

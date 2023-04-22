@@ -164,26 +164,26 @@ export default function Page() {
 						description = "Shows status of FFXIV servers."
 					/>
 				</div>
-				<h2>Farming minigame commands</h2>
+				<h2>Minigame commands</h2>
 				<div style={{marginLeft: '1rem'}}>
 					<CommandEntry
 						name = "/farm view"
-						 description = "View what is happening in your farm, and buttons with your possible actions."
+						 description = "View what is happening in your farm, and interact with it."
 					/>
 					<CommandEntry
 						name = "/farm inventory"
-						 description = "Show your inventory items and pets."
+						 description = "Show your inventory items."
 					/>
 					<CommandEntry
 						name = "/farm fish"
 						 description = "Try to catch a fish. Can be used every hour."
 					/>
 					<CommandEntry
-						name = "/farm shop give"
+						name = "/farm shop"
 						 description = "Buy and sell items."
 					/>
 					<CommandEntry
-						name = "/farm"
+						name = "/farm give"
 						 parameters = "[item] [amount] [user]"
 						 description = "Give a selected item to other user."
 					/>
@@ -191,6 +191,15 @@ export default function Page() {
 						name = "/farm top"
 						 description = "Minigame leaderboard for the guild."
 					/>
+					<CommandEntry
+						name = "/pet view"
+						 description = 'View information about your currently "equipped" pet, and interact with it.'
+					/>
+					<CommandEntry
+						name = "/pet list"
+						 description = 'List all of your pets.'
+					/>
+					<small>* note that the minigames are more feature complete than the commands might show.<br/>&nbsp; most of the functionality is accesible through buttons.</small>
 				</div>
 				<h2>Miscelaneous commands</h2>
 				<div style={{marginLeft: '1rem'}}>
