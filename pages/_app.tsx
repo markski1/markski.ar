@@ -3,6 +3,7 @@ import { AppProps } from 'next/app';
 import Transition from '../components/Transition';
 import '../styles/transition.css';
 import Header from '../components/molecules/Header';
+import React from 'react';
 
 function App({ Component, pageProps }: AppProps) {
   return (

@@ -62,15 +62,15 @@ export default function Home({ posts }) {
 			<div className={utilStyles.headingContainer}>
 				<h2 className={utilStyles.headingLg}>blog</h2>
 			</div>
-			{posts.map((post: { frontMatter: { title: string; description: string; }; slug: string; }) => (
+			{posts.map((post: { frontMatter: { title: string; description: string; order: number }; slug: string; }) => (
 				<PrintEntry
-					key = {id++}
+					key = {post.frontMatter.order}
 					title = {post.frontMatter.title}
 					url = {'/blog/' + post.slug}
 					text = {post.frontMatter.description}
 					// date = {post.frontMatter.date}
 				/>
-			))}
+			)).reverse()}
 
 
 			<div className={utilStyles.headingContainer}>

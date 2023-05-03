@@ -1,4 +1,5 @@
 import styles from '../layout.module.css';
+import Logo from '../atoms/Logo';
 import Link from "next/link";
 
 export default function Header() {
@@ -6,12 +7,7 @@ export default function Header() {
 		<header className={styles.header}>
 			<div className={styles.headerContainer}>
 				<div style={{float: 'left'}}>
-					<img
-						src="/images/profileDesplacement.png"
-						width={144}
-						height={144}
-						alt="logo"
-						/>
+					<Logo />
 				</div>
 				<div style={{float: 'right', textAlign: 'right', marginTop: '0.5rem', marginRight: '0.25rem'}}>
 					<span>

@@ -15,7 +15,7 @@ export default function Page() {
 			description = 'Rosettes is a simple, open source discord bot with many easy to use features.'
 			image = 'https://markski.ar/images/rosettes.png'
 		/>
-		<Layout>
+		<Layout bgColor='#4C1E52'>
 			<Header>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Rosettes</p>
 			</Header>
