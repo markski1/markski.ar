@@ -27,27 +27,27 @@ cd tes3mp
         `}
     </SyntaxHighlighter>
 
-    Then, proceed to grab the <Link href="https://github.com/TES3MP/TES3MP/releases">latest TES3MP binaries</Link>.
-    We will also be using TES3MP's <Link href="https://github.com/TES3MP/CoreScripts">example server management scripts</Link>, which will take care of setting up the state of the server for proper multiplayer.
+    Then, proceed to grab the <Link style={{color: 'cyan'}} href="https://github.com/TES3MP/TES3MP/releases">latest TES3MP server binaries (VR versions don't count)</Link>.
     
     As of the day of me writing this (May 2nd, 2023), 0.8.1 are the latest version, and we'd use the following commands to fetch them:
 
     <SyntaxHighlighter language="bash" customStyle={{fontSize: '.8rem', background: 'black', color: 'white'}}>
         {`
 wget https://github.com/TES3MP/TES3MP/releases/download/tes3mp-0.8.1/tes3mp-server-GNU+Linux-x86_64-release-0.8.1-68954091c5-6da3fdea59.tar.gz
-wget https://github.com/TES3MP/CoreScripts/archive/refs/heads/0.8.1.zip
         `}
     </SyntaxHighlighter>
 
-    Once they are downloaded, I'd suggest renaming them to something more friendly (perhaps tes3mp-server.tar.gz and script-files.zip respectively).
+    Once it's been downloaded, I'd suggest renaming it to something more friendly (perhaps tes3mp-server.tar.gz).
 
     Now, we will be grabbing a bash script to do the initial set up for us. It'll unzip the files we just downloaded, create a new user (I'll call it tes3mp, but you can call it whatever you want), put everything in `opt/TES3MP`, and create a systemd service for the server.
 
+    In order, these 3 commands will: Download the bash script, make it executable, and run it as super user, providing the name of the server files, and a desired username for a dedicated user account.
+
     <SyntaxHighlighter language="bash" customStyle={{fontSize: '.8rem', background: 'black', color: 'white'}}>
         {`
-wget https://gist.githubusercontent.com/markski1/c3d63ef32c9c07cbee6da2708f3406e5/raw/c88973e2a86e0c54dfa687cb10c42efe431d44f0/ubuntu_tes3mp_deploy.sh
+wget https://gist.githubusercontent.com/markski1/c3d63ef32c9c07cbee6da2708f3406e5/raw/bc142e51295c5de6108faabcb7256039db98128e/ubuntu_tes3mp_deploy.sh
 chmod +x ubuntu_tes3mp_deploy.sh
-sudo ./ubuntu_tes3mp_deploy.sh tes3mp-server.tar.gz script-files.zip tes3mp
+sudo ./ubuntu_tes3mp_deploy.sh tes3mp-server.tar.gz tes3mp
         `}
     </SyntaxHighlighter>
 
@@ -64,7 +64,7 @@ sudo ufw allow 25561
 <Section title="settings">
     Your server is now set up and ready to run.
 
-    Please refer to <Link href="https://steamcommunity.com/groups/mwmulti/discussions/1/133258593388999187/">this steam guide</Link> by TES3MP's lead dev himself, explaining all the things you can and should set up.
+    Please refer to <Link style={{color: 'cyan'}} href="https://steamcommunity.com/groups/mwmulti/discussions/1/133258593388999187/">this steam guide</Link> by TES3MP's lead dev himself, explaining all the things you can and should set up.
 
     Remember: Your server files are in 'opt/TES3MP'!
 
