@@ -5,15 +5,12 @@ import { useRouter } from 'next/router';
 const variants = {
   out: {
     opacity: 0,
-    scale: 0.9,
-    zIndex: 1,
-    y: 200,
+    y: 50,
     transition: {
       duration: 0.25
     }
   },
   in: {
-    scale: 1,
     opacity: 1,
     y: 0,
     transition: {
