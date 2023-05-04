@@ -14,7 +14,7 @@ export default function Page() {
 			title = 'WTTk, Windows Tweaking Toolkit'
 			description = 'The lightweight, feature-complete tool kit for common Windows tweaking that would otherwise require having to dive into the registry or other unfriendly places.'
 		/>
-		<Layout bgColor='#36275C'>
+		<Layout type='page'>
 			<Header>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>WTTk</p>
 			</Header>

@@ -12,7 +12,7 @@ export default function Page() {
 			title = "Chat simple para CS:GO"
 			description = "Modificación para CSGO que simplifica los elementos del chat."
 		/>
-		<Layout>
+		<Layout type='page'>
 			<Header>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Chat simple para CS:GO</p>
 			</Header>

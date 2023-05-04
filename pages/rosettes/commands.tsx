@@ -20,7 +20,7 @@ export default function Page() {
 			/>
 		</Head>
 		{/* Use 'home' parameter to make the back-to-home button not show up. */}
-		<Layout home>
+		<Layout home type='page'>
 			<Header>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Rosettes commands</p>
 			</Header>

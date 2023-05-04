@@ -17,7 +17,7 @@ export default function Page() {
 				content="Desarrollador, estudiante de informatica. / Developer, Comp Sci student."
 			/>
 		</Head>
-		<Layout>
+		<Layout type='page'>
 			<Header>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>make a donation</p>
 			</Header>

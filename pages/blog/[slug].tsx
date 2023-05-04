@@ -43,7 +43,7 @@ export const getStaticPaths = async () => {
           <HeadParams
               title={title}
               description={description} />
-          <Layout bgColor='#351546'>
+          <Layout type='blog'>
             <span><small>{date}</small></span>
                 <Header>
                     <p className={utilStyles.headingLg} style={{ marginRight: '30px' }}>{title}</p>

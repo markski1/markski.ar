@@ -115,7 +115,7 @@ export default function Page() {
 			title = "Calculadora de pagos al exterior Argentina"
 			description = "Calcula impuestos de pagos al exterior, Steam, Netflix, Spotify, Epic Games, etc."
 			/>
-		<Layout bgColor='#221D52'>
+		<Layout type='page'>
 			<Header>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>calculadora de pagos al exterior</p>
 			</Header>

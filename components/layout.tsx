@@ -3,7 +3,16 @@ import styles from './layout.module.css';
 import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
-export default function Layout({ children, home=false, bgColor='#311d46' }) {
+export default function Layout({ children, home=false, type='none' }) {
+	let bgColor = "#311d46";
+	switch (type) {
+		case 'page':
+			bgColor = '#191B45';
+			break;
+		case 'blog':
+			bgColor = '#452043';
+			break;
+	}
 	return (
 		<>
 			<Head>
@@ -13,10 +22,7 @@ export default function Layout({ children, home=false, bgColor='#311d46' }) {
 			body {
 				background-color: ${bgColor};
 			}
-			#logo_p1 {
-				fill: ${bgColor};
-			}
-			#logo_p2 {
+			#logo {
 				fill: ${bgColor};
 			}
 			`}</style>
