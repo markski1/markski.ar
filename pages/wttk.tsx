@@ -55,7 +55,7 @@ export default function Page() {
 					WTTk is distributed as an unsigned executable, because it's expensive to get a digital signature. Because WTTk is not a popular application, Windows Smartscreen has a tiny dataset to decide if it's a legitimate application or not, and throws a pre-emptive warning. Simply click 'More information', then 'Run anyways'.
 				</QA>
 				<QA question="WTTk doesn't work, throws an error on launch!">
-					WTTk requires the  <Link href="https://dotnet.microsoft.com/en-us/download/dotnet/6.0/runtime"><span style={{color: 'cyan'}}>.NET 6.0 Runtime</span></Link> in order to run. Your should already have this if your Windows is up to date, though.
+					WTTk requires .NET Framework 4.8 in order to run. Windows 10 should already have this out of the box. If you're running an older version of Windows, you'll need to pick it up off Microsoft's website.
 				</QA>
 			</Section>
 		</Layout>
