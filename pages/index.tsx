@@ -79,25 +79,25 @@ export default function Home({ posts }) {
 			<PrintEntry
 				title = 'PSXU'
 				url = 'https://github.com/markski1/PSXU'
-				text = 'single-file PHP script to upload files on your webserver through Sharex for quick sharing.'
+				text = 'single-file php script to upload files on your webserver through sharex for quick sharing.'
+				target = '_blank'
+			/>
+			<PrintEntry
+				title = 'ez-steam-api.php'
+				url = 'https://github.com/markski1/ez-steam-api.php'
+				text = 'object-oriented php interface for easily and quickly requesting data from the steam api.'
 				target = '_blank'
 			/>
 			<PrintEntry
 				title = 'tireFuncs'
 				url = 'https://github.com/markski1/SAMP-tireFuncs'
-				text = 'functions and callbacks for easily handling vehicle tires in SA-MP.'
+				text = 'functions and callbacks for easily handling vehicle tires in sa-mp.'
 				target = '_blank'
 			/>
 			<PrintEntry
 				title = 'vModData'
 				url = 'https://github.com/markski1/SAMP-vModData'
-				text = 'library to obtain information about vehicle components in SA-MP.'
-				target = '_blank'
-			/>
-			<PrintEntry
-				title = '3dspeed'
-				url = 'https://github.com/markski1/SAMP-3dspeed'
-				text = 'easy to implement Speedometer for SA-MP server which floats in the physical game world.'
+				text = 'library to obtain information about vehicle components in sa-mp.'
 				target = '_blank'
 			/>
 		</Layout>
