@@ -10,7 +10,7 @@ import path from 'path'
 import matter from 'gray-matter'
 
 export default function Home({ posts }) {
-	let id:number = 0;
+	const sortedPosts = posts.sort((a, b) => a.frontMatter.order - b.frontMatter.order);
 	return (
 		<>
 		<HeadParams
@@ -62,7 +62,7 @@ export default function Home({ posts }) {
 			<div className={utilStyles.headingContainer}>
 				<h2 className={utilStyles.headingLg}>blog</h2>
 			</div>
-			{posts.map((post: { frontMatter: { title: string; description: string; order: number }; slug: string; }) => (
+			{sortedPosts.map((post: { frontMatter: { title: string; description: string; order: number }; slug: string; }) => (
 				<PrintEntry
 					key = {post.frontMatter.order}
 					title = {post.frontMatter.title}

@@ -7,7 +7,7 @@ export default function PrintEntry(props: { spanishOnly?: boolean; url: string; 
 		sptxt = <>&nbsp;<span style={{fontSize: '0.8rem', color: 'gray'}}>spanish only</span><br/></>;
 	}
 	// I don't capitalize in descriptions
-	let description:string = props.text.charAt(0).toLowerCase() + props.text.slice(1);
+	let description:string = props.text.toLowerCase();
 	
 	return (
 		<div className={utilStyles.entry}>
@@ -22,4 +22,4 @@ export default function PrintEntry(props: { spanishOnly?: boolean; url: string; 
 			</p>
 		</div>
 	);
-} 
+}
