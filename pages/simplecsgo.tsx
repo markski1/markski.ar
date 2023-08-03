@@ -16,6 +16,24 @@ export default function Page() {
 			<Header>
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Chat simple para CS:GO</p>
 			</Header>
+			<Section title="deprecado">
+				<p>Por alguna extraña razón, google sigue listando esta pagina.</p>
+				<p>El mod ya no funciona y ya no se distribuye. Cuando salga CS2 lo voy a hacer nuevo.</p>
+			</Section>
+		</Layout>
+		</>
+	);
+	/*
+	return (
+		<>
+		<HeadParams
+			title = "Chat simple para CS:GO"
+			description = "Modificación para CSGO que simplifica los elementos del chat."
+		/>
+		<Layout type='page'>
+			<Header>
+				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Chat simple para CS:GO</p>
+			</Header>
 			<Section title="como se ve">
 				<p>Los rangos tienen un numero indicando progreso:</p>
 				<img width={387} height={107} src="./images/csgo/rango.png"/>
@@ -48,4 +66,5 @@ export default function Page() {
 		</Layout>
 		</>
 	);
+	*/
 }
