@@ -55,8 +55,13 @@ export default function Home({ posts }) {
 			<PrintEntry
 				title = 'Argentine exterior tax calculator'
 				url = 'calc'
-				text = 'calculate costs of payments from argentina to foreign services such as steam'
+				text = 'calculate costs of payments from argentina to foreign services such as steam.'
 				spanishOnly
+			/>
+			<PrintEntry
+				title = 'Wartime Leader'
+				url = 'wartime'
+				text = 'the windows tweaking toolkit allows tweaking hidden windows settings.'
 			/>
 
 			<div className={utilStyles.headingContainer}>
