@@ -45,23 +45,23 @@ export default function Home({ posts }) {
 			<PrintEntry
 				title = 'Rosettes'
 				url = 'rosettes'
-				text = 'simple, free, open source discord bot.'
+				text = 'simple, free, open source discord bot. [.net 6]'
 			/>
 			<PrintEntry
 				title = 'WTTk'
 				url = 'wttk'
-				text = 'the windows tweaking toolkit allows tweaking hidden windows settings.'
+				text = 'the windows tweaking toolkit allows tweaking hidden windows settings. [.net framework 4.8]'
 			/>
 			<PrintEntry
 				title = 'Argentine exterior tax calculator'
 				url = 'calc'
-				text = 'calculate costs of payments from argentina to foreign services such as steam.'
+				text = 'calculate costs of payments from argentina to foreign services such as steam. [js]'
 				spanishOnly
 			/>
 			<PrintEntry
 				title = 'Wartime Leader'
 				url = 'wartime'
-				text = 'the windows tweaking toolkit allows tweaking hidden windows settings.'
+				text = 'simple web-based fortress management and defense game. [php, htmx]' 
 			/>
 
 			<div className={utilStyles.headingContainer}>

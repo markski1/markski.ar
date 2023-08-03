@@ -11,12 +11,12 @@ export default function Page() {
 		<>
 		<HeadParams
 			title = 'Wartime Leader'
-			description = 'Wartime Leader is a simple text-based fortress management and defense game.'
+			description = 'Wartime Leader is a simple web-based fortress management and defense game.'
 			image = 'https://markski.ar/images/rosettes.png'
 		/>
 		<Layout type='page'>
 			<Header>
-				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Rosettes</p>
+				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>Wartime Leader</p>
 			</Header>
 			<Section title="about">
                 <p>Wartime leader is a simple game, inspired on Enchanted Fortress, a text-based Android game by Ivan Kravarscan.</p>
