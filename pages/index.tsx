@@ -18,22 +18,36 @@ export default function Home({ posts }) {
 			description = "Desarrollador, estudiante de informatica. / Developer, Comp Sci student."
 			/>
 		<Layout home>
-			
 			<div className={utilStyles.contactCard}>
+				<p>
+					I am Juan, known online as Markski, a software developer from Argentina.
+				</p>
+				<span>
+					I study computer science in the National University of La Plata.<br />
+					Experienced in backend and frontend development, and databases.
+				</span>
+				
 				<Grid container columnSpacing={4} rowSpacing={3}>
 					<Grid item xs={7}>
-						<div style={{whiteSpace: 'pre-line', minWidth: '17rem'}}>
-							<p>I study Computer Science in the UNLP, and currently work as a freelancer.<br/>&nbsp;<br/>
-							Always interested in work and opportunities.<br/>Get in touch!</p>
+						<div style={{minWidth: '20rem', marginBottom: '-2rem', whiteSpace: 'nowrap'}}>
+							<p>Languages and technologies I work with:</p>
+							<ul style={{lineHeight: '1.6'}}>
+								<li>C# (.NET and .NET Framework)</li>
+								<li>PHP (Laravel, Wordpress)</li>
+								<li>Javascript (Vanilla, React/Next.JS)</li>
+								<li>Databases (MySQL, NoSQL)</li>
+								<li>Server admin (Linux, mainly Debian)</li>
+							</ul>
 						</div>
 					</Grid>
 					<Grid item xs>
-						<div style={{minWidth: '10rem', marginTop: '.5rem'}}>
-							<GetIcon icon="github" /> <a className={utilStyles.contactLink} href="https://www.github.com/markski1">GitHub</a><br />
-							<GetIcon icon="twitter" /> <a className={utilStyles.contactLink} href="https://www.twitter.com/a_markski">Twitter</a><br />
-							<GetIcon icon="telegram" /> <a className={utilStyles.contactLink} href="https://www.telegram.me/Markski">Telegram</a><br />
-							<GetIcon icon="discord" /> <a className={utilStyles.contactLink} href="discord:markski.ar">Discord</a><br />
-							<GetIcon icon="email" /> <a className={utilStyles.contactLink} href="mailto:me@markski.ar">me@markski.ar</a>
+						<div style={{minWidth: '10rem', whiteSpace: 'nowrap'}}>
+							<p>Get in touch:</p>
+							<span className={utilStyles.listMargin}><GetIcon icon="github" /> <a className={utilStyles.contactLink} href="https://www.github.com/markski1">GitHub</a><br /></span>
+							<span className={utilStyles.listMargin}><GetIcon icon="twitter" /> <a className={utilStyles.contactLink} href="https://www.twitter.com/a_markski">Twitter</a><br /></span>
+							<span className={utilStyles.listMargin}><GetIcon icon="telegram" /> <a className={utilStyles.contactLink} href="https://www.telegram.me/Markski">Telegram</a><br /></span>
+							<span className={utilStyles.listMargin}><GetIcon icon="discord" /> <a className={utilStyles.contactLink} href="discord:markski.ar">Discord</a><br /></span>
+							<span className={utilStyles.listMargin}><GetIcon icon="email" /> <a className={utilStyles.contactLink} href="mailto:me@markski.ar">me@markski.ar</a></span>
 						</div>
 					</Grid>
 				</Grid>

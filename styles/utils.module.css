@@ -73,7 +73,6 @@
 	color: white;
 	background-color: rgba(255, 255, 255, 0.1);
 	padding: 1rem 2rem;
-	white-space: nowrap !important;
 	overflow: hidden;
 }
 
@@ -84,6 +83,10 @@
 .contactLink {
 	color: white;
 	line-height: 1.7;
+}
+
+.listMargin {
+	margin-left: 1rem;
 }
 
 .input {
