@@ -19,7 +19,7 @@ export default function Home({ posts }) {
 			/>
 		<Layout home>
 			<div className={utilStyles.contactCard}>
-				<p>
+				<p style={{marginTop: '.5rem'}}>
 					I am Juan, known online as Markski, a software developer from Argentina.
 				</p>
 				<span>

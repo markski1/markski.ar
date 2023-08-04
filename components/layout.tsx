@@ -4,13 +4,13 @@ import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
 export default function Layout({ children, home=false, type='none' }) {
-	let bgColor = "#311d46";
+	let bgColor = "#191B45";
 	switch (type) {
 		case 'page':
-			bgColor = '#191B45';
+			bgColor = '#1C315C';
 			break;
 		case 'blog':
-			bgColor = '#452043';
+			bgColor = '#153145';
 			break;
 	}
 	return (
