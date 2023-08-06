@@ -10,7 +10,7 @@ import path from 'path'
 import matter from 'gray-matter'
 
 export default function Home({ posts }) {
-	const sortedPosts = posts.sort((a, b) => a.frontMatter.order - b.frontMatter.order);
+	const sortedPosts = posts.sort((a : any, b : any) => a.frontMatter.order - b.frontMatter.order);
 	return (
 		<>
 		<HeadParams

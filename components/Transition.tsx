@@ -1,4 +1,3 @@
-import { withTheme } from '@emotion/react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
 
