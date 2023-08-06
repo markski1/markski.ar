@@ -1,112 +1,123 @@
-import * as React from 'react';
-import Head from 'next/head';
+import { useState, useEffect } from 'react';
 import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
-import Grid from '@mui/material/Grid';
 import Header from '../components/atoms/PageHeader';
 import SectorContainer from '../components/atoms/SectionContainer';
 import HeadParams from '../components/atoms/HeadParams';
 
 export default function Page() {
-	let pvcPorcentaje: number[];
-	//               N/A  CABA  CHACO  CRDB  LPMP  NEUQ  RNGR  SALTA  TDF
-	pvcPorcentaje = [0.0, 0.02, 0.055, 0.03, 0.01, 0.03, 0.05, 0.036, 0.0];
+	// CONSTANT ARRAY: Contains the percentage of taxes per province.
+	//                     N/A  CABA  CHACO  CRDB  LPMP  NEUQ  RNGR  SALTA  TDF
+	const pvcPercentage = [0.0, 0.02, 0.055, 0.03, 0.01, 0.03, 0.05, 0.036, 0.0];
 
-	let values: { eur: number; usd: number; brs: number; };
+    const [currencies, setCurrencies] = useState<{ eur: number; usd: number; brs: number; }>({ eur: -1, usd: -1, brs: -1 });
+    const [amount, setAmount] = useState(0);
+    const [displayAmount, setDisplayAmount] = useState(0);
+    const [total, setTotal] = useState(0);
+    const [totalTaxes, setTotalTaxes] = useState(0);
+    const [currency, setCurrency] = useState(1);
+    const [province, setProvince] = useState(0);
+    const [digitalServiceTaxDisplay, setDigitalServiceTaxDisplay] = useState(0);
+    const [perceptionTaxDisplay, setPerceptionTaxDisplay] = useState(0);
+    const [paisTaxDisplay, setPaisTaxDisplay] = useState(0);
+    const [provinceTaxDisplay, setProvinceTaxDisplay] = useState(0);
+    const [provincePercent, setProvincePercent] = useState(0);
 
-	var obtenidos = false;
+    async function fetchCurrencies() {
+        const response = await fetch("https://snep.markski.ar/monedas.php");
+        const data = await response.json();
+        setCurrencies(data);
+    }
 
-	async function setearMonedas() {
-		let response = await fetch("https://snep.markski.ar/monedas.php");
-		values = await response.json();
+    useEffect(() => {
+        fetchCurrencies();
+    }, []);
 
-		obtenidos = true;
-		return true;
-	}
+    useEffect(() => {
+        let workingAmount:number;
 
-	function calcularTrigger(e: { preventDefault: () => any; }) {
-		// se llama a traves de esta funcion trigger para que no se recargue la pagina.
-		// la solucion real seria re-escribir esto como un hook, pero no tengo tiempo.
-		calcular(e);
-		return e.preventDefault();
-	}
+        workingAmount = amount;
+        
+        if (currency == 2) {
+            workingAmount *= currencies.usd;
+        }
+        if (currency == 3) {
+            workingAmount *= currencies.eur;
+        }
+        if (currency == 4) {
+            workingAmount *= currencies.brs;
+        }
 
-	async function calcular(e: { preventDefault: () => any; }) {
-		var cantidad = parseFloat((document.getElementById('cantidad') as HTMLInputElement).value);
+        if (workingAmount < 0) {
+            alert("Perdón, pero esa conversión actualmente no esta funcionando.");
+            return;
+        }
 
-		if (!isNumeric(cantidad)) {
-			cantidad = 0;
+        let digitalServiceTax:number;
+
+        // Tierra del Fuego does not pay digital service IVA
+        if (province == 8) {
+            digitalServiceTax = 0;
+            document.getElementById("tdf-alert").style.display = 'block';
+        }
+        else {
+            digitalServiceTax = amount * 0.21;
+            document.getElementById("tdf-alert").style.display = 'none';
+        }
+        
+        let AFIP = workingAmount * 0.45;
+        let PAIS = workingAmount * 0.08;
+        let provincePercent = 0.0;
+        
+        if (province > 0) {
+            provincePercent = workingAmount * pvcPercentage[province];
+        }
+        
+        let workingTotalTaxes = AFIP + PAIS + provincePercent + digitalServiceTax;
+
+        setPerceptionTaxDisplay(AFIP);
+        setProvinceTaxDisplay(provincePercent);
+        setDigitalServiceTaxDisplay(digitalServiceTax);
+        setPaisTaxDisplay(PAIS);
+        setProvincePercent(pvcPercentage[province] * 100);
+        
+        setTotalTaxes(workingTotalTaxes);
+        setDisplayAmount(workingAmount);
+        setTotal(workingAmount + workingTotalTaxes);
+    }, [amount, currency, province]);
+
+    function updateAmount() {
+        let number = parseFloat((document.getElementById('amount') as HTMLInputElement).value);
+        if (isNaN(number) || !isFinite(number))
+            number = 0;
+
+        setAmount(number);
+    }
+
+    function updateCurrency() {
+        let number = parseFloat((document.getElementById('currency') as HTMLInputElement).value);
+        if (isNaN(number) || !isFinite(number))
+            number = 1;
+        
+        setCurrency(number);
+    }
+
+    function updateProvince() {
+        let number = parseFloat((document.getElementById('province') as HTMLInputElement).value);
+        if (isNaN(number) || !isFinite(number) || number < 0) {
+			number = 0;
 		}
 
-		if (cantidad < 0) {
-			alert("Por favor ingresa una cantidad mayor a 0");
-			return e.preventDefault();
-		}
+        setProvince(number);
+    }
 
-		var moneda = parseInt((document.getElementById('moneda') as HTMLInputElement).value);
-
-		// si todavia no se cargaron las conversiones, cargarlas.
-		if (!obtenidos) {
-			// solo awaitear si no son pesos
-			if (parseInt((document.getElementById('moneda') as HTMLInputElement).value) == 1) {
-				setearMonedas();
-			}
-			else {
-				document.getElementById("botonSubmit").innerText = "Cargando conversiones...";
-				await setearMonedas();
-				document.getElementById("botonSubmit").innerText = "Calcular";
-			}
-		}
-		
-		var pvcia = parseInt((document.getElementById('pvcia') as HTMLInputElement).value);
-
-		if (moneda == 2) {
-			cantidad *= values.usd;
-		}
-		if (moneda == 3) {
-			cantidad *= values.eur;
-		}
-		if (moneda == 4) {
-			cantidad *= values.brs;
-		}
-
-		document.getElementById("totalCompra").innerHTML = cantidad.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-
-		// Chequeamos de vuelta si menor que 0. ¿Por que?
-		// Porque cuando una conversión no esta funcionando, aparece como -1, por lo tanto arriba se torna a negativo.
-		if (cantidad < 0) {
-			alert("Perdón, pero esa conversión actualmente no esta funcionando.");
-			return e.preventDefault();
-		}
-
-		var servdig:number;
-		if (pvcia == 8) {
-			servdig = 0; // TDF no paga IVA
-			document.getElementById("tdf-alerta").style.display = 'block';
-		} 
-		else {
-			servdig = cantidad * 0.21;
-			document.getElementById("tdf-alerta").style.display = 'none';
-		}
-		var afip = cantidad * 0.45;
-		var pais = cantidad * 0.08;
-		var pvc = 0.0;
-		pvc = cantidad * pvcPorcentaje[pvcia];
-		document.getElementById("impuestlol").innerHTML = (pvcPorcentaje[pvcia] * 100).toFixed(1);
-		var totalImpuestos = servdig + afip + pais + pvc;
-		var total = cantidad + totalImpuestos;
-		
-
-		document.getElementById("total").innerHTML = total.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-		document.getElementById("servdig").innerHTML = servdig.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-		document.getElementById("afip").innerHTML = afip.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-		document.getElementById("pais").innerHTML = pais.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-		document.getElementById("pvc").innerHTML = pvc.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-		document.getElementById("totalImpuestos").innerHTML = totalImpuestos.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2});
-		return e.preventDefault();
-	}
-	function isNumeric(n: any) {
-		return !isNaN(parseFloat(n)) && isFinite(n);
+	function parseToPesos(pesosAmount: number) {
+		return (
+			<span className={utilStyles.money}>
+				AR$
+				{pesosAmount.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+			</span>
+		);
 	}
 
 	return (
@@ -123,51 +134,53 @@ export default function Page() {
 				<p className={utilStyles.headingMd}>ingresá cuanto vas a cargar</p>
 			</div>
 			
-			<form onSubmit={calcularTrigger}>
-				<Grid container spacing={2.5}>
-					<Grid item xs>
-						<select defaultValue={1} onChange={calcularTrigger} className={utilStyles.input} id="moneda">
-							<option value={1}>AR$</option>
-							<option value={2}>USD</option>
-							<option value={3}>EUR</option>
-							<option value={4}>BR$</option>
-						</select>
-						<input style={{marginTop: '20px'}} onChange={calcularTrigger} className={utilStyles.input} id="cantidad" placeholder="Cantidad $" type="number" pattern="[0-9]+([\.,][0-9]+)?" step="0.01" title="Numero con no mas de 2 decimales." />
-					</Grid>
-					<Grid item xs>
-						<select defaultValue={0} onChange={calcularTrigger} className={utilStyles.input} id="pvcia">
-							<option value={0}>Provincia</option>
-							<option value={1}>Buenos Aires o CABA</option>
-							<option value={2}>Chaco</option>
-							<option value={3}>Cordoba</option>
-							<option value={4}>La Pampa</option>
-							<option value={5}>Neuquén</option>
-							<option value={6}>Rio Negro</option>
-							<option value={7}>Salta</option>
-							<option value={8}>Tierra del Fuego</option>
-							<option value={0}>Ninguna de las anteriores</option>
-						</select>
-						<button style={{marginTop: '20px'}} type="submit" id="botonSubmit" className={utilStyles.button}>Calcular</button>
-					</Grid>
-				</Grid>
-			</form>
+			<div className={utilStyles.flexContainer}>
+				<div className={utilStyles.flexBox}>
+					<input min={0} onChange={() => { updateAmount() }}  className={utilStyles.input} id="amount" placeholder="Cantidad $" type="number" pattern="[0-9]+([\.,][0-9]+)?" step="0.01" title="Numero con no mas de 2 decimales." />
+				</div>
+				<div className={utilStyles.flexBox}>
+					<select defaultValue={1} onChange={() => { updateCurrency() }}  className={utilStyles.input} id="currency">
+						<option value={1}>AR$</option>
+						<option value={2}>USD</option>
+						<option value={3}>EUR</option>
+						<option value={4}>BR$</option>
+					</select>
+				</div>
+				<div className={utilStyles.flexBox}>
+					<select defaultValue={0} onChange={() => { updateProvince() }}  className={utilStyles.input} id="province">
+						<option value={0}>Provincia</option>
+						<option value={1}>Buenos Aires o CABA</option>
+						<option value={2}>Chaco</option>
+						<option value={3}>Cordoba</option>
+						<option value={4}>La Pampa</option>
+						<option value={5}>Neuquén</option>
+						<option value={6}>Rio Negro</option>
+						<option value={7}>Salta</option>
+						<option value={8}>Tierra del Fuego</option>
+						<option value={0}>Ninguna de las anteriores</option>
+					</select>
+				</div>
+				<div className={utilStyles.flexBox} style={{textAlign: 'center'}}>
+					<span className={utilStyles.heading2Xl}>Total: {parseToPesos(total)}</span>
+				</div>
+			</div>
 
 
 			<div className={utilStyles.centerContainer}>
-				<p className={utilStyles.heading2Xl}>Total: AR$<span id="total" style={{fontWeight: '600'}}>0,00</span></p>
+				
 			</div>
 			<SectorContainer>
 				<div style={{whiteSpace: 'pre-line', minWidth: '20rem'}}>
 					<span className={utilStyles.headingMd}>
-						En la compra: <span className={utilStyles.money}>AR$<span id="totalCompra">0,00</span></span><br />
-						En impuestos: <span className={utilStyles.money}>AR$<span id="totalImpuestos">0,00</span></span>
+						En la compra: {parseToPesos(displayAmount)}<br />
+						En impuestos: {parseToPesos(totalTaxes)}
 					</span>
 					<small>
 						<ul style={{marginBottom: '0rem'}}>
-							<li>IVA Servicios Digitales <span className={utilStyles.money}>AR$<span id="servdig">0,00</span></span> <b>(21%)</b> <span id="tdf-alerta" style={{display: 'none'}}>* Tiera del Fuego no lo paga</span></li>
-							<li>Percepción RG AFIP 4815 <span className={utilStyles.money}>AR$<span id="afip">0,00</span></span> <b>(45%)</b></li>
-							<li>Ley impuesto PAIS <span className={utilStyles.money}>AR$<span id="pais">0,00</span></span> <b>(8%)</b></li>
-							<li>Impuestos provinciales <span className={utilStyles.money}>AR$<span id="pvc">0,00</span></span> <b>(<span id="impuestlol">?</span>%)</b></li>
+							<li>IVA Servicios Digitales {parseToPesos(digitalServiceTaxDisplay)} <b>(21%)</b> <span id="tdf-alert" style={{display: 'none'}}>* Tierra del Fuego no paga IVA</span></li>
+							<li>Percepción RG AFIP 4815 {parseToPesos(perceptionTaxDisplay)} <b>(45%)</b></li>
+							<li>Ley impuesto PAIS {parseToPesos(paisTaxDisplay)} <b>(8%)</b></li>
+							<li>Impuestos provinciales {parseToPesos(provinceTaxDisplay)} <b>({provincePercent}%)</b></li>
 						</ul>
 					</small>
 				</div>
@@ -177,11 +190,11 @@ export default function Page() {
 				<span className={utilStyles.headingMd}>¿Que tan exacto es el resultado?</span>
 				<br/>
 				<p><small>
-					Depende. Suele ser muy cercano (±2%) si se calcula en pesos.<br/>
-					Si estas calculando en otra divisa, hay una buena posibilidad de que tu banco use una conversion un poco distinta a la nuestra. En algunos casos pague hasta 5% mas de lo calculado, asi que hay que estar preparado para todo.<br/>
+					Con pesos suele ser exacto.<br/>
+					En otra divisa, hay una chance de que tu banco use una conversion distinta, a veces ~5% mayor.<br/>
 				</small></p>
 				<span><small>
-					Esta calculadora asume un caso "generico", lo que se pagaria a los servicios mas comunes. Para estar seguros, recomiendo <a className={utilStyles.money} href="https://www.mercadopago.com.ar/ayuda/pagos-en-moneda-extranjera_4063">revisar esta guia</a>. Es de Mercado Pago, pero aplica a la mayoria de las tarjetas.
+					Esta calculadora asume un caso común. Para estar seguros, recomiendo <a className={utilStyles.money} href="https://www.mercadopago.com.ar/ayuda/pagos-en-moneda-extranjera_4063">revisar esta guia</a>.
 				</small></span>
 			</SectorContainer>
 
