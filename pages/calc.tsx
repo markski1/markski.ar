@@ -4,6 +4,7 @@ import utilStyles from '../styles/utils.module.css';
 import Header from '../components/atoms/PageHeader';
 import SectorContainer from '../components/atoms/SectionContainer';
 import HeadParams from '../components/atoms/HeadParams';
+import { Padding } from '@mui/icons-material';
 
 export default function Page() {
 	// CONSTANT ARRAY: Contains the percentage of taxes per province.
@@ -185,6 +186,12 @@ export default function Page() {
 					</small>
 				</div>
 			</SectorContainer>
+
+			<div style={{backgroundColor: '#FF002244', padding: '.5rem 1rem'}}>
+				<p>Atención:</p>
+				<p>La versión oficial de la calculadora se encuentra ahora en <a href="https://calc.markski.ar" style={{color: 'cyan'}}>Calculando Argentina</a>.</p>
+				<p>Esta versión seguira funcionando al menos hasta fin de año, con conversiones actualizadas y todo. Pero recomiendo usar la nueva.</p>
+			</div>
 
 			<SectorContainer>
 				<span className={utilStyles.headingMd}>¿Que tan exacto es el resultado?</span>

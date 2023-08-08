@@ -20,11 +20,11 @@ export default function Home({ posts }) {
 		<Layout home>
 			<div className={utilStyles.contactCard}>
 				<p style={{marginTop: '.5rem'}}>
-					I am Juan, known online as Markski, a software developer from Argentina.
+					I am Juan, a software developer from Argentina.
 				</p>
 				<span>
 					I study computer science in the National University of La Plata.<br />
-					Experienced in backend and frontend development, and databases.
+					Experienced in web development, backend and databases.
 				</span>
 				
 				<Grid container columnSpacing={4} rowSpacing={3}>
@@ -34,7 +34,7 @@ export default function Home({ posts }) {
 							<ul style={{lineHeight: '1.6'}}>
 								<li>C# (.NET and .NET Framework)</li>
 								<li>PHP (Laravel, Wordpress)</li>
-								<li>Javascript (Vanilla, React/Next.JS)</li>
+								<li>JavaScript (Vanilla, React/Next.JS)</li>
 								<li>Databases (MySQL, NoSQL)</li>
 								<li>Server admin (Linux, mainly Debian)</li>
 							</ul>
@@ -67,15 +67,10 @@ export default function Home({ posts }) {
 				text = 'the windows tweaking toolkit allows tweaking hidden windows settings. [.net framework 4.8]'
 			/>
 			<PrintEntry
-				title = 'Argentine exterior tax calculator'
-				url = 'calc'
-				text = 'calculate costs of payments from argentina to foreign services such as steam. [js]'
+				title = 'Calculando Argentina'
+				url = 'calculando'
+				text = 'a web app with a collection of calculators relevant to argentina [react/next.js]'
 				spanishOnly
-			/>
-			<PrintEntry
-				title = 'Wartime Leader'
-				url = 'wartime'
-				text = 'simple web-based fortress management and defense game. [php, htmx]' 
 			/>
 
 			<div className={utilStyles.headingContainer}>
