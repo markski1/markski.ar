@@ -1,9 +1,7 @@
 import * as React from 'react';
 import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
-import Link from 'next/link';
 import Header from '../components/atoms/PageHeader';
-import MButton from '../components/atoms/MButton';
 import HeadParams from '../components/atoms/HeadParams';
 import Section from '../components/molecules/Section';
 
@@ -21,7 +19,7 @@ export default function Page() {
 			</Header>
 			<Section title="about">
 				<img
-					src = "https://calc.markski.ar/logo_small.png"
+					src = "https://calc.markski.ar/logo_small.webp"
 					width= "20%"
 					style = {{float: 'right'}}
 				/>

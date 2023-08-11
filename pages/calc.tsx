@@ -4,7 +4,6 @@ import utilStyles from '../styles/utils.module.css';
 import Header from '../components/atoms/PageHeader';
 import SectorContainer from '../components/atoms/SectionContainer';
 import HeadParams from '../components/atoms/HeadParams';
-import { Padding } from '@mui/icons-material';
 
 export default function Page() {
 	// CONSTANT ARRAY: Contains the percentage of taxes per province.

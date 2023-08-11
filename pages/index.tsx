@@ -1,5 +1,4 @@
 import Grid from '@mui/material/Grid';
-import Link from 'next/link';
 import Layout from '../components/layout';
 import utilStyles from '../styles/utils.module.css';
 import PrintEntry from '../components/atoms/HomeEntry'
