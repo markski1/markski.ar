@@ -45,8 +45,8 @@ export default function Home({ posts }) {
 							<span className={utilStyles.listMargin}><GetIcon icon="github" /> <a className={utilStyles.contactLink} href="https://www.github.com/markski1">GitHub</a><br /></span>
 							<span className={utilStyles.listMargin}><GetIcon icon="twitter" /> <a className={utilStyles.contactLink} href="https://www.twitter.com/a_markski">Twitter</a><br /></span>
 							<span className={utilStyles.listMargin}><GetIcon icon="telegram" /> <a className={utilStyles.contactLink} href="https://www.telegram.me/Markski">Telegram</a><br /></span>
-							<span className={utilStyles.listMargin}><GetIcon icon="discord" /> <a className={utilStyles.contactLink} href="discord:markski.ar">Discord</a><br /></span>
-							<span className={utilStyles.listMargin}><GetIcon icon="email" /> <a className={utilStyles.contactLink} href="mailto:me@markski.ar">me@markski.ar</a></span>
+							<span className={utilStyles.listMargin}><GetIcon icon="discord" /> <a className={utilStyles.contactLink} href="discord:markski.ar">Discord: markski.ar</a><br /></span>
+							<span className={utilStyles.listMargin}><GetIcon icon="email" /> <a className={utilStyles.contactLink} href="mailto:me@markski.ar">Email: me@markski.ar</a></span>
 						</div>
 					</Grid>
 				</Grid>
