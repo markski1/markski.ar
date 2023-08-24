@@ -58,7 +58,12 @@ export default function Home({ posts }) {
 			<PrintEntry
 				title = 'Rosettes'
 				url = 'rosettes'
-				text = 'simple, free, open source discord bot. [.net 6]'
+				text = 'simple, free, open source discord bot. [.net 7]'
+			/>
+			<PrintEntry
+				title = 'SAMonitor'
+				url = 'samonitor'
+				text = 'a server monitor and api for sa-mp and openmultiplayer [php & asp.net 7]'
 			/>
 			<PrintEntry
 				title = 'WTTk'
