@@ -24,9 +24,9 @@ export default function Page() {
 					style = {{float: 'right'}}
 				/>
 				
-				Calculando Argentina is an open source web app, providing common calculations relevant to the Argentine Republic.
+				Calculando Argentina is an open source progressive web application (PWA), providing common calculations relevant to the Argentine Republic.
 
-                <p>It provides a simple, quick interface, responsive across device sizes and form factors, and functions entirely client-side.</p>
+                <p>It provides a simple and lightweight user interface, responsive across device sizes and form factors, and functions entirely client-side.</p>
 
                 <p>It is written in TypeScript, on React/Next.JS</p>
 				

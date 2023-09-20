@@ -18,34 +18,13 @@ export default function Page() {
 				<p className={utilStyles.headingLg} style={{marginRight: '30px'}}>SAMonitor</p>
 			</Header>
 			<Section title="about">
-				SAMonitor is a free, open source, public server browser, API and Masterlist alternative for SA-MP and open.mp.
+				SAMonitor (or San Andreas Monitor) is a free, open source, public server browser, API and Masterlist alternative for SA-MP and open.mp.
 				
-				<p>The API is written in ASP.NET 7, as it runs rather quickly.</p>
-                <p>The website is written in HTMX & PHP 8, as I wanted to provide the most lightweight possible interface while still feeling reasonably modern.</p>
+				<p>The backend is written entirely in ASP.NET 7. It runs 24/7, constantly querying servers, collecting information and keeping track of playercounts and server availablility across the globe.</p>
+                <p>The website is written in HTMX & PHP 8, as I wanted to provide the most lightweight possible interface while still feeling reasonably modern. It provides filtering options, global metrics and server-specific pages.</p>
 				
-				<div style={{textAlign: 'center'}}>
-					<a href="https://sam.markski.ar" rel="noreferrer" target="_blank">
-						<MButton
-							text = "visit SAM"
-							color = "#2D215C"
-							width = "8rem"
-						/>
-					</a>
-					<a href="https://github.com/markski1/SAMonitor/blob/main/README.md" rel="noreferrer" target="_blank">
-						<MButton
-							text = "documentation"
-							color = "#4D215C"
-							width = "8rem"
-						/>
-					</a>
-					<a href="https://github.com/markski1/SAMonitor" rel="noreferrer" target="_blank">
-						<MButton
-							text = "github"
-							color = "#521D4F"
-							width = "8rem"
-						/>
-					</a>
-				</div>
+				<p>Visit: <a href="https://sam.markski.ar" style={{color: 'cyan'}}>sam.markski.ar</a></p>
+				<p>Source code and API documentation <a href="https://github.com/markski1/SAMonitor/" style={{color: 'cyan'}}>on GitHub</a></p>
 			</Section>
 		</Layout>
 		</>

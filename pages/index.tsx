@@ -31,11 +31,10 @@ export default function Home({ posts }) {
 						<div style={{minWidth: '20rem', marginBottom: '-2rem', whiteSpace: 'nowrap'}}>
 							<p>Languages and technologies I work with:</p>
 							<ul style={{lineHeight: '1.6'}}>
-								<li>C# (.NET and .NET Framework)</li>
-								<li>PHP (Laravel, Wordpress)</li>
-								<li>JavaScript (Vanilla, React/Next.JS)</li>
-								<li>Databases (MySQL, NoSQL)</li>
-								<li>Server admin (Linux, mainly Debian)</li>
+								<li>C# (.NET Core and ASP.NET)</li>
+								<li>PHP (Vanilla and Laravel)</li>
+								<li>JS & TS (Vanilla, Node, React)</li>
+								<li>Databases (MySQL, PgSQL)</li>
 							</ul>
 						</div>
 					</Grid>
@@ -43,7 +42,6 @@ export default function Home({ posts }) {
 						<div style={{minWidth: '10rem', whiteSpace: 'nowrap'}}>
 							<p>Get in touch:</p>
 							<span className={utilStyles.listMargin}><GetIcon icon="github" /> <a className={utilStyles.contactLink} href="https://www.github.com/markski1">GitHub</a><br /></span>
-							<span className={utilStyles.listMargin}><GetIcon icon="twitter" /> <a className={utilStyles.contactLink} href="https://www.twitter.com/a_markski">Twitter</a><br /></span>
 							<span className={utilStyles.listMargin}><GetIcon icon="telegram" /> <a className={utilStyles.contactLink} href="https://www.telegram.me/Markski">Telegram</a><br /></span>
 							<span className={utilStyles.listMargin}><GetIcon icon="discord" /> <a className={utilStyles.contactLink} href="discord:markski.ar">Discord: markski.ar</a><br /></span>
 							<span className={utilStyles.listMargin}><GetIcon icon="email" /> <a className={utilStyles.contactLink} href="mailto:me@markski.ar">Email: me@markski.ar</a></span>
