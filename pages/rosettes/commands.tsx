@@ -76,27 +76,6 @@ export default function Page() {
 						description = 'Generates a GIF of the "throwing brick" meme with the provided image.'
 					/>
 				</div>
-				<h2>Music commands</h2>
-				<div style={{marginLeft: '1rem'}}>
-					<p><small>Upon using 'Music Play', a player with buttons is spawned, so most of these commands shouldn't be needed.</small></p>
-					<CommandEntry
-						name = "/music play"
-						parameters = "[url or search term]"
-						description = "Joins your voice channel and starts playing the given track. If a song is already playing, it'll be added to the queue."
-					/>
-					<CommandEntry
-						name = "/music skip"
-						description = "Skip to the next song in the queue, if applicable."
-					/>
-					<CommandEntry
-						name = "/music stop"
-						description = "Stops the music playback."
-					/>
-					<CommandEntry
-						name = "/music toggle"
-						description = "Use to pause and resume playback without stopping the entire song."
-					/>
-				</div>
 				<h2>Search commands</h2>
 				<div style={{marginLeft: '1rem'}}>
 					<CommandEntry

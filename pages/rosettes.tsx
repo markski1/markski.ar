@@ -88,7 +88,6 @@ export default function Page() {
 					<li><b>Image functions</b><br/>SauceNAO to find artwork sources, GIF reversing, converting image formats, etc.</li>
 					<li><b>Downloading Twitter videos</b><br/>Uploads a video file from any tweet you give it.</li>
 					<li><b>Polls</b><br/>Easily create polls where people can anonymously vote.</li>
-					<li><b>Playing music</b><br/>Rosettes can join your voicechats and play music as requested.</li>
 					<li><b>Reminders</b><br/>Let users set reminder alarms for themselves, even in DM's.</li>
 					<li><b>Searching</b><br/>Quickly get information for Pokémon, Anime, Manga, etc.</li>
 					<li><b>Minigames</b><br/>- Farming and fishing system, with shop, inventory and the expected stuff.<br/>- A pet ownership and interaction system.</li>
