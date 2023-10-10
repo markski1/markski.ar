@@ -17,7 +17,7 @@ export default function Home({ posts }) {
 			description = "Desarrollador, estudiante de informatica. / Developer, Comp Sci student."
 			/>
 		<Layout home>
-			<div className={utilStyles.contactCard}>
+			<div className={utilStyles.contactCard} style={{maxWidth: '48rem', margin: 'auto'}}>
 				<p style={{marginTop: '.5rem'}}>
 					I am Juan, a software developer from Argentina.
 				</p>
@@ -50,72 +50,76 @@ export default function Home({ posts }) {
 				</Grid>
 			</div>
 
-			<div className={utilStyles.headingContainer}>
-				<h2 className={utilStyles.headingLg}>software and services</h2>
-			</div>
-			<PrintEntry
-				title = 'Rosettes'
-				url = 'rosettes'
-				text = 'simple, free, open source discord bot. [.net 7]'
-			/>
-			<PrintEntry
-				title = 'SAMonitor'
-				url = 'samonitor'
-				text = 'a server monitor and api for sa-mp and openmultiplayer [php & asp.net 7]'
-			/>
-			<PrintEntry
-				title = 'WTTk'
-				url = 'wttk'
-				text = 'the windows tweaking toolkit allows tweaking hidden windows settings. [.net framework 4.8]'
-			/>
-			<PrintEntry
-				title = 'Calculando Argentina'
-				url = 'calculando'
-				text = 'a web app with a collection of calculators relevant to argentina [react/next.js]'
-				spanishOnly
-			/>
+			<Grid container columnSpacing={10} rowSpacing={3}>
+				<Grid item xs>
+					<div className={utilStyles.headingContainer} style={{minWidth: '20rem'}}>
+						<h2 className={utilStyles.headingLg}>software and services</h2>
+					</div>
+					<PrintEntry
+						title = 'Rosettes'
+						url = 'rosettes'
+						text = 'simple, free, open source discord bot. [.net 7]'
+					/>
+					<PrintEntry
+						title = 'SAMonitor'
+						url = 'samonitor'
+						text = 'a server monitor and api for sa-mp and openmultiplayer [php & asp.net 7]'
+					/>
+					<PrintEntry
+						title = 'WTTk'
+						url = 'wttk'
+						text = 'the windows tweaking toolkit allows tweaking hidden windows settings. [.net framework 4.8]'
+					/>
+					<PrintEntry
+						title = 'Calculando Argentina'
+						url = 'calculando'
+						text = 'a web app with a collection of calculators relevant to argentina [react/next.js]'
+						spanishOnly
+					/>
 
-			<div className={utilStyles.headingContainer}>
-				<h2 className={utilStyles.headingLg}>blog</h2>
-			</div>
-			{sortedPosts.map((post: { frontMatter: { title: string; description: string; order: number }; slug: string; }) => (
-				<PrintEntry
-					key = {post.frontMatter.order}
-					title = {post.frontMatter.title}
-					url = {'/blog/' + post.slug}
-					text = {post.frontMatter.description}
-					// date = {post.frontMatter.date}
-				/>
-			)).reverse()}
-
-
-			<div className={utilStyles.headingContainer}>
-				<h2 className={utilStyles.headingLg}>repositories and libraries</h2>
-			</div>
-			<PrintEntry
-				title = 'PSXU'
-				url = 'https://github.com/markski1/PSXU'
-				text = 'single-file php script to upload files on your webserver through sharex for quick sharing.'
-				target = '_blank'
-			/>
-			<PrintEntry
-				title = 'ez-steam-api.php'
-				url = 'https://github.com/markski1/ez-steam-api.php'
-				text = 'object-oriented php interface for easily and quickly requesting data from the steam api.'
-				target = '_blank'
-			/>
-			<PrintEntry
-				title = 'tireFuncs'
-				url = 'https://github.com/markski1/SAMP-tireFuncs'
-				text = 'functions and callbacks for easily handling vehicle tires in sa-mp.'
-				target = '_blank'
-			/>
-			<PrintEntry
-				title = 'vModData'
-				url = 'https://github.com/markski1/SAMP-vModData'
-				text = 'library to obtain information about vehicle components in sa-mp.'
-				target = '_blank'
-			/>
+					<div className={utilStyles.headingContainer} style={{minWidth: '20rem', marginTop: '4rem'}}>
+						<h2 className={utilStyles.headingLg}>repositories and libraries</h2>
+					</div>
+					<PrintEntry
+						title = 'PSXU'
+						url = 'https://github.com/markski1/PSXU'
+						text = 'single-file php script to upload files on your webserver through sharex for quick sharing.'
+						target = '_blank'
+					/>
+					<PrintEntry
+						title = 'ez-steam-api.php'
+						url = 'https://github.com/markski1/ez-steam-api.php'
+						text = 'object-oriented php interface for easily and quickly requesting data from the steam api.'
+						target = '_blank'
+					/>
+					<PrintEntry
+						title = 'tireFuncs'
+						url = 'https://github.com/markski1/SAMP-tireFuncs'
+						text = 'functions and callbacks for easily handling vehicle tires in sa-mp.'
+						target = '_blank'
+					/>
+					<PrintEntry
+						title = 'vModData'
+						url = 'https://github.com/markski1/SAMP-vModData'
+						text = 'library to obtain information about vehicle components in sa-mp.'
+						target = '_blank'
+					/>
+				</Grid>
+				<Grid item xs>
+					<div className={utilStyles.headingContainer} style={{minWidth: '20rem'}}>
+						<h2 className={utilStyles.headingLg}>blog</h2>
+					</div>
+					{sortedPosts.map((post: { frontMatter: { title: string; description: string; order: number }; slug: string; }) => (
+						<PrintEntry
+							key = {post.frontMatter.order}
+							title = {post.frontMatter.title}
+							url = {'/blog/' + post.slug}
+							text = {post.frontMatter.description}
+							// date = {post.frontMatter.date}
+						/>
+					)).reverse()}
+				</Grid>
+			</Grid>
 		</Layout>
 		</>
 	);

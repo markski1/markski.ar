@@ -5,6 +5,13 @@
 	min-height: 76vh;
 }
 
+.bigContainer {
+	max-width: 80rem;
+	padding: 0 1rem;
+	margin: 2rem auto;
+	min-height: 76vh;
+}
+
 .header {
 	background-color: #DDDDDD;
 	margin-bottom: 2.5rem;

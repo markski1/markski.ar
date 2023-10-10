@@ -26,7 +26,8 @@ export default function Layout({ children, home=false, type='none' }) {
 				fill: ${bgColor};
 			}
 			`}</style>
-			<div className={styles.container}>
+
+			<div className={home ? styles.bigContainer : styles.container}>
 				<main style={{width: "98%", margin: "-2rem auto"}}>
 					{children}
 				</main>
