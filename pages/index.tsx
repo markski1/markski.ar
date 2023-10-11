@@ -17,24 +17,25 @@ export default function Home({ posts }) {
 			description = "Desarrollador, estudiante de informatica. / Developer, Comp Sci student."
 			/>
 		<Layout home>
-			<div className={utilStyles.contactCard} style={{maxWidth: '48rem', margin: 'auto'}}>
+			<div className={utilStyles.contactCard} style={{maxWidth: '46rem', margin: 'auto'}}>
 				<p style={{marginTop: '.5rem'}}>
 					I am Juan, a software developer from Argentina.
 				</p>
 				<span>
 					I study computer science in the National University of La Plata.<br />
-					Experienced in web development, backend and databases.
+					Fullstack developer as a hobby, Backend developer for a living.
 				</span>
 				
 				<Grid container columnSpacing={4} rowSpacing={3}>
 					<Grid item xs={7}>
-						<div style={{minWidth: '20rem', marginBottom: '-2rem', whiteSpace: 'nowrap'}}>
-							<p>Languages and technologies I work with:</p>
-							<ul style={{lineHeight: '1.6'}}>
-								<li>C# (.NET Core and ASP.NET)</li>
-								<li>PHP (Vanilla and Laravel)</li>
-								<li>JS & TS (Vanilla, Node, React)</li>
-								<li>Databases (MySQL, PgSQL)</li>
+						<div style={{minWidth: '20rem', marginBottom: '-1rem', whiteSpace: 'nowrap'}}>
+							<p>Domains I work within:</p>
+							<ul style={{lineHeight: '1.65'}}>
+								<li>Backend development</li>
+								<li>Server administration</li>
+								<li>Database administration</li>
+								<li>Performance analysis</li>
+								<li>Automation</li>
 							</ul>
 						</div>
 					</Grid>
@@ -43,6 +44,7 @@ export default function Home({ posts }) {
 							<p>Get in touch:</p>
 							<span className={utilStyles.listMargin}><GetIcon icon="github" /> <a className={utilStyles.contactLink} href="https://www.github.com/markski1">GitHub</a><br /></span>
 							<span className={utilStyles.listMargin}><GetIcon icon="telegram" /> <a className={utilStyles.contactLink} href="https://www.telegram.me/Markski">Telegram</a><br /></span>
+							<span className={utilStyles.listMargin}><GetIcon icon="twitter" /> <a className={utilStyles.contactLink} href="https://www.twitter.com/a_markski">X (formerly Twitter)</a><br /></span>
 							<span className={utilStyles.listMargin}><GetIcon icon="discord" /> <a className={utilStyles.contactLink} href="discord:markski.ar">Discord: markski.ar</a><br /></span>
 							<span className={utilStyles.listMargin}><GetIcon icon="email" /> <a className={utilStyles.contactLink} href="mailto:me@markski.ar">Email: me@markski.ar</a></span>
 						</div>
@@ -50,7 +52,7 @@ export default function Home({ posts }) {
 				</Grid>
 			</div>
 
-			<Grid container columnSpacing={10} rowSpacing={3}>
+			<Grid container columnSpacing={8} rowSpacing={3}>
 				<Grid item xs>
 					<div className={utilStyles.headingContainer} style={{minWidth: '20rem'}}>
 						<h2 className={utilStyles.headingLg}>software and services</h2>
@@ -58,22 +60,22 @@ export default function Home({ posts }) {
 					<PrintEntry
 						title = 'Rosettes'
 						url = 'rosettes'
-						text = 'simple, free, open source discord bot. [.net 7]'
+						text = 'simple, free, open source discord bot.'
 					/>
 					<PrintEntry
 						title = 'SAMonitor'
 						url = 'samonitor'
-						text = 'a server monitor and api for sa-mp and openmultiplayer [php & asp.net 7]'
+						text = 'server monitoring for sa-mp and openmultiplayer.'
 					/>
 					<PrintEntry
 						title = 'WTTk'
 						url = 'wttk'
-						text = 'the windows tweaking toolkit allows tweaking hidden windows settings. [.net framework 4.8]'
+						text = 'enables tweaking hidden windows settings.'
 					/>
 					<PrintEntry
 						title = 'Calculando Argentina'
 						url = 'calculando'
-						text = 'a web app with a collection of calculators relevant to argentina [react/next.js]'
+						text = 'web app with calculators relevant to argentina.'
 						spanishOnly
 					/>
 
@@ -109,13 +111,13 @@ export default function Home({ posts }) {
 					<div className={utilStyles.headingContainer} style={{minWidth: '20rem'}}>
 						<h2 className={utilStyles.headingLg}>blog</h2>
 					</div>
-					{sortedPosts.map((post: { frontMatter: { title: string; description: string; order: number }; slug: string; }) => (
+					{sortedPosts.map((post: { frontMatter: { title: string; description: string; order: number; date:string }; slug: string; }) => (
 						<PrintEntry
 							key = {post.frontMatter.order}
 							title = {post.frontMatter.title}
 							url = {'/blog/' + post.slug}
 							text = {post.frontMatter.description}
-							// date = {post.frontMatter.date}
+							date = {post.frontMatter.date}
 						/>
 					)).reverse()}
 				</Grid>

@@ -1,7 +1,7 @@
 import utilStyles from '../../styles/utils.module.css';
 import Link from 'next/link';
 
-export default function PrintEntry(props: { spanishOnly?: boolean; url: string; text: string; title: string; target?: string }) {
+export default function PrintEntry(props: { spanishOnly?: boolean; url: string; text: string; title: string; target?: string; date?: string }) {
 	let sptxt: JSX.Element;
 	if (props.spanishOnly) {
 		sptxt = <>&nbsp;<span style={{fontSize: '0.8rem', color: 'gray'}}>spanish only</span><br/></>;
@@ -18,6 +18,7 @@ export default function PrintEntry(props: { spanishOnly?: boolean; url: string; 
 				{sptxt}
 			</h3>
 			<p style={{color: 'darkgray'}}>
+				{props.date && <><small style={{color: 'gray'}}>{props.date}</small><br/></>}
 				{description}
 			</p>
 		</div>
