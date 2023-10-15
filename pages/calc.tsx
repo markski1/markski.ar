@@ -20,6 +20,7 @@ export default function Page() {
     const [digitalServiceTaxDisplay, setDigitalServiceTaxDisplay] = useState(0);
     const [perceptionTaxDisplay, setPerceptionTaxDisplay] = useState(0);
     const [paisTaxDisplay, setPaisTaxDisplay] = useState(0);
+    const [goodsTaxDisplay, setGoodsTaxDisplay] = useState(0);
     const [provinceTaxDisplay, setProvinceTaxDisplay] = useState(0);
     const [provincePercent, setProvincePercent] = useState(0);
 
@@ -65,6 +66,7 @@ export default function Page() {
             document.getElementById("tdf-alert").style.display = 'none';
         }
         
+		let BIENES = workingAmount * 0.25;
         let AFIP = workingAmount * 0.45;
         let PAIS = workingAmount * 0.08;
         let provincePercent = 0.0;
@@ -73,12 +75,13 @@ export default function Page() {
             provincePercent = workingAmount * pvcPercentage[province];
         }
         
-        let workingTotalTaxes = AFIP + PAIS + provincePercent + digitalServiceTax;
+        let workingTotalTaxes = AFIP + PAIS + provincePercent + digitalServiceTax + BIENES;
 
         setPerceptionTaxDisplay(AFIP);
         setProvinceTaxDisplay(provincePercent);
         setDigitalServiceTaxDisplay(digitalServiceTax);
         setPaisTaxDisplay(PAIS);
+        setGoodsTaxDisplay(BIENES);
         setProvincePercent(pvcPercentage[province] * 100);
         
         setTotalTaxes(workingTotalTaxes);
@@ -179,6 +182,7 @@ export default function Page() {
 						<ul style={{marginBottom: '0rem'}}>
 							<li>IVA Servicios Digitales {parseToPesos(digitalServiceTaxDisplay)} <b>(21%)</b> <span id="tdf-alert" style={{display: 'none'}}>* Tierra del Fuego no paga IVA</span></li>
 							<li>Percepción RG AFIP 4815 {parseToPesos(perceptionTaxDisplay)} <b>(45%)</b></li>
+							<li>Percepción RG AFIP 5272 {parseToPesos(goodsTaxDisplay)} <b>(45%)</b></li>
 							<li>Ley impuesto PAIS {parseToPesos(paisTaxDisplay)} <b>(8%)</b></li>
 							<li>Impuestos provinciales {parseToPesos(provinceTaxDisplay)} <b>({provincePercent}%)</b></li>
 						</ul>
