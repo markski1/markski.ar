@@ -89,10 +89,10 @@ export default function Page() {
 					<li><b>Downloading Twitter videos</b><br/>Uploads a video file from any tweet you give it.</li>
 					<li><b>Polls</b><br/>Easily create polls where people can anonymously vote.</li>
 					<li><b>Reminders</b><br/>Let users set reminder alarms for themselves, even in DM's.</li>
-					<li><b>Searching</b><br/>Quickly get information for Pokémon, Anime, Manga, etc.</li>
+					<li><b>Searching</b><br/>Quickly get information from Wikipedia, UrbanDictionary, Pokepedia, Anime/Manga sites, etc.</li>
 					<li><b>Minigames</b><br/>- Farming and fishing system, with shop, inventory and the expected stuff.<br/>- A pet ownership and interaction system.</li>
 					<li><b>Custom commands</b><br/>Add your own guild commands to let users see information and manage roles.</li>
-					<li><b>Miscelaneous</b><br/>- Display who joins and leaves the server<br/>- Provide status information for certain games<br/>- Throwing dice and coins<br/>- Even more.</li>
+					<li><b>Miscelaneous</b><br/>- Display who joins and leaves the server<br/>- Provide status information for certain games<br/>- Throwing dice and coins<br/>-Expression evaluator<br/>- Even more.</li>
 					<li><b>What else would you like?</b><br/>If Rosettes lacks a feature you want, use <span style={{color: 'cyan'}}>/feedback</span>, or contact me directly.<br/>I am always adding new things, and welcoming new ideas.</li>
 				</ul>
 				<p>

@@ -79,6 +79,11 @@ export default function Page() {
 				<h2>Search commands</h2>
 				<div style={{marginLeft: '1rem'}}>
 					<CommandEntry
+						name = "/find wiki"
+						parameters = "[term]"
+						description = "Finds a Wikipedia entry for the given term."
+					/>
+					<CommandEntry
 						name = "/find urban"
 						parameters = "[term]"
 						description = "Finds an Urban Dictionary definition of the given term."
@@ -180,7 +185,7 @@ export default function Page() {
 					/>
 					<small>* note that the minigames are more feature complete than the commands might show.<br/>&nbsp; most of the functionality is accesible through buttons.</small>
 				</div>
-				<h2>Miscelaneous commands</h2>
+				<h2>Miscellaneous commands</h2>
 				<div style={{marginLeft: '1rem'}}>
 					<CommandEntry
 						name = "/serverinfo"
@@ -190,6 +195,11 @@ export default function Page() {
 						name = "/profile"
 						parameters = "[optional:user]"
 						description = "Shows information about yourself or the provided user."
+					/>
+					<CommandEntry
+						name = "/eval"
+						parameters = "[mathematical expression]"
+						description = "Evaluates the given matematical expression."
 					/>
 					<CommandEntry
 						name = "/makesweeper"
