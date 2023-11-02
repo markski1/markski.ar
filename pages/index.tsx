@@ -78,8 +78,9 @@ export default function Home({ posts }) {
 						text = 'web app with calculators relevant to argentina.'
 						spanishOnly
 					/>
+					<iframe src="https://status.markski.ar/badge?theme=dark" style={{border: '0px', width: '250px', height: '32px', marginTop: '.5rem', marginLeft: '.5rem'}}></iframe>
 
-					<div className={utilStyles.headingContainer} style={{minWidth: '20rem', marginTop: '4rem'}}>
+					<div className={utilStyles.headingContainer} style={{minWidth: '20rem', marginTop: '2rem'}}>
 						<h2 className={utilStyles.headingLg}>repositories and libraries</h2>
 					</div>
 					<PrintEntry
