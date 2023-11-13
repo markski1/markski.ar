@@ -6,7 +6,7 @@
 		"@emotion/react": "^11.10.5",
 		"@emotion/styled": "^11.10.5",
 		"@mui/icons-material": "^5.11.0",
-		"@mui/material": "^5.11.6",
+		"@mui/material": "^5.14.14",
 		"eslint-config-next": "^13.2.4",
 		"framer-motion": "^7.10.3",
 		"next": "^13.5.4",
