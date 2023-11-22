@@ -18,14 +18,10 @@ export default function Home({ posts }) {
 			/>
 		<Layout home>
 			<div className={utilStyles.contactCard} style={{maxWidth: '46rem', margin: 'auto'}}>
-				<p style={{marginTop: '.5rem'}}>
-					I am Juan, a software developer from Argentina.
-				</p>
-				<span>
+				<p style={{marginBottom: '.25rem', marginTop: '.5rem'}}>
 					I study computer science in the National University of La Plata.<br />
 					Fullstack developer as a hobby, Backend developer for a living.
-				</span>
-				
+				</p>
 				<Grid container columnSpacing={4} rowSpacing={3}>
 					<Grid item xs={7}>
 						<div style={{minWidth: '20rem', marginBottom: '-1rem', whiteSpace: 'nowrap'}}>
@@ -35,6 +31,7 @@ export default function Home({ posts }) {
 								<li>Server administration</li>
 								<li>Database administration</li>
 								<li>Performance analysis</li>
+								<li>System design</li>
 								<li>Automation</li>
 							</ul>
 						</div>
